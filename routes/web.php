@@ -2,8 +2,8 @@
   
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-  
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FileController;
   
 /*
 |--------------------------------------------------------------------------
@@ -44,5 +44,7 @@ All Admin Routes List
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
   
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+    Route::get('file-upload', [FileController::class, 'index']);
+    Route::post('file-upload', [FileController::class, 'store'])->name('file.store');
 });
   

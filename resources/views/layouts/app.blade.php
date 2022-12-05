@@ -7,74 +7,59 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>THESIS</title>
+    <link rel="icon" href="{{ asset('assets/images/new.jpg') }}" type="image/jpg" />
+
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+
+    <link href="{{ asset('/css/frontcss/home.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('/css/frontcss/auth.css') }}" rel="stylesheet">
+
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+<!-- Navbar start -->
+<nav id="navbar" class="">
+    <div class="nav-wrapper">
+        <!-- Navbar Logo -->
+        <div class="logo">
+            <a href="/"><img src="{{ asset('assets/images/newlogo.jpg') }}" alt=""></a>
+        </div>
+
+        {{-- <div class="search">
+            <div class="searchBar">
+                <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
+                <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit" style="margin-top: -30px;"><i class='bx bx-search-alt-2' ></i>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
             </div>
-        </nav>
+        </div> --}}
+        <!-- Navbar Links -->
+        {{-- <ul id="" class="menu">
+            <li><a href="/">Home</a></li>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+            <li><a href="#browse">Browse</a></li>
+        </ul> --}}
     </div>
+</nav>
+<!-- Navbar end -->
+
+<div class="page-wrapper" style="margin-top: 150px">
+    <!--page-content-wrapper-->
+    <div class="page-content-wrapper">
+        @yield('content')
+    </div>
+    <!--end page-content-wrapper-->
+</div>
+
 </body>
 </html>

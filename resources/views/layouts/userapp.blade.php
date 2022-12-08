@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Theis</title>
+    <title>THESIS</title>
     <!--favicon-->
     <link rel="icon" href="{{ asset('images/newlogo.jpg') }}" type="image/jpg" />
 
@@ -49,7 +49,7 @@
         <div class="nav-wrapper">
             <!-- Navbar Logo -->
             <div class="logo">
-                <a href="/"><img src="{{ asset('images/newlogo.jpg') }}" alt=""></a>
+                <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
             </div>
 
             <div class="search">
@@ -111,6 +111,7 @@
                         <li><a href="/#">Browse</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/#">Privacy & Policy</a></li>
+                        <li><a href="/login">Admin</a></li>
                     </ul>
                 </div>
 

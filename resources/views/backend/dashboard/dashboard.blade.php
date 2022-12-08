@@ -1,4 +1,4 @@
-@extends('backend.layouts.layout')
+@extends('layouts.adminapp')
 @section('content')
     <!-- Begin page -->
     <div id="layout-wrapper">

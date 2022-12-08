@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Theis</title>
     <!--favicon-->
-    <link rel="icon" href="{{ asset('assets/images/newlogo.jpg') }}" type="image/jpg" />
+    <link rel="icon" href="{{ asset('images/newlogo.jpg') }}" type="image/jpg" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Bootstrap CSS -->
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" /> --}}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
 
     {{-- <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
         <div class="nav-wrapper">
             <!-- Navbar Logo -->
             <div class="logo">
-                <a href="/"><img src="{{ asset('assets/images/newlogo.jpg') }}" alt=""></a>
+                <a href="/"><img src="{{ asset('images/newlogo.jpg') }}" alt=""></a>
             </div>
 
             <div class="search">

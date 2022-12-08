@@ -6,14 +6,10 @@
             <p style="font-size: 25px">Browse your information to complete your thesis.</p>
             <button>Browse more books</button>
         </div>
-            <img src="{{ asset('assets/images/books_below_nav.png') }}" alt="">
+            <img src="{{ asset('images/books_below_nav.png') }}" alt="">
     </div>
     <div class="latest_book">
             <p>Latest books</p>
-            <img src="{{ asset('assets/images/newshelf.png') }}" alt="" style="top: 37em; left: 140px;
-            position: absolute; width: 85%">
-            <img src="{{ asset('assets/images/newshelf.png') }}" alt="" style="top: 56.5em; left: 140px;
-            position: absolute; width: 85%">
         <div class="latest_card swiper">
             {{-- =swiper --}}
             
@@ -22,7 +18,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -30,7 +35,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -38,7 +52,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -46,7 +69,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -54,7 +86,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -62,7 +103,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -70,7 +120,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -78,7 +137,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -86,7 +154,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -94,19 +171,37 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
                             </div>
                         </div>
                     </div>
-                    <div class="slide-content" style="margin-top: 2em">
+                    <div class="slide-content" style="margin-top: 10px">
                         <div class="card-wrapper swiper-wrapper">
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -114,7 +209,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -122,7 +226,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -130,7 +243,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -138,7 +260,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -146,7 +277,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -154,7 +294,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -162,7 +311,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -170,7 +328,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -178,7 +345,16 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('assets/images/cover_card.png') }}" alt="" class="card-img">
+                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                    </div>
+                                    <div class="card_detail">
+                                        <span>
+                                            <p>Title: Bus Ticket Reservation</p>
+                                            <p>Author: Twinkle</p>
+                                            <p>Department: GIC</p>
+                                        </span>
+                                        <button>View</button>
+
                                     </div>
                                 </div>
                                 
@@ -209,9 +385,9 @@
 
     <script>
         var swiper = new Swiper(".slide-content", {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            slidesPerGroup: 4,
+            slidesPerView: 3,
+            spaceBetween: 25,
+            slidesPerGroup: 3,
             loop: true,
             loopFillGroupWithBlank: true,
             pagination: {

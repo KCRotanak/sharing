@@ -1,11 +1,11 @@
 <?php
-  
+
 namespace Database\Seeders;
-  
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\User;
-  
+use Illuminate\Database\Seeder;
+
 class CreateUsersSeeder extends Seeder
 {
     /**
@@ -17,16 +17,22 @@ class CreateUsersSeeder extends Seeder
     {
         $users = [
             [
-               'name'=>'Admin User',
+               'name'=>'Admin',
                'email'=>'admin@gmail.com',
                'type'=>1,
-               'password'=> bcrypt('88888888'),
+               'password'=> bcrypt('12345678'),
+            ],
+            [
+               'name'=>'Manager',
+               'email'=>'manager@gmail.com',
+               'type'=> 2,
+               'password'=> bcrypt('12345678'),
             ],
             [
                'name'=>'User',
                'email'=>'user@gmail.com',
                'type'=>0,
-               'password'=> bcrypt('88888888'),
+               'password'=> bcrypt('12345678'),
             ],
         ];
     

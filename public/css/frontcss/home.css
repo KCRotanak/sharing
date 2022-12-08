@@ -334,8 +334,8 @@ a {
 }
 
 .latest_card .image-content .card_detail span {
-    margin-top: 15px;
-    font-size: 14px;
+    margin-top: 25px;
+    font-size: 18px;
     text-decoration: none !important;
     display: inline-block;
 }

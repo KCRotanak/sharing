@@ -27,6 +27,10 @@ use App\Http\Controllers\Backend\DepartmentController;
 Route::get('/', function () {
     return view('frontend.home');
 });
+
+Route::get('/contact', function(){
+    return view('frontend.contact');
+});
   
 Auth::routes();
   
@@ -59,13 +63,5 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('/admin/contact', ContactController::class);
 });
   
-/*------------------------------------------
---------------------------------------------
-All Admin Routes List
---------------------------------------------
---------------------------------------------*/
-Route::middleware(['auth', 'user-access:manager'])->group(function () {
-  
-    Route::get('/manager/home', [App\Http\Controllers\HomeController::class, 'managerHome'])->name('manager.home');
-});
+
 

@@ -383,7 +383,10 @@
             <span>
                 <p class="suggestion_title">Any Suggestion?</p>
                 <p>Feel free to send us a message.</p>
-                <button>Contact Us</button>
+                
+                <a href="/contact">
+                    <button>Contact Us</button>
+                </a>
             </span>
         </div>
     </div>

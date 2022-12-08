@@ -33,7 +33,7 @@
     <div class="nav-wrapper">
         <!-- Navbar Logo -->
         <div class="logo">
-            <a href="/"><img src="{{ asset('assets/images/newlogo.jpg') }}" alt=""></a>
+            <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
         </div>
 
         {{-- <div class="search">

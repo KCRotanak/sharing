@@ -378,7 +378,14 @@
     
     </div>
     <div class="recommand_book">
-
+        <img src="{{asset('images/3people.png')}}" alt="">
+        <div class="suggestion">
+            <span>
+                <p class="suggestion_title">Any Suggestion?</p>
+                <p>Feel free to send us a message.</p>
+                <button>Contact Us</button>
+            </span>
+        </div>
     </div>
     {{-- Swiper JS --}}
     <script src="js/swiper-bundle.min.js"></script>

@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <div class="login-form py-4" style="margin-top: 150px">

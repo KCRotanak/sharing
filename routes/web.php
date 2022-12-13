@@ -26,11 +26,11 @@ use App\Http\Controllers\Backend\DepartmentController;
 
 Route::get('/', function () {
     return view('frontend.home');
-});
+})->name('home');
 
 Route::get('/contact', function(){
     return view('frontend.contact');
-});
+})->name('contact');
   
 Auth::routes();
   

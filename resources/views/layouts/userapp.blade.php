@@ -39,7 +39,7 @@
 
     {{-- swiper css --}}
     <link rel="stylesheet" href="{{ asset('/css/frontcss/swiper-bundle.min.css') }} ">
-
+    
 
 </head>
 
@@ -49,8 +49,31 @@
         <div class="nav-wrapper">
             <!-- Navbar Logo -->
             <div class="logo">
+                <!-- Logo Placeholder for Inlustration -->
                 <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
+                <!-- <a href="#home"><i class="fa fa-coffee"></i> Acoderr</a> -->
             </div>
+            
+            <ul id="" class="menu">
+                @php
+                    $currentRouteName = request()
+                        ->route()
+                        ->getName();
+                @endphp
+
+                <li><a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a></li>
+                <li><a href="#browse">Browse</a></li>
+                <li><a href="{{ asset('/contact') }}"  class="{{ $currentRouteName === 'contact' ? 'active' : '' }} one">Contact</a></li>
+            </ul>
+
+
+            {{-- <a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a>
+            <a href="{{ asset('/showtime') }}"
+                class="{{ $currentRouteName === 'showtime' ? 'active' : '' }} one">Showtime</a>
+            <a href="{{ asset('/comingsoon') }}"
+                class="{{ $currentRouteName === 'comingsoon' ? 'active' : '' }} one">Coming Soon</a>
+            <a href="{{ asset('/contact') }}"
+                class="{{ $currentRouteName === 'contact.create' ? 'active' : '' }} one">Contact Us</a> --}}
 
             <div class="search">
                 <div class="searchBar">
@@ -60,11 +83,7 @@
                 </div>
             </div>
             <!-- Navbar Links -->
-            <ul id="" class="menu">
-                <li><a href="/">Home</a></li>
 
-                <li><a href="#browse">Browse</a></li>
-            </ul>
         </div>
     </nav>
     <!-- Navbar end -->
@@ -113,6 +132,7 @@
                         <li><a href="/#">Privacy & Policy</a></li>
                         <li><a href="/login">Admin</a></li>
                     </ul>
+                    
                 </div>
 
             </div>
@@ -165,5 +185,15 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+    </script>
+
+    {{-- nav bar active--}}
+    <script>
+        $(document).ready(function() {
+
+            $(".one").click(function() {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        });
     </script>
 </body>

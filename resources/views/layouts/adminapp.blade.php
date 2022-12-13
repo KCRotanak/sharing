@@ -3,8 +3,6 @@
     data-sidebar-image="none" data-preloader="disable">
 
 
-<!-- Mirrored from themesbrand.com/velzon/html/default/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:51:41 GMT -->
-
 <head>
 
     <meta charset="utf-8" />

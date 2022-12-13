@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>THESIS</title>
     <!--favicon-->
-    <link rel="icon" href="{{ asset('images/newlogo.jpg') }}" type="image/jpg" />
+    <link rel="icon" href="{{ asset('images/Tlogo.png') }}" type="image/jpg" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
@@ -16,9 +16,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
 
-    {{-- <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> --}}
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    {{-- Font --}}
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 
+    {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 

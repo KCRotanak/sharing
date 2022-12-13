@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>THESIS</title>
     <!--favicon-->
-    <link rel="icon" href="{{ asset('images/newlogo.jpg') }}" type="image/jpg" />
+    <link rel="icon" href="{{ asset('images/Tlogo.png') }}" type="image/png" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 

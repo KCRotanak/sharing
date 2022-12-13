@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>THESIS</title>
-    <link rel="icon" href="{{ asset('assets/images/new.jpg') }}" type="image/jpg" />
+    <link rel="icon" href="{{ asset('assets/images/Tlogo.png') }}" type="image/png" />
 
 
     <!-- Fonts -->

@@ -35,19 +35,19 @@ a {
 .nav-wrapper {
     margin: auto;
     text-align: center;
-    width: 90%;
+    width: 80%;
 }
 
 .logo {
     float: left;
+    margin-left: -100px;
     font-size: 1.5em;
     height: 80px;
-    letter-spacing: 1px;
     color: rgb(0, 0, 0);
 }
 
-.menu {
-    margin-left: 60%;
+#navbar .menu {
+    margin-right: 500px;
 }
 
 #navbar li {
@@ -60,29 +60,38 @@ a {
 }
 
 #navbar li a {
-    color: black;
+    color: rgb(255, 255, 255);
     /* display: block; */
-    font-size: 1em;
+    font-size: 18px;
     /* font-weight: bold; */
     height: 30px;
     letter-spacing: 1px;
     margin: 0 10px;
-    padding: 10px 18px;
+    /* margin-left: 20px; */
+    padding: 10px 30px;
     position: relative;
     text-decoration: none;
-    text-transform: uppercase;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    background: #f5f5f5;
+    /* background: #f5f5f5; */
     outline: none;
     border: none;
     border-radius: 1.625rem;
 }
 
+#navbar li>a.active {
+    color: #bcbcbc;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
 #navbar li a:hover {
     /* border-bottom: 1px solid rgb(28, 121, 184); */
-    color: #959595;
-    /* background-color: rgb(114, 114, 114); */
+    color: #bcbcbc;
+    text-decoration: underline;
+    text-underline-offset: 8px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 }
@@ -93,13 +102,13 @@ a {
 .search {
     width: 400px;
     display: block;
-    float: left;
-    margin-left: 350px;
-    margin-top: 15px;
+    float: right;
+    margin-right: 100px;
+    margin-top: -80px;
 }
 
 .searchBar {
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -113,7 +122,7 @@ a {
     border: none;
     border-radius: 1.625rem;
     padding: 0 3.5rem 0 1.5rem;
-    margin-left: 80px;
+    margin-left: 10px;
     font-size: 1rem;
 }
 
@@ -210,7 +219,7 @@ a {
 
 .page-wrapper .ads_browse {
     width: 100%;
-    height: 527px;
+    height: 415px;
     background: #C9D6DF;
     display: flex;
     /* justify-content: flex-end; */
@@ -219,7 +228,7 @@ a {
 
 .page-wrapper .ads_browse .ads_text {
     margin-left: 350px;
-    margin-top: 10em;
+    margin-top: 7em;
 }
 
 .page-wrapper .ads_browse .ads_text button {
@@ -230,11 +239,14 @@ a {
     background: #52616B;
     border-radius: 10px;
     border-width: 0px !important;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
 }
 
 .page-wrapper .ads_browse .ads_text button:hover {
-    background-color: white;
-    color: #52616B;
+    background-color: rgb(143, 153, 160);
+    color: black;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 }
@@ -246,10 +258,17 @@ a {
 .page-wrapper .latest_book {
     width: 90%;
     margin: 0 auto;
-    height: 85vh;
+    height: 89vh;
     background-color: #F0F5F9;
     text-decoration: underline;
     font-size: 28px;
+    margin-top: 10px;
+}
+
+.page-wrapper .latest_book .category_latest {
+    margin-top: 40px;
+    font-size: 36px;
+    margin-left: 25px;
 }
 
 .page-wrapper .latest_book p {
@@ -259,18 +278,17 @@ a {
 .latest_book .latest_card {
     /* margin-top: 20px; */
     width: 100%;
-    /* padding: 40px 0; */
     height: 100%;
     /* background-color: #dce07f; */
 }
 
 .latest_card .slide-content {
-    height: 45%;
+    height: 100%;
     margin: 0 10px;
-    margin-left: 30px;
-    margin-right: 30px;
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
     overflow: hidden;
-    margin-top: 10px;
+    /* background-color: yellow; */
 }
 
 .latest_card .card-wrapper {
@@ -281,7 +299,7 @@ a {
 
 .latest_card .card:hover {
     -webkit-transform: scale(1);
-    transform: scale(1.06);
+    transform: scale(1.03);
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
@@ -290,30 +308,32 @@ a {
     height: 100%;
     transition: 0.3s ease-in-out;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
+    /* margin-left: 5px; */
     background-color: #F0F5F9 !important;
     border-width: 0px !important;
-    /* margin-left: 5px; */
 }
 
 .latest_card .image-content {
-    /* z-index: 999; */
-    width: 100%;
-    height: 100%;
+    width: 18em;
+    height: 29em;
+    margin-left: 30px;
     position: relative;
     row-gap: 5px;
     border-width: 0px !important;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    display: flex;
+    background-color: #C9D6DF;
+    border-radius: 20px;
+    /* display: flex; */
 }
 
-.latest_card .card-image {
+.latest_card .image-content .card-image {
+    margin: 0 auto;
     position: relative;
-    height: 100%;
-    width: 50%;
+    height: 75%;
+    width: 90%;
     /* background: rgb(137, 137, 137); */
     border-width: 0px !important;
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .latest_card .card-image .card-img {
@@ -323,19 +343,21 @@ a {
 }
 
 .latest_card .image-content .card_detail {
-    width: 50%;
-    height: 60%;
-    background-color: #DDE6EC;
-    margin-top: 80px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 15px 20px;
-    /* text-align: start !important; */
+    width: 100%;
+    height: 25%;
+    /* background-color: #ffffff; */
+    /* margin-top: 80px; */
+    padding-top: 10px;
+    text-align: center !important;
+}
+
+.latest_card .image-content .card_detail p {
+    font-size: 20px !important;
 }
 
 .latest_card .image-content .card_detail span {
-    margin-top: 25px;
-    font-size: 18px;
+    /* margin-top: 25px; */
+    /* font-size: 20px; */
     text-decoration: none !important;
     display: inline-block;
 }
@@ -344,9 +366,9 @@ a {
     margin-top: 10px;
     border-radius: 15px;
     border-width: 0px !important;
-    width: 77px;
-    height: 27px;
-    font-size: 14px;
+    width: 83px;
+    height: 34px;
+    font-size: 18px;
     color: white;
     background-color: #52616B;
     transition: all 0.5s ease;
@@ -363,7 +385,7 @@ a {
 
 .latest_card .swiper-navBtn {
     color: #52616B;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .latest_card .swiper-navBtn:hover {
@@ -405,13 +427,13 @@ a {
 .page-wrapper .recommand_book img {
     width: 500px;
     height: 500px;
-    margin-left: 6rem;
+    margin-left: 10rem;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .page-wrapper .recommand_book .suggestion {
-    width: 55rem;
+    width: 60em;
     height: 300px;
     background-color: #C9D6DF;
     margin-left: auto;

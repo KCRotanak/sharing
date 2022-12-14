@@ -63,7 +63,7 @@
                 @endphp
 
                 <li><a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a></li>
-                <li><a href="#browse">Browse</a></li>
+                <li><a href="{{ asset('/browse') }}" class="{{ $currentRouteName === 'browse' ? 'active' : '' }} one">Browse</a></li>
                 <li><a href="{{ asset('/contact') }}"  class="{{ $currentRouteName === 'contact' ? 'active' : '' }} one">Contact</a></li>
             </ul>
 
@@ -128,7 +128,7 @@
                     <h4 class="mt-lg-0 mt-sm-3" style="font-size: 20px">Links</h4>
                     <ul class="m-0 p-0">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/#">Browse</a></li>
+                        <li><a href="/browse">Browse</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/#">Privacy & Policy</a></li>
                         <li><a href="/login">Admin</a></li>

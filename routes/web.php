@@ -31,6 +31,10 @@ Route::get('/', function () {
 Route::get('/contact', function(){
     return view('frontend.contact');
 })->name('contact');
+
+Route::get('/browse', function(){
+    return view('frontend.browse');
+})->name('browse');
   
 Auth::routes();
   

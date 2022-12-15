@@ -73,22 +73,6 @@
                 </li>
             </ul>
 
-
-            {{-- <a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a>
-            <a href="{{ asset('/showtime') }}"
-                class="{{ $currentRouteName === 'showtime' ? 'active' : '' }} one">Showtime</a>
-            <a href="{{ asset('/comingsoon') }}"
-                class="{{ $currentRouteName === 'comingsoon' ? 'active' : '' }} one">Coming Soon</a>
-            <a href="{{ asset('/contact') }}"
-                class="{{ $currentRouteName === 'contact.create' ? 'active' : '' }} one">Contact Us</a> --}}
-
-            {{-- <div class="search">
-                <div class="searchBar">
-                    <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
-                    <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit" style="margin-top: -30px;"><i class='bx bx-search-alt-2' ></i>
-                    </button>
-                </div>
-            </div> --}}
             <!-- Navbar Links -->
 
         </div>

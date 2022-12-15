@@ -1,5 +1,10 @@
 @extends('layouts.userapp')
 @section('content')
+<div class="loader" style="margin-top:0px">
+    <div class="loader-content">
+        <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader" />
+    </div>
+</div>
     <div class="container" style="margin: 140px">
         <div class="row">
             <div class="col-4">
@@ -48,7 +53,17 @@
 
 
         </div>
-
-
     </div>
 @endsection
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            var loader = document.getElementsByClassName("loader")[0];
+            loader.className = "loader fadeout";
+            setTimeout(function() {
+                loader.style.display = "none"
+            }, 1000)
+        }, 500)
+    }
+</script>

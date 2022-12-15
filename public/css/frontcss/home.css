@@ -254,6 +254,7 @@ a {
 }
 
 .page-wrapper .ads_browse .ads_text button {
+    margin-top: 20px;
     width: 265px;
     height: 47px;
     position: absolute;
@@ -289,7 +290,7 @@ a {
 
 .page-wrapper .latest_book .category_latest {
     margin-top: 40px;
-    font-size: 36px;
+    font-size: 28px;
     margin-left: 25px;
 }
 
@@ -449,7 +450,7 @@ a {
 .page-wrapper .recommand_book img {
     width: 500px;
     height: 500px;
-    margin-left: 10rem;
+    margin-left: 12rem;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -475,6 +476,7 @@ a {
 }
 
 .page-wrapper .recommand_book .suggestion button {
+    margin-top: 20px;
     width: 219px;
     height: 47px;
     background: #52616B;

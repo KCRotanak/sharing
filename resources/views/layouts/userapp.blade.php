@@ -52,7 +52,6 @@
             <div class="logo">
                 <!-- Logo Placeholder for Inlustration -->
                 <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
-                <!-- <a href="#home"><i class="fa fa-coffee"></i> Acoderr</a> -->
             </div>
             
             <ul id="" class="menu">
@@ -187,4 +186,16 @@
             });
         });
     </script>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            var loader = document.getElementsByClassName("loader")[0];
+            loader.className = "loader fadeout";
+            setTimeout(function() {
+                loader.style.display = "none"
+            }, 1000)
+        }, 500)
+    }
+</script>
 </body>

@@ -1,13 +1,14 @@
 @extends('layouts.userapp')
 @section('content')
-<div class="loader" style="margin-top:0px">
-    <div class="loader-content">
-        <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader" />
+    <div class="loader" style="margin-top:0px">
+        <div class="loader-content">
+            <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader" />
+        </div>
     </div>
-</div>
+
     <div class="container" style="margin: 140px">
-        <div class="row">
-            <div class="col-4">
+        <div class="row" style="width: 1700px">
+            <div class="col-3">
                 <form action="">
                     <div class="card" style="padding: 20px">
                         <div class="form-group col-12 " style="padding: 10px">
@@ -32,7 +33,7 @@
                             <label for="year">Year</label>
                             <select id="selectYear" class="form-select">
                                 @for ($i = 2000; $i <= 2022; $i++)
-                                <option class="">{{$i}}</option>
+                                    <option class="">{{ $i }}</option>
                                 @endfor
                             </select>
                         </div>
@@ -46,8 +47,8 @@
             </div>
 
             <div class="col-8">
-                <div class="card">
-                    <h1>Hello World</h1>
+                <div class="card" style="padding: 20px">
+
                 </div>
             </div>
 
@@ -55,15 +56,3 @@
         </div>
     </div>
 @endsection
-
-<script>
-    window.onload = function() {
-        setTimeout(function() {
-            var loader = document.getElementsByClassName("loader")[0];
-            loader.className = "loader fadeout";
-            setTimeout(function() {
-                loader.style.display = "none"
-            }, 1000)
-        }, 500)
-    }
-</script>

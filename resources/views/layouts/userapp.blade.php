@@ -65,6 +65,12 @@
                 <li><a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a></li>
                 <li><a href="{{ asset('/browse') }}" class="{{ $currentRouteName === 'browse' ? 'active' : '' }} one">Browse</a></li>
                 <li><a href="{{ asset('/contact') }}"  class="{{ $currentRouteName === 'contact' ? 'active' : '' }} one">Contact</a></li>
+                <li>
+                    <div class="search-box">
+                        <button class="btn-search"><i class="fas fa-search"></i></button>
+                        <input type="text" class="input-search" placeholder="Type to Search...">
+                      </div>
+                </li>
             </ul>
 
 
@@ -76,13 +82,13 @@
             <a href="{{ asset('/contact') }}"
                 class="{{ $currentRouteName === 'contact.create' ? 'active' : '' }} one">Contact Us</a> --}}
 
-            <div class="search">
+            {{-- <div class="search">
                 <div class="searchBar">
                     <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
                     <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit" style="margin-top: -30px;"><i class='bx bx-search-alt-2' ></i>
                     </button>
                 </div>
-            </div>
+            </div> --}}
             <!-- Navbar Links -->
 
         </div>

@@ -8,12 +8,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Department</h4>
+                                <h4 class="mb-sm-0">Teacher</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Page</a></li>
-                                        <li class="breadcrumb-item active">Department</li>
+                                        <li class="breadcrumb-item active">Teacher</li>
                                     </ol>
                                 </div>
 
@@ -39,8 +39,8 @@
                                                         data-bs-toggle="modal" id="create-btn"
                                                         data-bs-target="#showModal"><i
                                                             class="ri-add-line align-bottom me-1"></i> Add</button>
-                                                    {{-- <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i
-                                                            class="ri-delete-bin-2-line"></i></button> --}}
+                                                    <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i
+                                                            class="ri-delete-bin-2-line"></i></button>
                                                 </div>
                                             </div>
                                             <div class="col-sm">
@@ -64,12 +64,16 @@
                                                                     id="checkAll" value="option">
                                                             </div>
                                                         </th>
-                                                        <th class="sort" data-sort="id">ID</th>
-                                                        <th class="sort" data-sort="name">Name</th>
-                                                        <th class="" data-sort="action">Action</th>
+                                                        <th class="sort" data-sort="phone">ID</th>
+                                                        <th class="sort" data-sort="customer_name">Name</th>
+                                                        <th class="sort" data-sort="email">Email</th>
+                                                        <th class="sort" data-sort="date">Joining Date</th>
+                                                        <th class="sort"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="list form-check-all">
+                                                    @php $i=1; @endphp
+                                                    @foreach ($teachers as $key => $teacher)
                                                     <tr>
                                                         <th scope="row">
                                                             <div class="form-check">
@@ -80,9 +84,10 @@
                                                         <td class="id" style="display:none;"><a
                                                                 href="javascript:void(0);"
                                                                 class="fw-medium link-primary">#VZ2101</a></td>
-                                                        <td class="id">1</td>
-                                                        <td class="name">Web Development</td>
-
+                                                        <td class="id">{{ $teacher->id }}</td>
+                                                        <td class="name">{{$teacher->name }}</td>
+                                                        <td class="email">{{$teacher->email }}</td>
+                                                        <td class="date">{{$teacher->created_at }}</td>
                                                         <td>
                                                             <div class="d-flex gap-2">
                                                                 <div class="edit">
@@ -98,6 +103,7 @@
                                                             </div>
                                                         </td>
                                                     </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                             <div class="noresult" style="display: none">
@@ -130,7 +136,73 @@
                         </div>
                         <!-- end col -->
                     </div>
+                    <div class="modal fade" id="showModal" tabindex="-1"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-light p-3">
+                                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="close-modal"></button>
+                                </div>
+                                <form method="post" enctype="multipart/form-data" >
+                                    @csrf
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label for="customername-field" class="form-label">Name</label>
+                                            <input type="text" id="name" class="form-control" name="name" value="{{ old('name') }}"
+                                                placeholder="Enter Name" required />
+                                        </div>
 
+                                        <div class="mb-3">
+                                            <label for="email-field" class="form-label">Email</label>
+                                            <input type="email" id="email" class="form-control" name="email" value="{{ old('email') }}"
+                                                placeholder="Enter Email" required />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="hstack gap-2 justify-content-end">
+                                            <button type="button" class="btn btn-light"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-success" name="add-btn">Add
+                                                Customer</button>
+                                            <button type="button" class="btn btn-success" name="edit-btn">Update</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="btn-close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mt-2 text-center">
+                                        <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
+                                            colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px">
+                                        </lord-icon>
+                                        <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                                            <h4>Are you Sure ?</h4>
+                                            <p class="text-muted mx-4 mb-0">Are you Sure You want to Remove this Record ?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                                        <button type="button" class="btn w-sm btn-light"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn w-sm btn-danger " id="delete-record">Yes,
+                                            Delete It!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>

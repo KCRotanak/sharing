@@ -519,7 +519,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" data-key="t-analytics" href="/admin/subject">
-                                <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Subject</span>
+                                <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Teacher</span>
                             </a>
                         </li> <!-- end Dashboard Menu -->
                         <li class="nav-item">
@@ -598,6 +598,9 @@
     <script src="{{ asset('libs/sweetalert2/sweetalert2.min.js') }}"></script>
     <!-- App js -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    <!--Ajax-->
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> --}}
 </body>
 <!-- Mirrored from themesbrand.com/velzon/html/default/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:51:42 GMT -->
 

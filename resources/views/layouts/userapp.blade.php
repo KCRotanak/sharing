@@ -52,7 +52,6 @@
             <div class="logo">
                 <!-- Logo Placeholder for Inlustration -->
                 <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
-                <!-- <a href="#home"><i class="fa fa-coffee"></i> Acoderr</a> -->
             </div>
             
             <ul id="" class="menu">
@@ -73,22 +72,6 @@
                 </li>
             </ul>
 
-
-            {{-- <a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a>
-            <a href="{{ asset('/showtime') }}"
-                class="{{ $currentRouteName === 'showtime' ? 'active' : '' }} one">Showtime</a>
-            <a href="{{ asset('/comingsoon') }}"
-                class="{{ $currentRouteName === 'comingsoon' ? 'active' : '' }} one">Coming Soon</a>
-            <a href="{{ asset('/contact') }}"
-                class="{{ $currentRouteName === 'contact.create' ? 'active' : '' }} one">Contact Us</a> --}}
-
-            {{-- <div class="search">
-                <div class="searchBar">
-                    <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
-                    <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit" style="margin-top: -30px;"><i class='bx bx-search-alt-2' ></i>
-                    </button>
-                </div>
-            </div> --}}
             <!-- Navbar Links -->
 
         </div>
@@ -203,4 +186,16 @@
             });
         });
     </script>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            var loader = document.getElementsByClassName("loader")[0];
+            loader.className = "loader fadeout";
+            setTimeout(function() {
+                loader.style.display = "none"
+            }, 1000)
+        }, 500)
+    }
+</script>
 </body>

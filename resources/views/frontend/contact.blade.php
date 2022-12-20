@@ -1,5 +1,11 @@
 @extends('layouts.userapp')
 @section('content')
+
+<div class="loader" style="margin-top:100px">
+    <div class="loader-content">
+        <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader" />
+    </div>
+</div>
 <section class="contact_us">
     <div class="container">
         <div class="row">
@@ -47,4 +53,5 @@
         </div>
     </div>
 </section>
+
 @endsection

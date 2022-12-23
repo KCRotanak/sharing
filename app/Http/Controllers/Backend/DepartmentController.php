@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-use App\Http\Controllers\Controller;
+use App\Models\Department;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DepartmentController extends Controller
 {
@@ -13,7 +14,8 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        return view('backend.departments.index');
+        $departments = Department::all();
+        return view('backend.departments.index', compact('departments'));
     }
 
     /**
@@ -23,7 +25,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.departments.index');
     }
 
     /**
@@ -34,7 +36,19 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $departments = Department::all();
+        $request->validate([
+            'name' => 'required|unique:departments,name',
+        ]);
+
+        Department::create([
+            'name'=> $request['name'],
+
+        ]);
+        if ($request->has('add-btn')) {
+            return view('backend.departments.index', compact('departments'))
+            ->with('success', 'department is created successfully.');
+        }
     }
 
     /**
@@ -56,7 +70,7 @@ class DepartmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('backend.departments.index');
     }
 
     /**
@@ -66,9 +80,20 @@ class DepartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request, Department $department)
+    {    
+        $departments = Department::all();
+        $request->validate([
+            'name' => 'required',
+            // 'email' => 'required',
+        ]);
+    
+        $department->update($request->all());
+
+        if ($request->has('edit-btn')) {
+            return view('backend.departments.index', compact('departments'))
+                        ->with('success','User updated successfully');
+        }
     }
 
     /**
@@ -77,8 +102,11 @@ class DepartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Department $department)
     {
-        //
+        $department->delete();
+    
+        return redirect()->route('departments.index')
+                        ->with('success','User deleted successfully');
     }
 }

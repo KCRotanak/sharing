@@ -11,7 +11,7 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('images/Tlogo.png') }}">
 
     <!-- Sweet Alert css-->
     <link href="{{ asset('libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
@@ -478,7 +478,7 @@
             <!-- LOGO -->
             <div class="navbar-brand-box">
                 <!-- Dark Logo-->
-                <a href="index.html" class="logo logo-dark">
+                <a href="/" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ asset('images/Tlogo.png') }}" alt="" height="22">
                     </span>
@@ -487,7 +487,7 @@
                     </span>
                 </a>
                 <!-- Light Logo-->
-                <a href="index.html" class="logo logo-light">
+                <a href="/" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ asset('images/Tlogo.png') }}" alt="" height="22">
                     </span>

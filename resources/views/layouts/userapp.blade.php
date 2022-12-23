@@ -66,7 +66,7 @@
                 <li><a href="{{ asset('/contact') }}"  class="{{ $currentRouteName === 'contact' ? 'active' : '' }} one">Contact</a></li>
                 <li>
                     <div class="search-box">
-                        <button class="btn-search"><i class="fas fa-search"></i></button>
+                        <button class="btn-search"><i class='bx bx-search'></i></button>
                         <input type="text" class="input-search" placeholder="Type to Search...">
                       </div>
                 </li>
@@ -120,7 +120,7 @@
                         <li><a href="/browse">Browse</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/#">Privacy & Policy</a></li>
-                        <li><a href="/login">Admin</a></li>
+                        <li><a href="/admin">Admin</a></li>
                     </ul>
                     
                 </div>

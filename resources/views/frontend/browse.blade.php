@@ -34,7 +34,7 @@
                             <select id="selectYear" class="form-select">
                                 @for ($i = 2000; $i <= 2022; $i++)
                                     <option class="">{{ $i }}</option>
-                                @endfor
+                                @endfor 
                             </select>
                         </div>
 
@@ -46,12 +46,19 @@
                 </form>
             </div>
 
-            <div class="col-8">
-                <div class="card" style="padding: 20px">
-
+            <div class="browse_card">
+                <img src="{{asset ('images/cover_card.png')}}" alt="">
+                <div class="browse_descript">
+                    <span>
+                        <p>Title: Bus Ticket Reservation System</p>
+                        <p>Author: Twinkle</p>
+                        <p>Department: GIC</p>
+                        <p>Year: 2022</p>
+                        <p>Description: blah blah blah</p>
+                    </span>
                 </div>
+                <button><i class='bx bx-show'></i> View</button>
             </div>
-
 
         </div>
     </div>

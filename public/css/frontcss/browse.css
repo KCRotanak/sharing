@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+.browse_card {
+    width: 1150px;
+    height: 250px;
+    background-color: white;
+    margin-left: 2em;
+    border-radius: 25px;
+    /* display: flex; */
+}
+.browse_card img {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    width: 180px;
+    height: 220px;
+}
+.browse_card .browse_descript{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5em;
+    padding: 25px 30px;
+}
+.browse_card button {
+    width: 74px;
+    height: 64px;
+    background: #52616B;
+    border-radius: 15px;
+    border-width: 0;
+    color: white;
+    margin-left: auto;
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.browse_card .bx-show {
+    font-size: 35px;
+}

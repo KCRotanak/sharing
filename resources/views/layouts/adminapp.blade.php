@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
     data-sidebar-image="none" data-preloader="disable">
-
-
 <head>
-
     <meta charset="utf-8" />
     <title>Thesis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('images/Tlogo.png') }}">
 
@@ -24,7 +25,12 @@
 
     <!-- Layout config Js -->
     <script src="{{ asset('js/layout.js') }}"></script>
-
+    <!--Ajax-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script> 
     <!-- Bootstrap Css -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -33,6 +39,7 @@
     <link href="{{ asset('css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -44,7 +51,7 @@
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box horizontal-logo">
-                            <a href="index.html" class="logo logo-dark">
+                            <a href="/" class="logo logo-dark">
                                 <span class="logo-sm">
                                     <img src="{{ asset('images/Tlogo.png') }}" alt="" height="22">
                                 </span>
@@ -52,7 +59,7 @@
                                     <img src="{{ asset('images/logo-dark-1.png') }}" alt="" height="17">
                                 </span>
                             </a>
-                            <a href="index.html" class="logo logo-light">
+                            <a href="/" class="logo logo-light">
                                 <span class="logo-sm">
                                     <img src="{{ asset('images/Tlogo.png') }}" alt="" height="22">
                                 </span>
@@ -513,12 +520,12 @@
                         </li> <!-- end Dashboard Menu -->
                         <li class="menu-title"><span data-key="t-menu">Page</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" data-key="t-analytics" href="/admin/department">
+                            <a class="nav-link menu-link" data-key="t-analytics" href="/departments">
                                 <i class="ri-apps-2-line"></i><span data-key="t-layouts">Department</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" data-key="t-analytics" href="/admin/subject">
+                            <a class="nav-link menu-link" data-key="t-analytics" href="/teachers">
                                 <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Teacher</span>
                             </a>
                         </li> <!-- end Dashboard Menu -->
@@ -599,8 +606,7 @@
     <!-- App js -->
     <script src="{{ asset('js/app.js') }}"></script>
 
-    <!--Ajax-->
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> --}}
+
 </body>
 <!-- Mirrored from themesbrand.com/velzon/html/default/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:51:42 GMT -->
 

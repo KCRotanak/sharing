@@ -8,13 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Department extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'name',
+        'name'
     ];
-
-    public function fileupload()
-    {
-        return $this->belongsTo(FileUpload::class);
-    }
 }
+

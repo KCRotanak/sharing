@@ -1,10 +1,11 @@
 <?php
-
+           
 namespace App\Http\Controllers\Backend;
+use App\Http\Controllers\Controller;
 use App\Models\Department;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-
+use DataTables;
+          
 class DepartmentController extends Controller
 {
     /**
@@ -12,22 +13,30 @@ class DepartmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $departments = Department::all();
-        return view('backend.departments.index', compact('departments'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
+     
+        if ($request->ajax()) {
+  
+            $data = Department::latest()->get();
+  
+            return Datatables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row){
+   
+                           $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="edit btn btn-primary btn-sm editDepartment">Edit</a>';
+   
+                           $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteDepartment">Delete</a>';
+    
+                            return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
+        
         return view('backend.departments.index');
     }
-
+       
     /**
      * Store a newly created resource in storage.
      *
@@ -36,77 +45,38 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        $departments = Department::all();
-        $request->validate([
-            'name' => 'required|unique:departments,name',
-        ]);
-
-        Department::create([
-            'name'=> $request['name'],
-
-        ]);
-        if ($request->has('add-btn')) {
-            return view('backend.departments.index', compact('departments'))
-            ->with('success', 'department is created successfully.');
-        }
+        Department::updateOrCreate([
+                    'id' => $request->department_id
+                ],
+                [
+                    'name' => $request->name 
+                    // 'detail' => $request->detail
+                ]);        
+     
+        return response()->json(['success'=>'department saved successfully.']);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Department  $product
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        return view('backend.departments.index');
+        $department = Department::find($id);
+        return response()->json($department);
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Department $department)
-    {    
-        $departments = Department::all();
-        $request->validate([
-            'name' => 'required',
-            // 'email' => 'required',
-        ]);
     
-        $department->update($request->all());
-
-        if ($request->has('edit-btn')) {
-            return view('backend.departments.index', compact('departments'))
-                        ->with('success','User updated successfully');
-        }
-    }
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Department  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Department $department)
+    public function destroy($id)
     {
-        $department->delete();
-    
-        return redirect()->route('departments.index')
-                        ->with('success','User deleted successfully');
+        Department::find($id)->delete();
+      
+        return response()->json(['success'=>'Department deleted successfully.']);
     }
 }

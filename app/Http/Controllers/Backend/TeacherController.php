@@ -1,10 +1,11 @@
 <?php
-
+           
 namespace App\Http\Controllers\Backend;
+use App\Http\Controllers\Controller;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-
+use DataTables;
+          
 class TeacherController extends Controller
 {
     /**
@@ -12,22 +13,30 @@ class TeacherController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $teachers = Teacher::all();
-        return view('backend.teachers.index', compact('teachers'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
+     
+        if ($request->ajax()) {
+  
+            $data = Teacher::latest()->get();
+  
+            return Datatables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row){
+   
+                           $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="edit btn btn-primary btn-sm editTeacher">Edit</a>';
+   
+                           $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteTeacher">Delete</a>';
+    
+                            return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
+        
         return view('backend.teachers.index');
     }
-
+       
     /**
      * Store a newly created resource in storage.
      *
@@ -35,80 +44,40 @@ class TeacherController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {  
-        $teachers = Teacher::all();
-        $request->validate([
-            'name' => 'required|unique:teachers,name',
-            'name' => 'required|unique:teachers,email',
-        ]);
-
-        Teacher::create([
-            'name'=> $request['name'],
-            'email'=> $request['email'],
-
-        ]);
-        if ($request->has('add-btn')) {
-            return view('backend.teachers.index', compact('teachers'))
-            ->with('success', 'department is created successfully.');
-        }
-
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
     {
-        //
+        Teacher::updateOrCreate([
+                    'id' => $request->teacher_id
+                ],
+                [
+                    'name' => $request->name, 
+                    'email' => $request->email,
+                    'phone' => $request->phone
+                ]);        
+     
+        return response()->json(['success'=>'Teacher saved successfully.']);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Teacher  $product
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        return view('backend.teachers.index');
+        $teacher = Teacher::find($id);
+        return response()->json($teacher);
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        
-            $subjects = Teacher::all();
-
-            $request->validate([
-                'name' => 'required|unique:teachers,name',
-                'email' => 'required|unique:teachers,email',
-            ]);
-            $subjects->update($request->all());
-            
-        if ($request->has('edit-btn')) {
-            return view('backend.teachers.index', compact('teachers'))
-                            ->with('success','User updated successfully');
-        }
-        
-    }
-
+    
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        Teacher::find($id)->delete();
+      
+        return response()->json(['success'=>'Teacher deleted successfully.']);
     }
 }

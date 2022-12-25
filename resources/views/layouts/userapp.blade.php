@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>THESIS</title>
     <!--favicon-->
-    <link rel="icon" href="{{ asset('images/Tlogo.png') }}" type="image/png" />
+    <link rel="icon" href="{{ asset('images/Tlogo.png') }}" type="image/jpg" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
@@ -16,9 +16,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
 
-    {{-- <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> --}}
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    {{-- Font --}}
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 
+    {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -51,7 +52,6 @@
             <div class="logo">
                 <!-- Logo Placeholder for Inlustration -->
                 <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
-                <!-- <a href="#home"><i class="fa fa-coffee"></i> Acoderr</a> -->
             </div>
             
             <ul id="" class="menu">
@@ -62,26 +62,16 @@
                 @endphp
 
                 <li><a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a></li>
-                <li><a href="#browse">Browse</a></li>
+                <li><a href="{{ asset('/browse') }}" class="{{ $currentRouteName === 'browse' ? 'active' : '' }} one">Browse</a></li>
                 <li><a href="{{ asset('/contact') }}"  class="{{ $currentRouteName === 'contact' ? 'active' : '' }} one">Contact</a></li>
+                <li>
+                    <div class="search-box">
+                        <button class="btn-search"><i class="fas fa-search"></i></button>
+                        <input type="text" class="input-search" placeholder="Type to Search...">
+                      </div>
+                </li>
             </ul>
 
-
-            {{-- <a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a>
-            <a href="{{ asset('/showtime') }}"
-                class="{{ $currentRouteName === 'showtime' ? 'active' : '' }} one">Showtime</a>
-            <a href="{{ asset('/comingsoon') }}"
-                class="{{ $currentRouteName === 'comingsoon' ? 'active' : '' }} one">Coming Soon</a>
-            <a href="{{ asset('/contact') }}"
-                class="{{ $currentRouteName === 'contact.create' ? 'active' : '' }} one">Contact Us</a> --}}
-
-            <div class="search">
-                <div class="searchBar">
-                    <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
-                    <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit" style="margin-top: -30px;"><i class='bx bx-search-alt-2' ></i>
-                    </button>
-                </div>
-            </div>
             <!-- Navbar Links -->
 
         </div>
@@ -127,7 +117,7 @@
                     <h4 class="mt-lg-0 mt-sm-3" style="font-size: 20px">Links</h4>
                     <ul class="m-0 p-0">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/#">Browse</a></li>
+                        <li><a href="/browse">Browse</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/#">Privacy & Policy</a></li>
                         <li><a href="/login">Admin</a></li>
@@ -196,4 +186,16 @@
             });
         });
     </script>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            var loader = document.getElementsByClassName("loader")[0];
+            loader.className = "loader fadeout";
+            setTimeout(function() {
+                loader.style.display = "none"
+            }, 1000)
+        }, 500)
+    }
+</script>
 </body>

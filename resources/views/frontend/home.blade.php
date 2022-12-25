@@ -3,7 +3,7 @@
     <div class="ads_browse">
         <div class="ads_text">
             <p style="font-size: 50px">FIND GOOD THESIS</p>
-            <p style="font-size: 25px">Browse your information to complete your thesis.</p>
+            <p style="font-size: 25px; margin-top: -20px">Browse your information to complete your thesis.</p>
             <button>Browse more books</button>
         </div>
             <img src="{{ asset('images/books_below_nav.png') }}" alt="">
@@ -357,7 +357,7 @@
         <div class="suggestion">
             <span>
                 <p class="suggestion_title">Any Suggestion?</p>
-                <p>Feel free to send us a message.</p>
+                <p style="margin-top: -20px">Feel free to send us a message.</p>
                 
                 <a href="/contact">
                     <button>Contact Us</button>

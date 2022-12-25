@@ -2,11 +2,11 @@
            
 namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
-use App\Models\Department;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 use DataTables;
           
-class DepartmentController extends Controller
+class TeacherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,15 +18,15 @@ class DepartmentController extends Controller
      
         if ($request->ajax()) {
   
-            $data = Department::latest()->get();
+            $data = Teacher::latest()->get();
   
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function($row){
    
-                           $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="edit btn btn-primary btn-sm editDepartment">Edit</a>';
+                           $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="edit btn btn-primary btn-sm editTeacher">Edit</a>';
    
-                           $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteDepartment">Delete</a>';
+                           $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteTeacher">Delete</a>';
     
                             return $btn;
                     })
@@ -34,7 +34,7 @@ class DepartmentController extends Controller
                     ->make(true);
         }
         
-        return view('backend.departments.index');
+        return view('backend.teachers.index');
     }
        
     /**
@@ -45,38 +45,39 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        Department::updateOrCreate([
-                    'id' => $request->department_id
+        Teacher::updateOrCreate([
+                    'id' => $request->teacher_id
                 ],
                 [
-                    'name' => $request->name 
-                    // 'detail' => $request->detail
+                    'name' => $request->name, 
+                    'email' => $request->email,
+                    'phone' => $request->phone
                 ]);        
      
-        return response()->json(['success'=>'department saved successfully.']);
+        return response()->json(['success'=>'Teacher saved successfully.']);
     }
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Department  $product
+     * @param  \App\Teacher  $product
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $department = Department::find($id);
-        return response()->json($department);
+        $teacher = Teacher::find($id);
+        return response()->json($teacher);
     }
     
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Department  $product
+     * @param  \App\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        Department::find($id)->delete();
+        Teacher::find($id)->delete();
       
-        return response()->json(['success'=>'Department deleted successfully.']);
+        return response()->json(['success'=>'Teacher deleted successfully.']);
     }
 }

@@ -17,23 +17,17 @@ class DepartmentController extends Controller
     {
      
         if ($request->ajax()) {
-  
             $data = Department::latest()->get();
-  
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function($row){
-   
                            $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="edit btn btn-primary btn-sm editDepartment">Edit</a>';
-   
                            $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteDepartment">Delete</a>';
-    
                             return $btn;
                     })
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        
         return view('backend.departments.index');
     }
        
@@ -54,6 +48,7 @@ class DepartmentController extends Controller
                 ]);        
      
         return response()->json(['success'=>'department saved successfully.']);
+        
     }
     /**
      * Show the form for editing the specified resource.

@@ -38,6 +38,10 @@
 
     <link href="{{ asset('/css/frontcss/contact.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('/css/frontcss/browse.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('/css/frontcss/bookdetail.css') }}" rel="stylesheet">
+
     {{-- swiper css --}}
     <link rel="stylesheet" href="{{ asset('/css/frontcss/swiper-bundle.min.css') }} ">
     
@@ -45,6 +49,11 @@
 </head>
 
 <body>
+    {{-- <div class="loader" style="margin-top: 0px">
+        <div class="loader-content">
+            <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
+        </div>
+    </div> --}}
      <!-- Navbar start -->
      <nav id="navbar" class="">
         <div class="nav-wrapper">
@@ -79,14 +88,7 @@
     <!-- Navbar end -->
 
     <div class="page-wrapper">
-        <!--page-content-wrapper-->
-        {{-- <div class="page-content-wrapper">
-            <button type="button" class="btn btn-secondary btn-floating btn-lg" id="btn-back-to-top">
-                <i class="fas fa-arrow-up"></i>
-            </button> --}}
             @yield('content')
-        {{-- </div> --}}
-        <!--end page-content-wrapper-->
     </div>
 
     <!-- footer start -->

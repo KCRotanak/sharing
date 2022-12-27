@@ -37,6 +37,10 @@ Route::get('/browse', function(){
     return view('frontend.browse');
 })->name('browse');
 Auth::routes();
+Route::get('/bookdetail', function(){
+    return view('frontend.bookdetail');
+})->name('bookdetail');
+Auth::routes();
   
 /*------------------------------------------
 --------------------------------------------

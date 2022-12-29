@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
     data-sidebar-image="none" data-preloader="disable">
+
 <head>
     <meta charset="utf-8" />
     <title>Thesis</title>
@@ -8,7 +9,6 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('images/Tlogo.png') }}">
 
@@ -21,14 +21,18 @@
     <!-- gridjs css -->
     <link rel="stylesheet" href="{{ asset('libs/gridjs/theme/mermaid.min.css') }}">
 
+    {{-- datatable  --}}
+    <link rel="stylesheet" href="{{ asset('https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css') }}">
+
     <!-- Layout config Js -->
     <script src="{{ asset('js/layout.js') }}"></script>
     <!--Ajax-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script> 
+    {{-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script> --}}
+    {{-- <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>  --}}
     <!-- Bootstrap Css -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -450,7 +454,8 @@
                                     <img class="rounded-circle header-profile-user"
                                         src="{{ asset('images/profile.jpg') }}" alt="Header Avatar">
                                     <span class="text-start ms-xl-2">
-                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Admin User</span>
+                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Admin
+                                            User</span>
                                         <span
                                             class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">Admin</span>
                                     </span>
@@ -458,20 +463,21 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
-                
+
                                 <a class="dropdown-item" href="pages-profile.html"><i
                                         class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
                                         class="align-middle">Profile</span></a>
-                            
-                                <a class="dropdown-item" href="auth-logout-basic.html" data-key="t-analytics" 
-                                onclick="event.preventDefault();
+
+                                <a class="dropdown-item" href="auth-logout-basic.html" data-key="t-analytics"
+                                    onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();"><i
                                         class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
                                         class="align-middle" data-key="t-logout">Logout</span>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        class="d-none">
+                                        @csrf
+                                    </form>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -604,8 +610,12 @@
     <!-- App js -->
     <script src="{{ asset('js/app.js') }}"></script>
 
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
 
 </body>
-<!-- Mirrored from themesbrand.com/velzon/html/default/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:51:42 GMT -->
 
 </html>

@@ -14,7 +14,12 @@ class Teacher extends Model
      *
      * @return response()
      */
+    
     protected $fillable = [
         'name', 'email','phone'
     ];
+    public function thesis()
+    {
+        return $this->belongsTo(Thesis::class);
+    }
 }

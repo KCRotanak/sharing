@@ -51,8 +51,6 @@
                     <div class="browse_descript">
                         <span>
                             <p>Title: Bus Ticket Reservation System</p>
-                            <p>Teacher: Kimheng SOK</p>
-                            <p>Company: CODE CLANS</p>
                             <p>Author: Twinkle</p>
                             <p>Department: GIC</p>
                             <p>Year: 2022</p>
@@ -66,8 +64,6 @@
                     <div class="browse_descript">
                         <span>
                             <p>Title: Bus Ticket Reservation System</p>
-                            <p>Teacher: Kimheng SOK</p>
-                            <p>Company: CODE CLANS</p>
                             <p>Author: Twinkle</p>
                             <p>Department: GIC</p>
                             <p>Year: 2022</p>
@@ -81,8 +77,6 @@
                     <div class="browse_descript">
                         <span>
                             <p>Title: Bus Ticket Reservation System</p>
-                            <p>Teacher: Kimheng SOK</p>
-                            <p>Company: CODE CLANS</p>
                             <p>Author: Twinkle</p>
                             <p>Department: GIC</p>
                             <p>Year: 2022</p>
@@ -96,8 +90,6 @@
                     <div class="browse_descript">
                         <span>
                             <p>Title: Bus Ticket Reservation System</p>
-                            <p>Teacher: Kimheng SOK</p>
-                            <p>Company: CODE CLANS</p>
                             <p>Author: Twinkle</p>
                             <p>Department: GIC</p>
                             <p>Year: 2022</p>
@@ -111,8 +103,6 @@
                     <div class="browse_descript">
                         <span>
                             <p>Title: Bus Ticket Reservation System</p>
-                            <p>Teacher: Kimheng SOK</p>
-                            <p>Company: CODE CLANS</p>
                             <p>Author: Twinkle</p>
                             <p>Department: GIC</p>
                             <p>Year: 2022</p>
@@ -126,8 +116,6 @@
                     <div class="browse_descript">
                         <span>
                             <p>Title: Bus Ticket Reservation System</p>
-                            <p>Teacher: Kimheng SOK</p>
-                            <p>Company: CODE CLANS</p>
                             <p>Author: Twinkle</p>
                             <p>Department: GIC</p>
                             <p>Year: 2022</p>

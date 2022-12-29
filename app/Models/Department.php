@@ -11,5 +11,9 @@ class Department extends Model
     protected $fillable = [
         'name'
     ];
+    public function thesis()
+    {
+        return $this->belongsTo(Thesis::class);
+    }
 }
 

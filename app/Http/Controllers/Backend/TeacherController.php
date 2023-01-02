@@ -1,11 +1,12 @@
 <?php
-           
+
 namespace App\Http\Controllers\Backend;
+
 use App\Http\Controllers\Controller;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use DataTables;
-          
+
 class TeacherController extends Controller
 {
     /**
@@ -15,28 +16,28 @@ class TeacherController extends Controller
      */
     public function index(Request $request)
     {
-     
+
         if ($request->ajax()) {
-  
+
             $data = Teacher::latest()->get();
-  
+
             return Datatables::of($data)
-                    ->addIndexColumn()
-                    ->addColumn('action', function($row){
-   
-                           $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="edit btn btn-primary btn-sm editTeacher">Edit</a>';
-   
-                           $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteTeacher">Delete</a>';
-    
-                            return $btn;
-                    })
-                    ->rawColumns(['action'])
-                    ->make(true);
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+
+                    $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Edit" class="edit btn btn-primary btn-sm editTeacher">Edit</a>';
+
+                    $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteTeacher">Delete</a>';
+
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
         }
-        
+
         return view('backend.teachers.index');
     }
-       
+
     /**
      * Store a newly created resource in storage.
      *
@@ -45,16 +46,18 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        Teacher::updateOrCreate([
-                    'id' => $request->teacher_id
-                ],
-                [
-                    'name' => $request->name, 
-                    'email' => $request->email,
-                    'phone' => $request->phone
-                ]);        
-     
-        return response()->json(['success'=>'Teacher saved successfully.']);
+        Teacher::updateOrCreate(
+            [
+                'id' => $request->teacher_id
+            ],
+            [
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone
+            ]
+        );
+
+        return response()->json(['success' => 'Teacher saved successfully.']);
     }
     /**
      * Show the form for editing the specified resource.
@@ -67,7 +70,7 @@ class TeacherController extends Controller
         $teacher = Teacher::find($id);
         return response()->json($teacher);
     }
-    
+
     /**
      * Remove the specified resource from storage.
      *
@@ -77,7 +80,7 @@ class TeacherController extends Controller
     public function destroy($id)
     {
         Teacher::find($id)->delete();
-      
-        return response()->json(['success'=>'Teacher deleted successfully.']);
+
+        return response()->json(['success' => 'Teacher deleted successfully.']);
     }
 }

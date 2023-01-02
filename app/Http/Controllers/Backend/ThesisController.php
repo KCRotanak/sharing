@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Teacher;
+use App\Models\Department;
+use App\Models\Thesis;
 
 class ThesisController extends Controller
 {
@@ -13,7 +17,12 @@ class ThesisController extends Controller
      */
     public function index()
     {
-        return view('backend.thesis.index');
+        // $departments = Department::get();
+        // $teachers = Teacher::get();
+        // $data = Thesis::get();
+        return view('backend.thesis.index'
+        // compact('data', 'teachers', 'departments')
+    );
     }
 
     /**

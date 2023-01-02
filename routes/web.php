@@ -6,9 +6,6 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ThesisController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Controllers\Backend\DepartmentController;
-use App\Http\Controllers\ProductAjaxController;
-use App\Http\Controllers\TeacherController;
 
 /*
 |--------------------------------------------------------------------------

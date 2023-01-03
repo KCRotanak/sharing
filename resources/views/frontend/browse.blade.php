@@ -1,6 +1,6 @@
 @extends('layouts.userapp')
 @section('content')
-<div class="loader" style="margin-top: 0px">
+<div class="loader" style="margin-top: -20px">
     <div class="loader-content">
         <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
     </div>
@@ -32,20 +32,23 @@
                             <label for="year">Year</label>
                             <select id="selectYear" class="form-select">
                                 @for ($i = 2000; $i <= 2022; $i++)
+                                    <option selected> Select Year </option>
                                     <option class="">{{ $i }}</option>
                                 @endfor 
                             </select>
                         </div>
 
                         <div class="form-group" style="padding: 10px">
-                            <button type="button" class="btn btn-secondary" style="width: 200px">Filter</button>
+                            <button type="button" class="filter-button">Filter</button>
                         </div>
 
                     </div>
                 </form>
             </div>
-
-            <div class="col-8" style="height: 120vh;margin-left:50px; overflow: auto; -webkit-overflow-scrolling: touch">
+    
+        
+            <div class="col-8" style="margin-left:50px;">
+                @for ($i = 0; $i <= 6; $i++)
                 <div class="browse_card">
                     <img src="{{asset ('images/cover_card.png')}}" alt="">
                     <div class="browse_descript">
@@ -59,73 +62,7 @@
                     </div>
                     <button><i class='bx bx-show'></i> View</button>
                 </div>
-                <div class="browse_card">
-                    <img src="{{asset ('images/cover_card.png')}}" alt="">
-                    <div class="browse_descript">
-                        <span>
-                            <p>Title: Bus Ticket Reservation System</p>
-                            <p>Author: Twinkle</p>
-                            <p>Department: GIC</p>
-                            <p>Year: 2022</p>
-                            <p>Description: blah blah blah</p>
-                        </span>
-                    </div>
-                    <button><i class='bx bx-show'></i> View</button>
-                </div>
-                <div class="browse_card">
-                    <img src="{{asset ('images/cover_card.png')}}" alt="">
-                    <div class="browse_descript">
-                        <span>
-                            <p>Title: Bus Ticket Reservation System</p>
-                            <p>Author: Twinkle</p>
-                            <p>Department: GIC</p>
-                            <p>Year: 2022</p>
-                            <p>Description: blah blah blah</p>
-                        </span>
-                    </div>
-                    <button><i class='bx bx-show'></i> View</button>
-                </div>
-                <div class="browse_card">
-                    <img src="{{asset ('images/cover_card.png')}}" alt="">
-                    <div class="browse_descript">
-                        <span>
-                            <p>Title: Bus Ticket Reservation System</p>
-                            <p>Author: Twinkle</p>
-                            <p>Department: GIC</p>
-                            <p>Year: 2022</p>
-                            <p>Description: blah blah blah</p>
-                        </span>
-                    </div>
-                    <button><i class='bx bx-show'></i> View</button>
-                </div>
-                <div class="browse_card">
-                    <img src="{{asset ('images/cover_card.png')}}" alt="">
-                    <div class="browse_descript">
-                        <span>
-                            <p>Title: Bus Ticket Reservation System</p>
-                            <p>Author: Twinkle</p>
-                            <p>Department: GIC</p>
-                            <p>Year: 2022</p>
-                            <p>Description: blah blah blah</p>
-                        </span>
-                    </div>
-                    <button><i class='bx bx-show'></i> View</button>
-                </div>
-                <div class="browse_card">
-                    <img src="{{asset ('images/cover_card.png')}}" alt="">
-                    <div class="browse_descript">
-                        <span>
-                            <p>Title: Bus Ticket Reservation System</p>
-                            <p>Author: Twinkle</p>
-                            <p>Department: GIC</p>
-                            <p>Year: 2022</p>
-                            <p>Description: blah blah blah</p>
-                        </span>
-                    </div>
-                    <button><i class='bx bx-show'></i> View</button>
-                </div>
-            </div>
-
+                @endfor
         </div>
     </div>
 @endsection

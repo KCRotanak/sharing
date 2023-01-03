@@ -68,7 +68,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('departments', App\Http\Controllers\Backend\DepartmentController::class);
     
 
-    Route::get('/thesis',[BookController::class,'index']);
+    Route::get('/admin/thesis',[BookController::class,'index']);
     Route::get('/upload',[BookController::class,'upload']);
     Route::post('/uploadthesis',[BookController::class,'store']);
     Route::get('/show',[BookController::class,'show']);

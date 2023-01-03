@@ -1,35 +1,46 @@
 <?php
-
-
 namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Stroage;
 use App\Models\Book;
+use App\Models\Teacher;
+use App\Models\Department;
 class BookController extends Controller
 {
    public function index()
    {
     $thesis=Book::get();
-   	return view('backend.thesis.index',compact('thesis'));
+    $teachers=Teacher::get();
+    $departments=Department::get();
+   	return view('backend.thesis.index',compact('thesis','teachers','departments'));
    }
     public function upload()
    {
-   	return view('backend.thesis.upload');
+      $thesis=Book::get();
+      $teachers=Teacher::get();
+      $departments=Department::get();
+   	return view('backend.thesis.upload',compact('teachers','departments'));
    }
 
      public function store(Request $request)
    {
    		$thesis=new Book();
+
 			     $file=$request->file;
 	           $filename=time().'.'.$file->getClientOriginalExtension();
 		        $request->file->move('assets',$filename);
 		        $thesis->file=$filename;
-		        $thesis->name=$request->name;
-                // $thesis->name=$request->name;
-		        // $thesis->description=$request->description;
+		        $thesis->title=$request->title;
+              $thesis->author=$request->author;
+              $thesis->departmentID=$request->departmentID;
+              $thesis->teacherID=$request->teacherID;
+              $thesis->company=$request->company;
+              $thesis->year=$request->year;
+		        $thesis->description=$request->description;
 		        $thesis->save();
-		        return redirect()->back();
+
+              return redirect()->route('backend.thesis.index') ->with('success','Thesis deleted successfully');
 
    }
 //    public function show()
@@ -46,6 +57,12 @@ class BookController extends Controller
    	$thesis=Book::find($id);
    	return view('backend.thesis.view',compact('thesis'));
    } 
+   public function destroy(Book $thesis)
+   {
+       $thesis->delete();
+       return redirect()->route('backend.thesis.index')
+                       ->with('success','Message deleted successfully');
+   }
 }
 
 

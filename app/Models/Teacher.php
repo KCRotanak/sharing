@@ -20,6 +20,6 @@ class Teacher extends Model
     ];
     public function thesis()
     {
-        return $this->belongsTo(Thesis::class);
+        return $this->belongsTo(Book::class);
     }
 }

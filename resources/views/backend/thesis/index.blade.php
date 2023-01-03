@@ -54,24 +54,29 @@
                                         <thead class="table-light">
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Name</th>
+                                                <th>Title</th>
                                                 <th>Author</th>
+                                                <th>Teacher</th>
                                                 <th>Department</th>
+                                                <th>Company</th>
                                                 <th>Year</th>
+                                                <th>Description</th>
                                                 <th width="280px">Action</th>
                                             </tr>
                                         </thead>
 
                                         @foreach ($thesis as $thesis)
                                             <tr>
-                                                <td> </td>
-                                                <td>{{ $thesis->name }} </td>
-                                                <td>{{ $thesis->description }} </td>
-                                                <td> </td>
-                                                <td> </td>
+                                                <td>{{ $thesis->id }}</td>
+                                                <td>{{ $thesis->title }} </td>
+                                                <td>{{ $thesis->author }} </td>
+                                                <td>{{ $thesis->teacherID}} </td>
+                                                <td>{{ $thesis->departmentID}} </td>
+                                                <td>{{ $thesis->company}} </td>
+                                                <td>{{ $thesis->year}} </td>
+                                                <td>{{ $thesis->description}} </td>
                                                 <td>
-                                                    <form action=""
-                                                        method="POST">
+                                                    <form action="" method="POST">
                                                         <a class="btn btn-sm btn-secondary"
                                                         href="{{ url('/view', $thesis->id) }}">View</a>
                                                         <a class="btn btn-sm btn-primary"href="{{ url('/download', $thesis->file) }}"
@@ -93,23 +98,5 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-                    {{-- <table>
-                        <tr>
-                            <th>Name</th>
-                            <th>View</th>
-                            <th>Download</th>
-                        </tr>
-                        @foreach ($thesis as $thesis)
-                            <tr>
-                                <td>{{ $thesis->name }}</td>
-                                <td>{{ $thesis->description }}</td>
-                                <td><a href="{{ url('/view', $thesis->id) }}">View</a></td>
-                                <td><a href="{{ url('/download', $thesis->file) }}">Download</a></td>
-                            </tr>
-                        @endforeach
-                    </table>
-                    <a class="btn btn-success" href="{{ url('/upload') }}">Upload Page</a> --}}
-          
+        </div>      
 @endsection

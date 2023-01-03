@@ -55,7 +55,8 @@
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Title</th>
-                                                <th>Author</th>                                               
+                                                <th>Author</th>   
+                                                <th>Teacher</th>                                               
                                                 <th>Department</th>        
                                                 <th>Year</th>                                      
                                                 <th width="280px">Action</th>
@@ -67,7 +68,8 @@
                                                 <td>{{ $book->id }}</td>
                                                 <td>{{ $book->title }} </td>
                                                 <td>{{ $book->author }} </td>                                           
-                                                <td>{{ $book->departmentID}} </td>                                               
+                                                <td>{{ $book->teacher->name }} </td> 
+                                                <td>{{ $book->department->name}} </td>                                                
                                                 <td>{{ $book->year}} </td>                                           
                                                 <td>
                                                     <form action="{{ route('backend.books.destroy', $book->id) }}" method="POST">

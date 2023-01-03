@@ -60,7 +60,8 @@ class BookController extends Controller
    public function view($id)
    {
    	$book=Book::find($id);
-   	return view('backend.books.view',compact('books'));
+      
+   	return view('backend.books.view',compact('book'));
    } 
 
    public function destroy($id)

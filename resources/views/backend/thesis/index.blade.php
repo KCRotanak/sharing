@@ -1,6 +1,6 @@
 @extends('layouts.adminapp')
 @section('content')
-    <div id="layout-wrapper">
+    {{-- <div id="layout-wrapper">
         <div class="main-content">
             <div class="page-content">
                 <div class="container-fluid">
@@ -246,5 +246,30 @@
                     </div>
                 </div>
             </div>
+        </div> --}}
+    <div id="layout-wrapper">
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>View</th>
+                            <th>Download</th>
+                        </tr>
+                        @foreach ($thesis as $thesis)
+                            <tr>
+                                <td>{{ $thesis->name }}</td>
+                                <td>{{ $thesis->description }}</td>
+                                <td><a href="{{ url('/view', $thesis->id) }}">View</a></td>
+                                <td><a href="{{ url('/download', $thesis->file) }}">Download</a></td>
+                            </tr>
+                        @endforeach
+                    </table>
+                    <a class="btn btn-success" href="{{ url('/upload') }}">Upload Page</a>
+                </div>
+            </div>
         </div>
-    @endsection
+    </div>
+@endsection

@@ -1,10 +1,24 @@
 @extends('layouts.userapp')
 @section('content')
+{{-- <div class="loader" style="margin-top: 0px">
+    <div class="loader-content">
+        <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
+    </div>
+</div> --}}
     <div class="ads_browse">
+        <div class="loader" style="margin-top: 0px">
+            <div class="loader-content">
+                <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
+            </div>
+        </div>
         <div class="ads_text">
             <p style="font-size: 50px">FIND GOOD THESIS</p>
             <p style="font-size: 25px; margin-top: -20px">Browse your information to complete your thesis.</p>
-            <button>Browse more books</button>
+            
+            <a href="/browse">
+                <button>Browse more books</button>
+            </a>
+            
         </div>
             <img src="{{ asset('images/books_below_nav.png') }}" alt="">
     </div>

@@ -23,22 +23,30 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0">Data Table</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div id="customerList">
-                                        <div class="row g-4 mb-3">
-                                            <div class="col-sm-auto">
-                                                <div>
-                                                    <a class="btn btn-success" href="javascript:void(0)"
-                                                        id="createNewDepartment"><i
-                                                            class="ri-add-line align-bottom me-1"></i> Create
-                                                        New Department</a>
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <h4 class="card-title mt-2">Data Table</h4>
+                                        </div>
+
+                                        <div class="col" style="margin-left: 35px">
+                                            <div id="customerList">
+                                                <div class="row">
+                                                    <div class="col-sm-auto">
+                                                        <div>
+                                                            <a class="btn btn-success" href="javascript:void(0)"
+                                                                id="createNewDepartment"><i
+                                                                    class="ri-add-line align-bottom me-1"></i> Create
+                                                                New Department</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <table class="table table-bordered data-table">
+                                </div>
+                                
+                                <div class="card-body">
+                                    <table class="table table-bordered data-table" id="myTable">
                                         <thead class="table-light">
                                             <tr >
                                                 <th class="sort">ID</th>
@@ -68,7 +76,7 @@
                                                                 maxlength="50" required="">
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-offset-2 col-sm-10">
+                                                    <div class="col-sm-offset-2 col-sm-10" style="margin-top: 20px">
                                                         <button type="submit" class="btn btn-primary" id="saveBtn"
                                                             value="create">Save
                                                         </button>
@@ -165,15 +173,16 @@
                 e.preventDefault();
                 $(this).html('Save');
 
-                $.ajax({
-                    data: $('#departmentForm').serialize(),
-                    url: "{{ route('departments.store') }}",
-                    type: "POST",
-                    dataType: 'json',
-                    success: function(data) {
-                        $('#departmentForm').trigger("reset");
-                        $('#ajaxModel').modal('hide');
-                        table.draw();
+                        $.ajax({
+                            data: $('#departmentForm').serialize(),
+                            url: "{{ route('departments.store') }}",
+                            type: "POST",
+                            dataType: 'json',
+                            success: function(data) {
+
+                                $('#departmentForm').trigger("reset");
+                                $('#ajaxModel').modal('hide');
+                                table.draw();
 
                     },
                     error: function(data) {

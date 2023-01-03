@@ -23,22 +23,27 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0">Data Table</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div id="customerList">
-                                        <div class="row g-4 mb-3">
-                                            <div class="col-sm-auto">
-                                                <div>
-                                                    <a class="btn btn-success" href="javascript:void(0)"
-                                                        id="createNewTeacher"><i class="ri-add-line align-bottom me-1"></i>
-                                                        Create
-                                                        Teacher's
-                                                        detail</a>
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <h4 class="card-title mt-2">Data Table</h4>
+                                        </div>
+
+                                        <div class="col" style="margin-left: 60px">
+                                            <div id="customerList">
+                                                <div class="col-sm-auto">
+                                                    <div>
+                                                        <a class="btn btn-success" href="javascript:void(0)"
+                                                            id="createNewTeacher"><i
+                                                                class="ri-add-line align-bottom me-1"></i>
+                                                            Create New Teacher</a>
+                                                    </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="card-body">
 
                                     <table class="table table-bordered data-table">
                                         <thead class="table-light">
@@ -58,12 +63,12 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="modal-title" id="modelHeading"></h4>
+                                                <h4 class="modal-title" id="modelHeading" style="margin-left: 10px"></h4>
                                             </div>
                                             <div class="modal-body">
                                                 <form id="teacherForm" name="teacherForm" class="form-horizontal">
                                                     <input type="hidden" name="teacher_id" id="teacher_id">
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="padding: 10px;">
                                                         <label for="name" class="col-sm-2 control-label">Name</label>
                                                         <div class="col-sm-12">
                                                             <input type="text" class="form-control" id="name"
@@ -71,7 +76,7 @@
                                                                 maxlength="50" required="">
                                                         </div>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="padding: 10px;">
                                                         <label for="email" class="col-sm-2 control-label">Email</label>
                                                         <div class="col-sm-12">
                                                             <input type="text" class="form-control" id="email"
@@ -79,8 +84,8 @@
                                                                 maxlength="50" required="">
                                                         </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="phone" class="col-sm-2 control-label">Phone
+                                                    <div class="form-group" style="padding: 10px;">
+                                                        <label for="phone" class="col-sm-4 control-label">Phone
                                                             Number</label>
                                                         <div class="col-sm-12">
                                                             <input type="text" class="form-control" id="phone"
@@ -88,7 +93,7 @@
                                                                 maxlength="50" required="">
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-offset-2 col-sm-10">
+                                                    <div class="col-sm-offset-2 col-lg-10" style="padding: 10px;">
                                                         <button type="submit" class="btn btn-primary" id="saveBtn"
                                                             value="create">Save
                                                         </button>
@@ -160,7 +165,7 @@
                 $('#saveBtn').val("create-teacher");
                 $('#teacher_id').val('');
                 $('#teacherForm').trigger("reset");
-                $('#modelHeading').html("Create Teahcher's detail");
+                $('#modelHeading').html("Enter teacher's information");
                 $('#ajaxModel').modal('show');
             });
 

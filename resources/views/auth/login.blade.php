@@ -8,7 +8,7 @@
                     <div class="card shadow-sm">
                         <span class="shape"></span>
                         <div class="card-header text-center bg-transparent">
-                            <i class="fas fa-user-circle"></i>
+                            <i class="fas fa-user-circle" style="color: #1A374D"></i>
                             <h2>Admin Login</h2>
                         </div>
                         <div class="card-body py-4">

@@ -522,15 +522,15 @@
                                 <i class="ri-dashboard-2-line"></i><span data-key="t-layouts">Dashboard</span>
                             </a>
                         </li> <!-- end Dashboard Menu -->
-                        <li class="menu-title"><span data-key="t-menu">Page</span></li>
+                        <li class="menu-title"><span data-key="t-menu">Pages</span></li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" data-key="t-analytics" href="/departments">
-                                <i class="ri-apps-2-line"></i><span data-key="t-layouts">Department</span>
+                                <i class="ri-community-line"></i><span data-key="t-layouts">Department</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" data-key="t-analytics" href="/teachers">
-                                <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Teacher</span>
+                                <i class="ri-account-circle-line"></i> <span data-key="t-layouts">Teacher</span>
                             </a>
                         </li> <!-- end Dashboard Menu -->
                         <li class="nav-item">
@@ -538,15 +538,15 @@
                                 <i class="ri-pages-line"></i> <span data-key="t-authentication">Thesis</span>
                             </a>
                         </li>
-                        <li class="menu-title"><span data-key="t-menu">About</span></li>
-                        <li class="nav-item">
+                        <li class="menu-title"><span data-key="t-menu">Contact</span></li>
+                        {{-- <li class="nav-item">
                             <a class="nav-link menu-link" data-key="t-analytics" href="/admin/user">
                                 <i class="ri-account-circle-line"></i><span data-key="t-pages">User</span>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link menu-link" data-key="t-analytics" href="/admin/contact">
-                                <i class="ri-message-line"></i> <span data-key="t-landing">Contact Us</span>
+                                <i class="ri-message-line"></i> <span data-key="t-landing">Messages</span>
                             </a>
                         </li>
                         {{-- <li class="nav-item">
@@ -613,6 +613,46 @@
     <script>
         $(document).ready(function() {
             $('#myTable').DataTable();
+        });
+    </script>
+
+    {{-- Sweet Alert --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="text/javascript">
+        $('.show-alert-delete-box').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((willDelete) => {
+                if (willDelete.isConfirmed) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your record has been deleted.',
+                        'success'
+                    )
+
+                    form.submit();
+
+                }
+            })
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // show the alert
+            $(".alert").fadeTo(2200, 500).slideUp(500, function() {
+                $(".alert").alert('close');
+            });
         });
     </script>
 

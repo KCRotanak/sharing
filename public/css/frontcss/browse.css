@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
 }
+
 .browse_card {
     display: flex;
     background-color: #ffffff;
@@ -9,8 +10,8 @@
     border-radius: 7px;
     height: 250px;
     margin-top: 20px;
-
 }
+
 .browse_card img {
     margin-left: 30px;
     width: 160px;
@@ -18,16 +19,18 @@
     margin-top: auto;
     margin-bottom: auto;
 }
-.browse_card .browse_descript{
+
+.browse_card .browse_descript {
     font-size: 18px;
     font-weight: 500;
     line-height: 1em;
     padding: 45px 30px;
 }
+
 .browse_card button {
     width: 80px;
     height: 80px;
-    background: #52616B;
+    background: #1A374D;
     border-radius: 15px;
     border-width: 0;
     color: white;
@@ -38,15 +41,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
-.browse_card button:hover {
 
-    background: #344755;
+.browse_card button:hover {
+    background: #406882;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 }
 
 .browse_card .bx-show {
     font-size: 30px;
+}
+
+.filter-button {
+    width: 200px;
+    height: 40px;
+    background: #1A374D;
+    color: white;
+    border-radius: 8px;
+    border-color: white;
 }

@@ -204,7 +204,7 @@
                             </a>
                         </li> <!-- end Dashboard Menu -->
                         <li class="nav-item">
-                            <a class="nav-link menu-link" data-key="t-analytics" href="/admin/thesis">
+                            <a class="nav-link menu-link" data-key="t-analytics" href="/admin/books">
                                 <i class="ri-pages-line"></i> <span data-key="t-authentication">Thesis</span>
                             </a>
                         </li>

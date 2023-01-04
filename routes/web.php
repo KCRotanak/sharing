@@ -70,12 +70,14 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('/admin/departments', App\Http\Controllers\Backend\DepartmentController::class);
     
 
-    Route::get('/admin/thesis',[BookController::class,'index']);
-    Route::get('/admin/upload',[BookController::class,'upload']);
-    Route::post('/admin/uploadthesis',[BookController::class,'store']);
-    Route::get('/admin/show',[BookController::class,'show']);
-    Route::get('/admin/download/{file}',[BookController::class,'download']);
-    Route::get('/admin/view/{is}',[BookController::class,'view']);
+    Route::get('/admin/books',[BookController::class,'index'])->name('backend.books.index');
+    Route::get('/admin/book/upload',[BookController::class,'upload'])->name('backend.books.upload');
+    Route::post('/uploadbook',[BookController::class,'store']);
+    Route::get('/show',[BookController::class,'show']);
+    Route::get('/download/{file}',[BookController::class,'download'])->name('backend.book.download');
+    Route::get('/view/{is}',[BookController::class,'view']);
+
+    Route::delete('delete/book/{id}', [BookController::class, 'destroy'])->name('backend.books.destroy');
 });
   
 

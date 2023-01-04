@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,8 +14,16 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('file')->nullable();
+            $table->string('title');
+            $table->string('author');
+            $table->unsignedBigInteger('departmentID');
+            $table->unsignedBigInteger('teacherID');
+            $table->foreign('departmentID')->references('id')->on('departments');
+            $table->foreign('teacherID')->references('id')->on('teachers');
+            $table->string('company');
+            $table->string('year');
+            $table->string('description');
+            $table->string('file');
             $table->timestamps();
         });
     }

@@ -5,11 +5,12 @@
         <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
     </div>
 </div>
-    <div class="container" style="margin: 100px">
+    <div class="container" style="margin: 125px">
         <div class="row" style="width: 1700px">
             <div class="col-3">
+                <h3>Search Filter</h3>
                 <form action="">
-                    <div class="card" style="padding: 20px; margin-top: 20px">
+                    <div class="card" style="padding: 20px; margin-top: 20px; border-radius: 15px;">
                         <div class="form-group col-12 " style="padding: 10px">
                             <label for="department">Department</label>
                             <select class="form-select">
@@ -48,6 +49,7 @@
     
         
             <div class="col-8" style="margin-left:50px;">
+                <h3>Books</h3>
                 @for ($i = 0; $i <= 6; $i++)
                 <div class="browse_card">
                     <img src="{{asset ('images/cover_card.png')}}" alt="">

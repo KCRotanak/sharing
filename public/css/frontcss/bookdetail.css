@@ -49,3 +49,36 @@
     margin-top: 8.5em;
     margin-left: auto;
 }
+.detail .bookdetail h2{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 171.02%;
+    left:570px;
+   
+}
+.detail .bookdetail .author{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 171.02%;
+    top:200px;
+    left:575px;
+    
+   
+}
+.detail .bookdetail .bookID{
+    position: absolute;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 144.52%;
+    /* or 23px */
+    color: #000000;
+}

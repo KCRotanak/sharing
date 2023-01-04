@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Frontend;
+
 use App\Http\Controllers\Controller;
+use App\Models\Frontend\ContactUs;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class ContactUsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +16,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts=Contact::get();
-        
-        return view('backend.contacts.index', compact('contacts'));
+        //
     }
 
     /**
@@ -26,7 +26,8 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        return view('frontend.contact');
+
     }
 
     /**
@@ -37,27 +38,36 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            // 'name' => 'required',
+            'email'=>'required',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+    
+        Contact::create($request->all());
+
+        return redirect()->route('contactus.create')->with('success','Message sent successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Frontend\ContactUs  $contactUs
      * @return \Illuminate\Http\Response
      */
-    public function show(Contact $contact)
+    public function show(ContactUs $contactUs)
     {
-        return view('backend.contacts.show',compact('contact'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Frontend\ContactUs  $contactUs
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(ContactUs $contactUs)
     {
         //
     }
@@ -66,10 +76,10 @@ class ContactController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Frontend\ContactUs  $contactUs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, ContactUs $contactUs)
     {
         //
     }
@@ -77,14 +87,11 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Frontend\ContactUs  $contactUs
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy(ContactUs $contactUs)
     {
-        $contact->delete();
-    
-        return redirect()->route('contact.index')
-                        ->with('success','Message deleted successfully');
+        //
     }
 }

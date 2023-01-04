@@ -20,7 +20,7 @@ a {
     ======================================================*/
 
 #navbar {
-    background: #52616B;
+    background: #1A374D;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     color: rgb(0, 0, 0);
     position: fixed;
@@ -63,7 +63,7 @@ a {
 #navbar li a {
     color: rgb(255, 255, 255);
     /* display: block; */
-    font-size: 24px;
+    font-size: 20px;
     /* font-weight: bold; */
     height: 30px;
     letter-spacing: 1px;
@@ -117,7 +117,7 @@ a {
     outline: none;
     border-radius: 25px;
     transition: all .5s ease-in-out;
-    background-color: #52616B;
+    background-color: #1A374D;
     padding-right: 40px;
     color: #fff;
 }
@@ -165,7 +165,7 @@ a {
 /* /////////////////  FOOTER  //////////////////////// */
 
 .footer {
-    background: #52616B;
+    background: #1A374D;
     color: white;
 }
 
@@ -259,7 +259,7 @@ a {
     height: 47px;
     position: absolute;
     color: white;
-    background: #52616B;
+    background: #1A374D;
     border-radius: 10px;
     border-width: 0px !important;
     font-size: 18px;
@@ -268,8 +268,8 @@ a {
 }
 
 .page-wrapper .ads_browse .ads_text button:hover {
-    background-color: rgb(143, 153, 160);
-    color: black;
+    background-color: #406882;
+    color: rgb(255, 255, 255);
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 }
@@ -393,21 +393,21 @@ a {
     height: 34px;
     font-size: 18px;
     color: white;
-    background-color: #52616B;
+    background-color: #1A374D;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     cursor: pointer;
 }
 
 .latest_card .image-content .card_detail button:hover {
-    color: #000;
-    background-color: #C9D6DF;
+    color: rgb(255, 255, 255);
+    background-color: #406882;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 }
 
 .latest_card .swiper-navBtn {
-    color: #52616B;
+    color: #1A374D;
     transition: color 0.5s ease;
 }
 
@@ -431,7 +431,7 @@ a {
 }
 
 .latest_card .swiper-pagination-bullet {
-    background-color: #52616B;
+    background-color: #1A374D;
     opacity: 1;
 }
 
@@ -479,7 +479,7 @@ a {
     margin-top: 20px;
     width: 219px;
     height: 47px;
-    background: #52616B;
+    background: #1A374D;
     border-radius: 15px;
     color: white;
     transition: all 0.5s ease;
@@ -490,8 +490,8 @@ a {
 }
 
 .page-wrapper .recommand_book .suggestion button:hover {
-    background-color: rgb(167, 167, 167);
-    color: black;
+    color: rgb(255, 255, 255);
+    background-color: #406882;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 }

@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="form-group" style="padding: 10px">
-                            <button type="button" class="btn btn-secondary" style="width: 200px">Filter</button>
+                            <button type="button" class="filter-button">Filter</button>
                         </div>
 
                     </div>

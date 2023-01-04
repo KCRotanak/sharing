@@ -31,8 +31,8 @@
                         <div class="form-group col-12 " style="padding: 10px">
                             <label for="year">Year</label>
                             <select id="selectYear" class="form-select">
-                                @for ($i = 2000; $i <= 2022; $i++)
-                                    <option selected> Select Year </option>
+                                <option selected> Select Year </option>
+                                @for ($i = 2000; $i <= 2022; $i++)                            
                                     <option class="">{{ $i }}</option>
                                 @endfor 
                             </select>

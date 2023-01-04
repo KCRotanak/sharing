@@ -8,6 +8,8 @@ use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
 
+use App\Http\Controllers\Frontend\ContactUsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,16 +66,16 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     
     Route::resource('/admin/contact', ContactController::class);
 
-    Route::resource('teachers', App\Http\Controllers\Backend\TeacherController::class);
-    Route::resource('departments', App\Http\Controllers\Backend\DepartmentController::class);
+    Route::resource('/admin/teachers', App\Http\Controllers\Backend\TeacherController::class);
+    Route::resource('/admin/departments', App\Http\Controllers\Backend\DepartmentController::class);
     
 
-    Route::get('/thesis',[BookController::class,'index']);
-    Route::get('/upload',[BookController::class,'upload']);
-    Route::post('/uploadthesis',[BookController::class,'store']);
-    Route::get('/show',[BookController::class,'show']);
-    Route::get('/download/{file}',[BookController::class,'download']);
-    Route::get('/view/{is}',[BookController::class,'view']);
+    Route::get('/admin/thesis',[BookController::class,'index']);
+    Route::get('/admin/upload',[BookController::class,'upload']);
+    Route::post('/admin/uploadthesis',[BookController::class,'store']);
+    Route::get('/admin/show',[BookController::class,'show']);
+    Route::get('/admin/download/{file}',[BookController::class,'download']);
+    Route::get('/admin/view/{is}',[BookController::class,'view']);
 });
   
 

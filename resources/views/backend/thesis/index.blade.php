@@ -33,7 +33,7 @@
                                                 <div class="row">
                                                     <div class="col-sm-auto">
                                                         <div>
-                                                            <a class="btn btn-success" href="{{ url('/upload') }}"><i
+                                                            <a class="btn btn-success" href="{{ url('/admin/upload') }}"><i
                                                                     class="ri-add-line align-bottom me-1"></i> Create New Thesis</a>
                                                         </div>
                                                     </div>
@@ -74,7 +74,7 @@
                                                         method="POST">
                                                         <a class="btn btn-sm btn-secondary"
                                                         href="{{ url('/view', $thesis->id) }}">View</a>
-                                                        <a class="btn btn-sm btn-primary"href="{{ url('/download', $thesis->file) }}"
+                                                        <a class="btn btn-sm btn-primary"href="{{ url('/admin/download', $thesis->file) }}"
                                                            >Download</a>
                                                         @csrf
                                                         @method('DELETE')

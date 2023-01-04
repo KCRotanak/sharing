@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Thesis extends Model
+class Book extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -16,7 +16,7 @@ class Thesis extends Model
         'company',
         'year',
         'description',
-        'pdf'
+        'file'
     ];
     public function teacher()
     {

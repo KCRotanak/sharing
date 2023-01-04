@@ -64,7 +64,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // Route::resource('/admin/thesis', ThesisController::class);
     Route::resource('/admin/user', UserController::class);
     
-    Route::resource('/admin/contact', ContactController::class);
+    Route::resource('/admin/contacts', ContactController::class);
 
     Route::resource('/admin/teachers', App\Http\Controllers\Backend\TeacherController::class);
     Route::resource('/admin/departments', App\Http\Controllers\Backend\DepartmentController::class);

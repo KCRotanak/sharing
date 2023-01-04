@@ -195,7 +195,7 @@
                         <li class="menu-title"><span data-key="t-menu">Pages</span></li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" data-key="t-analytics" href="/admin/departments">
-                                <i class="ri-community-line"></i><span data-key="t-layouts">Department</span>
+                                <i class="bx bx-buildings"></i><span data-key="t-layouts">Department</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -205,7 +205,7 @@
                         </li> <!-- end Dashboard Menu -->
                         <li class="nav-item">
                             <a class="nav-link menu-link" data-key="t-analytics" href="/admin/books">
-                                <i class="ri-pages-line"></i> <span data-key="t-authentication">Thesis</span>
+                                <i class="bx bx-spreadsheet"></i> <span data-key="t-authentication">Thesis</span>
                             </a>
                         </li>
                         <li class="menu-title"><span data-key="t-menu">Contact</span></li>
@@ -215,7 +215,7 @@
                             </a>
                         </li> --}}
                         <li class="nav-item">
-                            <a class="nav-link menu-link" data-key="t-analytics" href="/admin/contact">
+                            <a class="nav-link menu-link" data-key="t-analytics" href="/admin/contacts">
                                 <i class="ri-message-line"></i> <span data-key="t-landing">Message</span>
                             </a>
                         </li>

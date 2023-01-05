@@ -72,7 +72,7 @@
 
                 <li><a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a></li>
                 <li><a href="{{ asset('/browse') }}" class="{{ $currentRouteName === 'browse' ? 'active' : '' }} one">Browse</a></li>
-                <li><a href="{{ asset('/contact') }}"  class="{{ $currentRouteName === 'contact' ? 'active' : '' }} one">Contact</a></li>
+                <li><a href="{{ asset('/contact') }}"  class="{{ $currentRouteName === 'contactus.create' ? 'active' : '' }} one">Contact Us</a></li>
                 <li>
                     <div class="search-box">
                         <button class="btn-search"><i class='bx bx-search'></i></button>

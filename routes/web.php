@@ -3,15 +3,15 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\UserController;
-use App\Http\Controllers\Backend\ThesisController;
 use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Controllers\Frontend\ContactUsController;
 
 //frond end
 use App\Http\Controllers\Frontend\BrowseController;
 use App\Http\Controllers\Frontend\HomeController;
+
+use App\Http\Controllers\Frontend\ContactUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,24 +69,23 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin', [DashboardController::class, 'index'])->name('backend.dashboard.dashboard');
     // Route::get('/admin/dashboard', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('admin.home');
     Route::resource('/admin/dashboard', DashboardController::class);   
-    // Route::resource('/admin/thesis', ThesisController::class);
+
     Route::resource('/admin/user', UserController::class);
     
-    Route::resource('/admin/contact', ContactController::class);
+    Route::resource('/admin/contacts', ContactController::class);
 
-    Route::resource('teachers', App\Http\Controllers\Backend\TeacherController::class);
-    Route::resource('departments', App\Http\Controllers\Backend\DepartmentController::class);
+    Route::resource('/admin/teachers', App\Http\Controllers\Backend\TeacherController::class);
+    Route::resource('/admin/departments', App\Http\Controllers\Backend\DepartmentController::class);
     
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-    Route::get('/admin/thesis',[BookController::class,'index'])->name('backend.thesis.index');
-    Route::get('/upload',[BookController::class,'upload']);
-    Route::post('/uploadthesis',[BookController::class,'store']);
+    Route::get('/admin/books',[BookController::class,'index'])->name('backend.books.index');
+    Route::get('/admin/book/upload',[BookController::class,'upload'])->name('backend.books.upload');
+    Route::post('/uploadbook',[BookController::class,'store']);
     Route::get('/show',[BookController::class,'show']);
-    Route::get('/download/{file}',[BookController::class,'download']);
+    Route::get('/download/{file}',[BookController::class,'download'])->name('backend.book.download');
     Route::get('/view/{is}',[BookController::class,'view']);
-    Route::delete('/admin/thesis/delete', [BookController::class, 'destroy'])->name('backend.thesis.destroy');
+
+    Route::delete('delete/book/{id}', [BookController::class, 'destroy'])->name('backend.books.destroy');
 });
   
 

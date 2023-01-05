@@ -5,11 +5,12 @@
         <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
     </div>
 </div>
-    <div class="container" style="margin: 100px">
+    <div class="container" style="margin: 125px">
         <div class="row" style="width: 1700px">
             <div class="col-3">
+                <h3>Search Filter</h3>
                 <form action="">
-                    <div class="card" style="padding: 20px; margin-top: 20px">
+                    <div class="card" style="padding: 20px; margin-top: 20px; border-radius: 15px;">
                         <div class="form-group col-12 " style="padding: 10px">
                             <label for="department">Department</label>
                             <select class="form-select">
@@ -31,8 +32,8 @@
                         <div class="form-group col-12 " style="padding: 10px">
                             <label for="year">Year</label>
                             <select id="selectYear" class="form-select">
-                                @for ($i = 2000; $i <= 2022; $i++)
-                                    <option selected> Select Year </option>
+                                <option selected> Select Year </option>
+                                @for ($i = 2000; $i <= 2022; $i++)                            
                                     <option class="">{{ $i }}</option>
                                 @endfor 
                             </select>
@@ -48,8 +49,8 @@
           
         
             <div class="col-8" style="margin-left:50px;">
-                @foreach ($thesis as $thesis)
-               
+                <h3>Books</h3>
+                @foreach($thesis as $key => $thesis)
                 <div class="browse_card">
                     <img src="{{ asset('images/cover_card.png') }}" alt="">
                     <div class="browse_descript">

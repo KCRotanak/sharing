@@ -8,67 +8,69 @@ use App\Models\Teacher;
 use App\Models\Department;
 class BookController extends Controller
 {
+
    public function index()
    {
-    $thesis=Book::get();
+    $books=Book::get();
     $teachers=Teacher::get();
     $departments=Department::get();
-   	return view('backend.thesis.index',compact('thesis','teachers','departments'));
-   }
-    public function upload()
-   {
-      $thesis=Book::get();
-      $teachers=Teacher::get();
-      $departments=Department::get();
-   	return view('backend.thesis.upload',compact('teachers','departments'));
+   	return view('backend.books.index',compact('books','teachers','departments'));
    }
 
-     public function store(Request $request)
+   public function upload()
    {
-   		$thesis=new Book();
+      $books=Book::get();
+      $teachers=Teacher::get();
+      $departments=Department::get();
+
+   	return view('backend.books.upload',compact('teachers','departments'));
+   }
+
+   public function store(Request $request)
+   {
+   		$book=new Book();
 
 			     $file=$request->file;
 	           $filename=time().'.'.$file->getClientOriginalExtension();
 		        $request->file->move('assets',$filename);
-		        $thesis->file=$filename;
-		        $thesis->title=$request->title;
-              $thesis->author=$request->author;
-              $thesis->departmentID=$request->departmentID;
-              $thesis->teacherID=$request->teacherID;
-              $thesis->company=$request->company;
-              $thesis->year=$request->year;
-		        $thesis->description=$request->description;
-		        $thesis->save();
+		        $book->file=$filename;
+		        $book->title=$request->title;
+              $book->author=$request->author;
+              $book->departmentID=$request->departmentID;
+              $book->teacherID=$request->teacherID;
+              $book->company=$request->company;
+              $book->year=$request->year;
+		        $book->description=$request->description;
+		        $book->save();
 
-              return redirect()->route('backend.thesis.index') ->with('success','Thesis deleted successfully');
+              return redirect()->route('backend.books.index') ->with('success','Book created successfully');
 
    }
 //    public function show()
 //    {
-//    	$thesis=Thesis::all();
-//    	return view('backend.thesis.show',compact('thesis'));
+//    	$book=book::all();
+//    	return view('backend.book.show',compact('book'));
 //    }
-      public function download(Request $request,$file)
+
+   public function download(Request $request,$file)
    {
     return response()->download(public_path('assets/'.$file));
    }
 
    public function view($id)
    {
-   	$thesis=Book::find($id);
-   	return view('backend.thesis.view',compact('thesis'));
-   }
+   	$book=Book::find($id);
+      
+   	return view('backend.books.view',compact('book'));
+   } 
 
    public function destroy($id)
    {
+      $book=Book::findOrFail($id);
 
-      $thesis=Book::findOrFail($id);
-      dd($thesis->id);
-
-      // Book::where('id', $id)->delete();
-      // $thesis->delete();
-      return redirect()->route('backend.thesis.index')
-                       ->with('success','Message deleted successfully');
+      $book->delete();
+      return redirect()->route('backend.books.index')
+                       ->with('success','Books deleted successfully');
    }
 }
 

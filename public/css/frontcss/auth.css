@@ -43,11 +43,11 @@
 
 .login-form .card .card-body input:focus,
 .login-form .card .card-body textarea:focus {
-    border: 1px solid #52616B;
+    border: 1px solid #1A374D;
 }
 
 .login-form .card .card-body .btn {
-    background: #52616B;
+    background: #1A374D;
     color: #fff;
     height: 47px;
     width: 100%;
@@ -56,7 +56,7 @@
 }
 
 .login-form .card .card-body .btn:hover {
-    background: #555;
+    background: #406882;
     color: #fff;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .input-icon2 {
-    color: #b5b5b5;
+    color: #1A374D;
     font-size: 18px;
     text-align: center;
     line-height: 38px;

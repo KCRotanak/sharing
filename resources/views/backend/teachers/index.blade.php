@@ -49,7 +49,7 @@
                                         <thead class="table-light">
                                             <tr>
 
-                                                <th class="sort">No</th>
+                                                <th class="sort">ID</th>
                                                 <th class="sort">Name</th>
                                                 <th class="sort">Email</th>
                                                 <th class="sort">Phone Number</th>
@@ -133,8 +133,8 @@
                 serverSide: true,
                 ajax: "{{ route('teachers.index') }}",
                 columns: [{
-                        data: 'DT_RowIndex',
-                        name: 'DT_RowIndex'
+                        data: 'id',
+                        name: 'id'
                     },
                     {
                         data: 'name',

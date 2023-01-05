@@ -48,8 +48,8 @@
                                 <div class="card-body">
                                     <table class="table table-bordered data-table" id="myTable">
                                         <thead class="table-light">
-                                            <tr>
-                                                <th class="sort">No</th>
+                                            <tr >
+                                                <th class="sort">ID</th>
                                                 <th class="sort">Name</th>
                                                 {{-- <th>Details</th> --}}
                                                 <th width="280px">Action</th>
@@ -173,16 +173,16 @@
                 e.preventDefault();
                 $(this).html('Save');
 
-                $.ajax({
-                    data: $('#departmentForm').serialize(),
-                    url: "{{ route('departments.store') }}",
-                    type: "POST",
-                    dataType: 'json',
-                    success: function(data) {
+                        $.ajax({
+                            data: $('#departmentForm').serialize(),
+                            url: "{{ route('departments.store') }}",
+                            type: "POST",
+                            dataType: 'json',
+                            success: function(data) {
 
-                        $('#departmentForm').trigger("reset");
-                        $('#ajaxModel').modal('hide');
-                        table.draw();
+                                $('#departmentForm').trigger("reset");
+                                $('#ajaxModel').modal('hide');
+                                table.draw();
 
                     },
                     error: function(data) {

@@ -15,7 +15,7 @@
     </div>
     <div class="bookdetail">
         <span style="width: 950px">
-            <h3>The Flactuation</h3>
+            <h3>{{$book->title}}</h3>
             <p style="text-decoration: underline; font-weight: bold">Book Details</p>
             <b>Author:</b>
             <p>{{$book->author}}</p>

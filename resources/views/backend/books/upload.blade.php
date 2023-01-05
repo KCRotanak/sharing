@@ -13,7 +13,7 @@
                                 <div class="card-body">
                                     <div class="row g-3">
 
-                                        <form action="{{ url('uploadbook') }}" method="post" enctype="multipart/form-data">
+                                        <form action="{{ url('uploadbook') }}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row mb-3">
                                                 <div class="col-lg-3">

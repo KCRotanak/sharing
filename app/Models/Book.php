@@ -9,7 +9,21 @@ class Book extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
+        'title',
+        'author', 
+        'departmentID',
+        'teacherID',
+        'company',
+        'year',
+        'description',
         'file'
     ];
+    public function teacher()
+    {
+        return $this->belongsTo(Teacher::class,'teacherID');
+    }
+    public function department()
+    {
+        return $this->belongsTo(Department::class,'departmentID');
+    }
 }

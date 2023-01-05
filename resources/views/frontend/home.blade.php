@@ -20,7 +20,7 @@
             </a>
             
         </div>
-            <img src="{{ asset('images/books_below_nav.png') }}" alt="">
+            <img src="{{ asset('images/book_background.jpg') }}" alt="">
     </div>
     <div class="latest_book">
             <p class="category_latest">Latest books</p>

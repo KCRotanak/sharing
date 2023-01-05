@@ -237,20 +237,21 @@ a {
 }
 
 
-/* ads */
+/* //////////////// ads ////////////////// */
 
 .page-wrapper .ads_browse {
     width: 100%;
-    height: 415px;
-    background: #C9D6DF;
+    height: 880px;
+    background-color: #F0F5F9;
     display: flex;
     /* justify-content: flex-end; */
     margin-top: 5em;
 }
 
 .page-wrapper .ads_browse .ads_text {
-    margin-left: 350px;
-    margin-top: 7em;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 18em;
 }
 
 .page-wrapper .ads_browse .ads_text button {
@@ -276,7 +277,11 @@ a {
 
 .page-wrapper .ads_browse img {
     margin-left: auto;
+    width: 95%;
 }
+
+
+/* ///////////////// latest book //////////////////// */
 
 .page-wrapper .latest_book {
     width: 90%;

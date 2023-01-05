@@ -77,6 +77,7 @@
                                                         href="{{ url('/view', $book->id) }}">View</a>
                                                         <a class="btn btn-sm btn-primary"href="{{ route('backend.book.download', $book->file) }}"
                                                            >Download</a>
+
                                                         @csrf
                                                         @method('DELETE')
                                                         

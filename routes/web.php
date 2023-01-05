@@ -6,11 +6,8 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
-
-//frond end
-use App\Http\Controllers\Frontend\BrowseController;
 use App\Http\Controllers\Frontend\HomeController;
-
+use App\Http\Controllers\Frontend\BrowseController;
 use App\Http\Controllers\Frontend\ContactUsController;
 
 /*

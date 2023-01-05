@@ -49,8 +49,9 @@
           
         
             <div class="col-8" style="margin-left:50px;">
-                <h3>Books</h3>
                 @foreach($thesis as $key => $thesis)
+                    
+                
                 <div class="browse_card">
                     <img src="{{ asset('images/cover_card.png') }}" alt="">
                     <div class="browse_descript">

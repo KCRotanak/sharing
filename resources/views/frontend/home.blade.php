@@ -31,8 +31,8 @@
                             @foreach($thesis as $thesis)
                             <div class="card swiper-slide">
                                 <div class="image-content">
-                                    <div class="card-image">
-                                        <embed frameborder="0" height="100%"  width="100%" src="/assets/{{$thesis->file}}"></embed>
+                                    <div class="card-image" >
+                                        <iframe frameborder="0"  height="100%"  width="100%" src="/assets/{{$thesis->file}}" scrolling="no" allowtransparency="true"style="pointer-events:none;" ></iframe>
                                     </div>
                                     <div class="card_detail">
                                         <span>
@@ -89,4 +89,5 @@
             }
         });
     </script>
+
 @endsection

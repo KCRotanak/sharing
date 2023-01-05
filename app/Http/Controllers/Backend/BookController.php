@@ -52,15 +52,22 @@ class BookController extends Controller
    {
     return response()->download(public_path('assets/'.$file));
    }
+
    public function view($id)
    {
    	$thesis=Book::find($id);
    	return view('backend.thesis.view',compact('thesis'));
-   } 
-   public function destroy(Book $thesis)
+   }
+
+   public function destroy($id)
    {
-       $thesis->delete();
-       return redirect()->route('backend.thesis.index')
+
+      $thesis=Book::findOrFail($id);
+      dd($thesis->id);
+
+      // Book::where('id', $id)->delete();
+      // $thesis->delete();
+      return redirect()->route('backend.thesis.index')
                        ->with('success','Message deleted successfully');
    }
 }

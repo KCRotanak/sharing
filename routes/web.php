@@ -7,6 +7,11 @@ use App\Http\Controllers\Backend\ThesisController;
 use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Frontend\ContactUsController;
+
+//frond end
+use App\Http\Controllers\Frontend\BrowseController;
+use App\Http\Controllers\Frontend\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,20 +28,25 @@ use App\Http\Controllers\Backend\DashboardController;
 // Route::resource('/admin', App\Http\Controllers\DashboardController::class);
 // Route::resource('/admin/dashboard', App\Http\Controllers\DashboardController::class);
 
-Route::get('/', function () {
-    return view('frontend.home');
-})->name('home');
+
 
 Route::get('/contact', [ContactUsController::class, 'create'])->name('contactus.create');
 Route::post('/contact', [ContactUsController::class, 'store'])->name('contactus.store');
 
-Route::get('/browse', function(){
-    return view('frontend.browse');
-})->name('browse');
+Route::get('/browse', [BrowseController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+
+// Route::get('/browse', function(){
+//     return view('frontend.browse');
+// })->name('browse');
 Auth::routes();
 Route::get('/bookdetail', function(){
     return view('frontend.bookdetail');
 })->name('bookdetail');
+
+
+
+
 Auth::routes();
   
 /*------------------------------------------
@@ -68,12 +78,15 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('departments', App\Http\Controllers\Backend\DepartmentController::class);
     
 
-    Route::get('/admin/thesis',[BookController::class,'index']);
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::get('/admin/thesis',[BookController::class,'index'])->name('backend.thesis.index');
     Route::get('/upload',[BookController::class,'upload']);
     Route::post('/uploadthesis',[BookController::class,'store']);
     Route::get('/show',[BookController::class,'show']);
     Route::get('/download/{file}',[BookController::class,'download']);
     Route::get('/view/{is}',[BookController::class,'view']);
+    Route::delete('/admin/thesis/delete', [BookController::class, 'destroy'])->name('backend.thesis.destroy');
 });
   
 

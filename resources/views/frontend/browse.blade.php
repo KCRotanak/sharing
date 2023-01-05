@@ -45,24 +45,25 @@
                     </div>
                 </form>
             </div>
-    
+          
         
             <div class="col-8" style="margin-left:50px;">
-                @for ($i = 0; $i <= 6; $i++)
+                @foreach ($thesis as $thesis)
+               
                 <div class="browse_card">
-                    <img src="{{asset ('images/cover_card.png')}}" alt="">
+                    <img src="{{ asset('images/cover_card.png') }}" alt="">
                     <div class="browse_descript">
                         <span>
-                            <p>Title: Bus Ticket Reservation System</p>
-                            <p>Author: Twinkle</p>
-                            <p>Department: GIC</p>
-                            <p>Year: 2022</p>
-                            <p>Description: blah blah blah</p>
+                            <p>Title: {{$thesis->title}} </p>
+                            <p>Author: {{$thesis->author}}</p>                          
+                            <p>Department: {{$thesis->department->name}}</p>
+                            <p>Year: {{$thesis->year}}</p>
+                            <p>Description: {{$thesis->description}}</p>
                         </span>
                     </div>
                     <button><i class='bx bx-show'></i> View</button>
                 </div>
-                @endfor
+                @endforeach
         </div>
     </div>
 @endsection

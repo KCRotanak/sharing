@@ -76,13 +76,15 @@
                                                 <td>{{ $thesis->year}} </td>
                                                 <td>{{ $thesis->description}} </td>
                                                 <td>
-                                                    <form action="" method="POST">
+                                                    <form action="{{ route('backend.thesis.destroy', $thesis->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-secondary"
                                                         href="{{ url('/view', $thesis->id) }}">View</a>
                                                         <a class="btn btn-sm btn-primary"href="{{ url('/download', $thesis->file) }}"
                                                            >Download</a>
+                                                           
                                                         @csrf
                                                         @method('DELETE')
+                                                        
                                                         <input name="_method" type="hidden" value="DELETE">
                                                         <button type="submit"
                                                             class="btn btn-sm btn-danger show-alert-delete-box"

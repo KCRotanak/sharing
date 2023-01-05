@@ -29,6 +29,7 @@
             
                     <div class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
+                            @foreach($thesis as $thesis)
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
@@ -36,153 +37,16 @@
                                     </div>
                                     <div class="card_detail">
                                         <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                        
-                                        <button>View</button>
-                                    </span>
-
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                       
-                                        <button>View</button>
-                                    </span>
-
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                      
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                       
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                   
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
+                                            <p>Title: {{$thesis->title}}</p>
+                                            <p>Author: {{$thesis->author}}</p>
+                                            <p>Department: {{$thesis->department->name}}</p>
                                         
                                         <button>View</button>
                                     </span>
                                     </div>
-                                </div>
-                                
+                                </div>                               
                             </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                        
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                        
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                      
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     {{-- <div class="slide-content" style="margin-top: 10px">

@@ -6,7 +6,7 @@
     margin: 0 auto;
     width: 1700px;
     height: 64.5vh;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
 }
 .detail .bookdownload {
@@ -32,7 +32,7 @@
     border-radius: 10px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    background-color:#52616B;
+    background-color:#1A374D;
     color: white;
 }
 .detail .bookdownload button:hover {
@@ -48,37 +48,26 @@
     background-color: #C9D6DF;
     margin-top: 8.5em;
     margin-left: auto;
+    padding-left: 50px;
+    padding-top: 30px;
+    display: flex;
 }
-.detail .bookdetail h2{
-    position: absolute;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
+.detail .bookdetail span > h3 {
     font-size: 36px;
-    line-height: 171.02%;
-    left:570px;
-   
-}
-.detail .bookdetail .author{
-    position: absolute;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
+    line-height: 171.02%;
+}
+.detail .bookdetail span > b {
     font-size: 18px;
-    line-height: 171.02%;
-    top:200px;
-    left:575px;
-    
-   
 }
-.detail .bookdetail .bookID{
+.detail .bookdetail span > p {
+    font-size: 18px;
+}
+.detail .bookdetail .bookdetail_right {
+    margin-top: 20px;
+    margin-left: 750px;
     position: absolute;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 144.52%;
-    /* or 23px */
-    color: #000000;
+}
+.detail .bookdetail .bookdetail_right span {
+    font-weight: normal;
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\BrowseController;
+use App\Http\Controllers\Frontend\BookDetailController;
 use App\Http\Controllers\Frontend\ContactUsController;
 
 /*
@@ -32,14 +33,13 @@ Route::post('/contact', [ContactUsController::class, 'store'])->name('contactus.
 
 Route::get('/browse', [BrowseController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/bookdetail', [BookDetailController::class, 'index']);
 
 // Route::get('/browse', function(){
 //     return view('frontend.browse');
 // })->name('browse');
 Auth::routes();
-Route::get('/bookdetail', function(){
-    return view('frontend.bookdetail');
-})->name('bookdetail');
+
 
 
 

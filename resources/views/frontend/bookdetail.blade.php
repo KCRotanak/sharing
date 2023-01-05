@@ -9,41 +9,30 @@
     <div class="bookdownload">
         
         <img src="{{asset ('images/cover_card.png')}}" alt="">
-        <button>Download</button>
+        <button>Download&nbsp;<i class='bx bxs-download' ></i></button>
     </div>
     <div class="bookdetail">
-        
-        <h2>The Flactuation</h2>
-
-            <div class="author">Author:</div>
-            
-            {{-- <div class="bookid">BookID:</div>
-            <div class="data-bookid">007</div>
-
-            <div class="detail">Book Details:</div>
-            <div class="data-detail">Donald Remphis</div>
-
-            <div class="year">Year:</div>
-            <div class="data-year">2022</div>
-
-            <div class="department">Department:</div>
-            <div class="data-department">Department of Information and Communication Engineering</div>
-
-            <div class="lecturer">Lecturer:</div>
-            <div class="data-lecturer">Mr. Hok Tin</div>
-
-            <div class="company">Company:</div>
-            <div class="data-company">Google, Inc</div>
-
-            <div class="supervisor">Supervisor:</div>
-            <div class="data-supervisor">Mr. Leo Messi</div>
-
-            <div class="company-detail" style="text-align: start;">
-                <div class="title">Description:</div>
-                <div class="data"> In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may used as a placeholder before final copy
-                    is available. </div>
-            </div> --}}
-
+        <span style="width: 950px">
+            <h3>The Flactuation</h3>
+            <p style="text-decoration: underline; font-weight: bold">Book Details</p>
+            <b>Author:</b>
+            <p>Donald Remphis</p>
+            <b>Department:</b>
+            <p>Department of Information and Communication Engineering</p>
+            <b>Company:</b>
+            <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate 
+                the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may
+                used as a placeholder before final copy is available.</p>
+        </span>
+        <span class="bookdetail_right">
+            <b>Book ID: </b><b style="font-weight: normal">Hi</b><br><br>
+            <b>Year:</b>
+            <p>2022</p>
+            <b>Lecturer:</b>
+            <p>Mr. SOK Kimheng</p>
+            <b>Supervisor:</b>
+            <p>Mr. Mbappe</p>
+        </span>
 
     </div>
 </div>

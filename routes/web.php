@@ -33,8 +33,11 @@ Route::post('/contact', [ContactUsController::class, 'store'])->name('contactus.
 
 Route::get('/browse', [BrowseController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/bookdetail', [BookDetailController::class, 'index']);
+// Route::get('/bookdetail', [BookDetailController::class, 'index']);
 
+Route::get('/bookdetail/{is}', [BookDetailController::class, 'show']);
+Route::get('/download/{file}',[BookDetailController::class,'download']);
+Route::get('/view/{is}',[BookDetailController::class,'view']);
 // Route::get('/browse', function(){
 //     return view('frontend.browse');
 // })->name('browse');

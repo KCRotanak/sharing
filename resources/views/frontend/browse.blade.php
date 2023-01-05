@@ -49,21 +49,22 @@
           
         
             <div class="col-8" style="margin-left:50px;">
-                @foreach($thesis as $key => $thesis)
+                @foreach($book as $key => $book)
                     
                 
                 <div class="browse_card">
                     <img src="{{ asset('images/cover_card.png') }}" alt="">
                     <div class="browse_descript">
                         <span>
-                            <p>Title: {{$thesis->title}} </p>
-                            <p>Author: {{$thesis->author}}</p>                          
-                            <p>Department: {{$thesis->department->name}}</p>
-                            <p>Year: {{$thesis->year}}</p>
-                            <p>Description: {{$thesis->description}}</p>
+                            <p>Title: {{$book->title}} </p>
+                            <p>Author: {{$book->author}}</p>                          
+                            <p>Department: {{$book->department->name}}</p>
+                            <p>Year: {{$book->year}}</p>
+                            <p>Description: {{$book->description}}</p>
                         </span>
                     </div>
-                    <button><i class='bx bx-show'></i> View</button>
+                    <a
+                    href="{{ url('/bookdetail', $book->id) }}"><button><i class='bx bx-show'></i> View</button></a>
                 </div>
                 @endforeach
         </div>

@@ -17,10 +17,10 @@ class BrowseController extends Controller
      */
     public function index()
     {
-        $thesis=Book::orderByDesc('id')->orderBy('id')->paginate(10);
+        $book=Book::orderByDesc('id')->orderBy('id')->paginate(10);
         $teachers=Teacher::get();
         $departments=Department::get();
-           return view('frontend.browse',compact('thesis','teachers','departments'));
+           return view('frontend.browse',compact('book','teachers','departments'));
     }
 
     /**

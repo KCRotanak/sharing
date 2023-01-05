@@ -28,19 +28,19 @@
             
                     <div class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
-                            @foreach($thesis as $thesis)
+                            @foreach($book as $book)
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <embed frameborder="0" height="100%"  width="100%" src="/assets/{{$thesis->file}}"></embed>
+                                        <iframe  height="100%"  width="100%" src="/assets/{{$book->file}}"></iframe>
                                     </div>
                                     <div class="card_detail">
                                         <span>
-                                            <p>Title: {{$thesis->title}}</p>
-                                            <p>Author: {{$thesis->author}}</p>
-                                            <p>Department: {{$thesis->department->name}}</p>
+                                            <p>Title: {{$book->title}}</p>
+                                            <p>Author: {{$book->author}}</p>
+                                            <p>Department: {{$book->department->name}}</p>
                                         
-                                        <button>View</button>
+                                            <a href="{{ url('/bookdetail', $book->id) }}"><button>View</button></a>
                                     </span>
                                     </div>
                                 </div>                               

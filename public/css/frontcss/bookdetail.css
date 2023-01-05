@@ -6,7 +6,7 @@
     margin: 0 auto;
     width: 1700px;
     height: 64.5vh;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
 }
 .detail .bookdownload {
@@ -32,7 +32,7 @@
     border-radius: 10px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    background-color:#52616B;
+    background-color:#1A374D;
     color: white;
 }
 .detail .bookdownload button:hover {
@@ -48,4 +48,26 @@
     background-color: #C9D6DF;
     margin-top: 8.5em;
     margin-left: auto;
+    padding-left: 50px;
+    padding-top: 30px;
+    display: flex;
+}
+.detail .bookdetail span > h3 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 171.02%;
+}
+.detail .bookdetail span > b {
+    font-size: 18px;
+}
+.detail .bookdetail span > p {
+    font-size: 18px;
+}
+.detail .bookdetail .bookdetail_right {
+    margin-top: 20px;
+    margin-left: 750px;
+    position: absolute;
+}
+.detail .bookdetail .bookdetail_right span {
+    font-weight: normal;
 }

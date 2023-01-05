@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
+use App\Models\Book;
+use App\Models\Contact;
+use App\Models\Department;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -17,7 +21,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard.dashboard');
+        $departments = Department::get()->count();
+        $teachers = Teacher::get()->count();
+        $messages = Contact::get()->count();
+        $books = Book::get()->count();
+        return view('backend.dashboard.dashboard', compact('departments', 'teachers', 'messages', 'books'));
     }
 
     /**
@@ -85,4 +93,6 @@ class DashboardController extends Controller
     {
         //
     }
+
+
 }

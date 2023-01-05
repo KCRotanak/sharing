@@ -1,11 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
-use App\Models\Contact;
+use App\Models\Book;
+use App\Models\Teacher;
+use App\Models\Department;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +17,10 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts=Contact::get();
-        
-        return view('backend.contacts.index', compact('contacts'));
+        $thesis=Book::orderByDesc('id')->orderBy('id')->paginate(10);
+        $teachers=Teacher::get();
+        $departments=Department::get();
+           return view('frontend.home',compact('thesis','teachers','departments'));
     }
 
     /**
@@ -26,7 +30,8 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+       
+
     }
 
     /**
@@ -46,9 +51,9 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Contact $contact)
+    public function show($id)
     {
-        return view('backend.contacts.show',compact('contact'));
+        //
     }
 
     /**
@@ -80,11 +85,8 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
-        $contact->delete();
-    
-        return redirect()->route('backend.contacts.index')
-                        ->with('success','Message deleted successfully');
+        //
     }
 }

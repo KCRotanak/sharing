@@ -24,7 +24,7 @@
                             <p>{{ $contact->subject }}</p>
                             <h3 class="card-title">Message:</h3>
                             <p> {{ $contact->message }}</p>
-                            <a class="btn btn-primary" href="{{ route('contact.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('contacts.index') }}"> Back</a>
 
                         </div>
 

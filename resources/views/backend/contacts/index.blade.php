@@ -56,11 +56,11 @@
                                                 {{-- <td>{{ $contact->name }}</td> --}}
 
                                                 <td>
-                                                    <form action="{{ route('contact.destroy', $contact->id) }}"
+                                                    <form action="{{ route('contacts.destroy', $contact->id) }}"
                                                         method="POST">
 
                                                         <a class="btn btn-sm btn-secondary"
-                                                            href="{{ route('contact.show', $contact->id) }}">Show</a>
+                                                            href="{{ route('contacts.show', $contact->id) }}">Show</a>
 
                                                         @csrf
                                                         @method('DELETE')

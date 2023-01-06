@@ -71,8 +71,8 @@
                                             <a href="/admin/teachers" class="text-decoration-none">See details</a>
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-warning rounded fs-3">
-                                                <i class="bx bx-user-circle text-warning"></i>
+                                            <span class="avatar-title bg-soft-secondary rounded fs-3">
+                                                <i class="bx bx-user-circle text-secondary"></i>
                                             </span>
                                         </div>
                                     </div>

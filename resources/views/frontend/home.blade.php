@@ -28,160 +28,24 @@
             
                     <div class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
+                            @foreach($book as $book)
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
+                                        <iframe  height="100%"  width="100%" src="/assets/{{$book->file}}"></iframe>
                                     </div>
                                     <div class="card_detail">
                                         <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
+                                            <p>Title: {{$book->title}}</p>
+                                            <p>Author: {{$book->author}}</p>
+                                            <p>Department: {{$book->department->name}}</p>
                                         
-                                        <button>View</button>
-                                    </span>
-
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                       
-                                        <button>View</button>
-                                    </span>
-
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                      
-                                        <button>View</button>
+                                            <a href="{{ url('/bookdetail', $book->id) }}"><button>View</button></a>
                                     </span>
                                     </div>
-                                </div>
-                                
+                                </div>                               
                             </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                       
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                   
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                        
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                        
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                        
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <div class="card-image">
-                                        <img src="{{ asset('images/cover_card.png') }}" alt="" class="card-img">
-                                    </div>
-                                    <div class="card_detail">
-                                        <span>
-                                            <p>Title: Bus Ticket Reservation</p>
-                                            <p>Author: Twinkle</p>
-                                            <p>Department: GIC</p>
-                                      
-                                        <button>View</button>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                    

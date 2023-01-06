@@ -8,10 +8,31 @@
 <div class="detail"> 
     <div class="bookdownload">
         
-        <img src="{{asset ('images/cover_card.png')}}" alt="">
-        <button>Download</button>
+        <iframe  height="100%"  width="100%" src="/assets/{{$book->file}}"></iframe>
+
+        <a href="{{ url('/download', $book->file) }}"
+            ><button>Download&nbsp;<i class='bx bxs-download' ></i></button></a>
     </div>
     <div class="bookdetail">
+        <span style="width: 950px">
+            <h3>{{$book->title}}</h3>
+            <p style="text-decoration: underline; font-weight: bold">Book Details</p>
+            <b>Author:</b>
+            <p>{{$book->author}}</p>
+            <b>Department:</b>
+            <p>{{$book->department->name}}</p>
+            <b>Description:</b>
+            <p>{{$book->description}}</p>
+        </span>
+        <span class="bookdetail_right">
+            <b>Book ID: </b><b style="font-weight: normal">{{$book->id}}</b><br><br>
+            <b>Year:</b>
+            <p>{{$book->year}}</p>
+            <b>Lecturer:</b>
+            <p>{{$book->teacher->name}}</p>
+            <b>Company:</b>
+            <p>{{$book->company}}</p>
+        </span>
 
     </div>
 </div>

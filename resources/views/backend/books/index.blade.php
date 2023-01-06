@@ -80,6 +80,7 @@
 
                                                         @csrf
                                                         @method('DELETE')
+                                                        
                                                         <input name="_method" type="hidden" value="DELETE">
                                                         <button type="submit"
                                                             class="btn btn-sm btn-danger show-alert-delete-box"

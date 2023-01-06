@@ -1,6 +1,6 @@
 @extends('layouts.userapp')
 @section('content')
-<div class="loader" style="margin-top: -20px">
+<div class="loader" style="margin-top: -30px">
     <div class="loader-content">
         <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
     </div>

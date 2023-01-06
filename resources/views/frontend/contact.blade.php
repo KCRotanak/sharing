@@ -2,7 +2,7 @@
 @section('content')
 
 <section class="contact_us">
-    <div class="loader" style="margin-top: 0px">
+    <div class="loader" style="margin-top: -150px">
         <div class="loader-content">
             <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
         </div>

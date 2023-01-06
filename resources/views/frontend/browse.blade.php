@@ -60,7 +60,7 @@
                             <p>Author: {{$book->author}}</p>                          
                             <p>Department: {{$book->department->name}}</p>
                             <p>Year: {{$book->year}}</p>
-                            <p>Description: {{$book->description}}</p>
+                            <p class="text">Description: {{$book->description}}</p>
                         </span>
                     </div>
                     <a

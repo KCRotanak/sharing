@@ -28,15 +28,16 @@
 }
 
 .browse_card button {
+    position: absolute;
+    margin-bottom: auto;
+    margin-top: 70px;
+    margin-left: 70px;
     width: 80px;
     height: 80px;
     background: #1A374D;
     border-radius: 15px;
     border-width: 0;
     color: white;
-    margin-bottom: auto;
-    margin-top: auto;
-    margin-left: 25em;
     display: flex;
     flex-direction: column;
     justify-content: center;

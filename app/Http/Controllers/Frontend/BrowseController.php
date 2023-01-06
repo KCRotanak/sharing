@@ -20,7 +20,7 @@ class BrowseController extends Controller
         $book=Book::orderByDesc('id')->orderBy('id')->paginate(10);
         $teachers=Teacher::get();
         $departments=Department::get();
-           return view('frontend.browse',compact('book','teachers','departments'));
+        return view('frontend.browse',compact('book','teachers','departments'));
     }
 
     /**

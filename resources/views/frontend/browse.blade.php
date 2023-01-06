@@ -1,10 +1,10 @@
 @extends('layouts.userapp')
 @section('content')
-<div class="loader" style="margin-top: 0px">
-    <div class="loader-content">
-        <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
+    <div class="loader" style="margin-top: 0px">
+        <div class="loader-content">
+            <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader" style="margin-top:300px">
+        </div>
     </div>
-</div>
     <div class="container" style="margin: 125px">
         <div class="row" style="width: 1700px">
             <div class="col-3">
@@ -15,27 +15,27 @@
                             <label for="department">Department</label>
                             <select class="form-select">
                                 <option selected>Select Department</option>
-                                <option value=" ">GIC</option>
-                                <option value=" ">GCI</option>
-                                <option value=" ">GEE</option>
+                                @foreach ($departments as $department)                              
+                                <option value="{{ $department->id }}">{{ $department->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group col-12 " style="padding: 10px">
                             <label for="lecturer">Lecturer</label>
                             <select class="form-select">
                                 <option selected>Select Lecturer</option>
-                                <option value=" ">GIC</option>
-                                <option value=" ">GCI</option>
-                                <option value=" ">GEE</option>
+                                @foreach ($teachers as $teacher)
+                                    <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group col-12 " style="padding: 10px">
                             <label for="year">Year</label>
                             <select id="selectYear" class="form-select">
                                 <option selected> Select Year </option>
-                                @for ($i = 2000; $i <= 2022; $i++)                            
+                                @for ($i = 2000; $i <= 2022; $i++)
                                     <option class="">{{ $i }}</option>
-                                @endfor 
+                                @endfor
                             </select>
                         </div>
 
@@ -46,9 +46,10 @@
                     </div>
                 </form>
             </div>
-          
-        
+
+
             <div class="col-8" style="margin-left:50px;">
+<<<<<<< HEAD
                 @foreach($book as $key => $book)
                     
                 
@@ -62,11 +63,34 @@
                             <p>Year: {{$book->year}}</p>
                             <p class="text">Description: {{$book->description}}</p>
                         </span>
+=======
+                <h3>Books</h3>
+                @foreach ($book as $key => $book)
+                    <div class="browse_card">
+                        <img src="{{ asset('images/cover_card.png') }}" alt="">
+                        <div class="browse_descript">
+                            <span>
+                                <p>Title: {{ $book->title }} </p>
+                                <p>Author: {{ $book->author }}</p>
+                                <p>Department: {{ $book->department->name }}</p>
+                                <p>Year: {{ $book->year }}</p>
+                                <p>Description: {{ $book->description }}</p>
+                            </span>
+                        </div>
+                        <a href="{{ url('/bookdetail', $book->id) }}"><button><i class='bx bx-show'></i> View</button></a>
+>>>>>>> 04094cafe4dcca24a8ca9a99debb56b56d39f174
                     </div>
-                    <a
-                    href="{{ url('/bookdetail', $book->id) }}"><button><i class='bx bx-show'></i> View</button></a>
-                </div>
                 @endforeach
+            </div>
         </div>
-    </div>
-@endsection
+
+        <script>
+            $('.browse_descript p').text(function(_, txt) {
+                if (txt.length > 80) {
+                    txt = txt.substr(0, 80) + " ...";
+                    $(this).parent().append("");
+                }
+                $(this).html(txt)
+            });
+        </script>
+    @endsection

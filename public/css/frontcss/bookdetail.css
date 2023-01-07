@@ -15,6 +15,7 @@
     border-radius: 25px;
     background-color: #C9D6DF;
     margin-top: 8.5em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     /* margin-bottom: auto; */
 }
 .detail .bookdownload img{
@@ -46,6 +47,7 @@
     height: 435px;
     border-radius: 25px;
     background-color: #C9D6DF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     margin-top: 8.5em;
     margin-left: auto;
     padding-left: 50px;
@@ -71,3 +73,23 @@
 .detail .bookdetail .bookdetail_right span {
     font-weight: normal;
 }
+.dropdown {
+    /* position: relative; */
+    /* display: inline-block; */
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1A374D;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 30px;
+    margin-left: 150px;
+    z-index: 1;
+    border-radius: 20px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

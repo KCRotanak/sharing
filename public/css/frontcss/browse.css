@@ -21,7 +21,7 @@
 }
 
 .browse_card .browse_descript {
-    width: 800px;
+    width: 750px;
     font-size: 18px;
     font-weight: 500;
     line-height: 1em;
@@ -44,7 +44,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .browse_card button:hover {
@@ -72,9 +71,10 @@
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 }
-.text{
+
+.text {
     display: -webkit-box;
     overflow: hidden;
-           -webkit-line-clamp: 3;
-           -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }

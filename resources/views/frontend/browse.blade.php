@@ -9,12 +9,13 @@
         <div class="row" style="width: 1700px">
             <div class="col-3">
                 <h3>Search Filter</h3>
-                <form action="">
+                <form action="{{ route('browse.filter') }}" method="GET">
+                    @csrf
                     <div class="card" style="padding: 20px; margin-top: 20px; border-radius: 15px;">
                         <div class="form-group col-12 " style="padding: 10px">
                             <label for="department">Department</label>
-                            <select class="form-select">
-                                <option selected>Select Department</option>
+                            <select class="form-select" name="inputDep">
+                                <option selected value="">Select Department</option>
                                 @foreach ($departments as $department)                              
                                 <option value="{{ $department->id }}">{{ $department->name }}</option>
                                 @endforeach
@@ -22,25 +23,25 @@
                         </div>
                         <div class="form-group col-12 " style="padding: 10px">
                             <label for="lecturer">Lecturer</label>
-                            <select class="form-select">
-                                <option selected>Select Lecturer</option>
+                            <select class="form-select" name="inputTec">
+                                <option selected value="">Select Lecturer</option>
                                 @foreach ($teachers as $teacher)
                                     <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group col-12 " style="padding: 10px">
-                            <label for="year">Year</label>
-                            <select id="selectYear" class="form-select">
-                                <option selected> Select Year </option>
+                            <label for="year">Academic Year</label>
+                            <select id="selectYear" class="form-select" name="inputYear">
+                                <option selected value=""> Select Year </option>
                                 @for ($i = 2000; $i <= 2022; $i++)
-                                    <option class="">{{ $i }}</option>
+                                    <option value="{{ $i }}" class="">{{ $i }} - {{$i+1}}</option>
                                 @endfor
                             </select>
                         </div>
 
                         <div class="form-group" style="padding: 10px">
-                            <button type="button" class="filter-button">Filter</button>
+                            <button type="submit" class="filter-button">Filter</button>
                         </div>
 
                     </div>
@@ -49,23 +50,8 @@
 
 
             <div class="col-8" style="margin-left:50px;">
-<<<<<<< HEAD
-                @foreach($book as $key => $book)
-                    
-                
-                <div class="browse_card">
-                    <img src="{{ asset('images/cover_card.png') }}" alt="">
-                    <div class="browse_descript">
-                        <span>
-                            <p>Title: {{$book->title}} </p>
-                            <p>Author: {{$book->author}}</p>                          
-                            <p>Department: {{$book->department->name}}</p>
-                            <p>Year: {{$book->year}}</p>
-                            <p class="text">Description: {{$book->description}}</p>
-                        </span>
-=======
                 <h3>Books</h3>
-                @foreach ($book as $key => $book)
+                @forelse ($books as $book)
                     <div class="browse_card">
                         <img src="{{ asset('images/cover_card.png') }}" alt="">
                         <div class="browse_descript">
@@ -73,14 +59,24 @@
                                 <p>Title: {{ $book->title }} </p>
                                 <p>Author: {{ $book->author }}</p>
                                 <p>Department: {{ $book->department->name }}</p>
-                                <p>Year: {{ $book->year }}</p>
+                                <p>Year: {{ $book->year }} - {{ $book->year+1 }}</p>
                                 <p>Description: {{ $book->description }}</p>
                             </span>
                         </div>
                         <a href="{{ url('/bookdetail', $book->id) }}"><button><i class='bx bx-show'></i> View</button></a>
->>>>>>> 04094cafe4dcca24a8ca9a99debb56b56d39f174
                     </div>
-                @endforeach
+                    @empty
+    
+                    <div class="container" style="padding: 100px">
+                        <div class="row justify-content-lg-center">
+                          <div class="col-lg-auto">
+                            <p>No result</p>
+                            {{-- <img src="{{ asset('assets/images/noresult.png') }}" alt=""> --}}
+                          </div>
+                        </div>
+                    </div>
+
+                @endforelse
             </div>
         </div>
 

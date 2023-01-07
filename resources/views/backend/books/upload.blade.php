@@ -99,7 +99,7 @@
                                                         <option selected>Select Academic Year</option>
                                                         @for ($i = 2000; $i <= 2022; $i++)
                                                
-                                                        <option class="" value="{{ $i }}">{{ $i }}</option>
+                                                        <option class="" value="{{ $i }}">{{ $i }}-{{$i+1}}</option>
                                                         @endfor 
                                                     </select>
                                                 </div>

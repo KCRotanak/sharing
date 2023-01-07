@@ -49,6 +49,21 @@
 
 
             <div class="col-8" style="margin-left:50px;">
+<<<<<<< HEAD
+                @foreach($book as $key => $book)
+                    
+                
+                <div class="browse_card">
+                    <img src="{{ asset('images/cover_card.png') }}" alt="">
+                    <div class="browse_descript">
+                        <span>
+                            <p>Title: {{$book->title}} </p>
+                            <p>Author: {{$book->author}}</p>                          
+                            <p>Department: {{$book->department->name}}</p>
+                            <p>Year: {{$book->year}}</p>
+                            <p class="text">Description: {{$book->description}}</p>
+                        </span>
+=======
                 <h3>Books</h3>
                 @foreach ($book as $key => $book)
                     <div class="browse_card">
@@ -63,6 +78,7 @@
                             </span>
                         </div>
                         <a href="{{ url('/bookdetail', $book->id) }}"><button><i class='bx bx-show'></i> View</button></a>
+>>>>>>> 04094cafe4dcca24a8ca9a99debb56b56d39f174
                     </div>
                 @endforeach
             </div>

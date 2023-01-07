@@ -15,6 +15,7 @@
     border-radius: 25px;
     background-color: #C9D6DF;
     margin-top: 8.5em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     /* margin-bottom: auto; */
 }
 .detail .bookdownload img{
@@ -51,6 +52,8 @@
     padding-left: 50px;
     padding-top: 30px;
     display: flex;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
 }
 .detail .bookdetail span > h3 {
     font-size: 36px;
@@ -71,3 +74,28 @@
 .detail .bookdetail .bookdetail_right span {
     font-weight: normal;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #363636;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+ .limit-text{
+     display: -webkit-box;
+     overflow: hidden;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+ }

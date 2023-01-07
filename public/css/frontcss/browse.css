@@ -21,6 +21,7 @@
 }
 
 .browse_card .browse_descript {
+    width: 800px;
     font-size: 18px;
     font-weight: 500;
     line-height: 1em;
@@ -29,19 +30,21 @@
 
 .browse_card button {
     position: absolute;
-    margin-bottom: auto;
-    margin-top: 70px;
-    margin-left: 70px;
+    /* margin-right: 300px; */
     width: 80px;
     height: 80px;
     background: #1A374D;
     border-radius: 15px;
     border-width: 0;
     color: white;
+    margin-top: 80px;
+    /* margin-right: 150px; */
+    /* margin-left: 25em; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .browse_card button:hover {
@@ -68,4 +71,10 @@
     background: #406882;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
+}
+.text{
+    display: -webkit-box;
+    overflow: hidden;
+           -webkit-line-clamp: 3;
+           -webkit-box-orient: vertical;
 }

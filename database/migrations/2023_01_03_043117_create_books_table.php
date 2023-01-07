@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreign('teacherID')->references('id')->on('teachers');
             $table->string('company');
             $table->string('year');
-            $table->string('description');
+            $table->text('description');
             $table->string('file');
             $table->timestamps();
         });

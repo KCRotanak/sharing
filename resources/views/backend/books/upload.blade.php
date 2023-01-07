@@ -12,14 +12,14 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">Pages</li>
-                                        <li class="breadcrumb-item active">book</li>
+                                        <li class="breadcrumb-item active">Books</li>
                                     </ol>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end page title -->
-                    
+
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="card">

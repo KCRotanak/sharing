@@ -23,10 +23,7 @@ use App\Http\Controllers\Frontend\ContactUsController;
 */
 
 
-// Route::resource('/admin', App\Http\Controllers\DashboardController::class);
-// Route::resource('/admin/dashboard', App\Http\Controllers\DashboardController::class);
-
-
+Route::get('/filter', [BrowseController::class, 'filter'])->name('browse.filter');
 
 Route::get('/contact', [ContactUsController::class, 'create'])->name('contactus.create');
 Route::post('/contact', [ContactUsController::class, 'store'])->name('contactus.store');

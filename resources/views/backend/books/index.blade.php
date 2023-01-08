@@ -12,7 +12,7 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">Pages</li>
-                                        <li class="breadcrumb-item active">book</li>
+                                        <li class="breadcrumb-item active">Books</li>
                                     </ol>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                                 <td>{{ $book->author }} </td>                                           
                                                 <td>{{ $book->teacher->name }} </td> 
                                                 <td>{{ $book->department->name}} </td>                                                
-                                                <td>{{ $book->year}} </td>                                           
+                                                <td>{{ $book->year}}-{{ $book->year+1}} </td>                                           
                                                 <td>
                                                     <form action="{{ route('backend.books.destroy', $book->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-secondary"

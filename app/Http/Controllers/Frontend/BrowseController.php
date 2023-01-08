@@ -17,10 +17,10 @@ class BrowseController extends Controller
      */
     public function index()
     {
-        $book=Book::orderByDesc('id')->orderBy('id')->paginate(10);
+        $books=Book::orderByDesc('id')->orderBy('id')->paginate(10);
         $teachers=Teacher::get();
         $departments=Department::get();
-           return view('frontend.browse',compact('book','teachers','departments'));
+        return view('frontend.browse',compact('books','teachers','departments'));
     }
 
     /**
@@ -88,5 +88,43 @@ class BrowseController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function filter(Request $request)
+    {
+
+        // dd($request->all());
+
+        $inputDep = $request->input('inputDep');
+        $inputTec = $request->input('inputTec');
+        $inputYear = $request->input('inputYear');
+
+        $books = Book::select()
+        
+        ->where(function($query) use ($inputDep){
+           if ($inputDep){
+            $query->where('departmentID', $inputDep);
+           }
+        }) 
+
+        ->where(function($query) use ($inputTec){
+            if ($inputTec){
+                $query->where('teacherID', $inputTec);
+            }
+        })
+
+        ->where(function($query) use ($inputYear){
+            if ($inputYear){
+                $query->where('year','=', $inputYear);
+            }
+        })
+
+        ->get();
+
+        $teachers = Teacher::get();
+        $departments = Department::get();
+    
+        return view('frontend.browse', compact('books','teachers', 'departments'));
+        
     }
 }

@@ -1,11 +1,11 @@
 @extends('layouts.userapp')
 @section('content')
     <div class="ads_browse">
-        {{-- <div class="loader" style="margin-top: 0px">
+        <div class="loader" style="margin-top: 0px ">
             <div class="loader-content">
                 <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
             </div>
-        </div> --}}
+        </div>
         <div class="ads_text">
 
             <p style="font-size: 50px">FIND GOOD THESIS</p>
@@ -18,7 +18,7 @@
             
         </div>
         
-        <img src="{{ asset('images/newbook_background.jpg') }}" alt="">
+        <img src="{{ asset('images/newbook_background.jpg') }}" style="width: 90%" alt="">
 
     </div>
     <div class="latest_book">

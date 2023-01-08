@@ -20,25 +20,26 @@
             <b>Department:</b>
             <p>{{$book->department->name}}</p>
             <b>Description:</b>
-            <p>{{$book->description}}</p>
+            <p class="limit-text">{{$book->description}}</p>
         </span>
         <span class="bookdetail_right">
             <b>Book ID: </b><b style="font-weight: normal">{{$book->id}}</b><br><br>
             <b>Year:</b>
             <p>{{$book->year}}</p>
-            <b>Lecturer:</b>
-            
-                <p>
-                    <div class="dropdown">
-                    {{$book->teacher->name}}
-                    <div class="dropdown-content">
-                    <p style="color: white">mail: {{$book->teacher->email}}</p>
-                    <p style="color: white">phone: {{$book->teacher->phone}}</p>
-                    </div>
-                </div>
+
+            <b>Lecturer:</b> <br>
+
+            <div class="dropdown">
+                <p>{{$book->teacher->name}}</p>
+                <div class="dropdown-content">
+                <p style="color: white">
+                    mail:{{$book->teacher->email}} <br>
+                    phone: {{$book->teacher->phone}}
                 </p>
-             
-            <b>Company:</b>
+                </div>
+            </div>
+            
+           <br> <b>Company:</b>
             <p>{{$book->company}}</p>
         </span>
     </div>

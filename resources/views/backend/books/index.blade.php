@@ -75,7 +75,8 @@
                                                     <form action="{{ route('backend.books.destroy', $book->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-secondary"
                                                         href="{{ url('/view', $book->id) }}">View</a>
-                                                        <a class="btn btn-sm btn-primary"href="{{ route('backend.book.download', $book->file) }}"
+                                                        <a class="btn btn-sm btn-primary"
+                                                        href="{{ route('backend.book.download', $book->file) }}"
                                                            >Download</a>
 
                                                         @csrf

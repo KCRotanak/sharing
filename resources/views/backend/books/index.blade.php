@@ -52,14 +52,17 @@
 
                                     <table class="table table-bordered data-table" id="myTable">
                                         <thead class="table-light">
-                                            <tr>
-                                                <th>ID</th>
+                                            <tr >
+                                               
+                                                <th >ID</th>
                                                 <th>Title</th>
                                                 <th>Author</th>   
                                                 <th>Teacher</th>                                               
-                                                <th>Department</th>        
+                                                <th>Department</th>      
+                                                <th>Company</th>    
                                                 <th>Year</th>                                      
                                                 <th width="280px">Action</th>
+                                               
                                             </tr>
                                         </thead>
 
@@ -69,7 +72,8 @@
                                                 <td>{{ $book->title }} </td>
                                                 <td>{{ $book->author }} </td>                                           
                                                 <td>{{ $book->teacher->name }} </td> 
-                                                <td>{{ $book->department->name}} </td>                                                
+                                                <td>{{ $book->department->name}} </td>
+                                                <td>{{ $book->company}} </td>                                                   
                                                 <td>{{ $book->year}}-{{ $book->year+1}} </td>                                           
                                                 <td>
                                                     <form action="{{ route('backend.books.destroy', $book->id) }}" method="POST">

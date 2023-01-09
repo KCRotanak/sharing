@@ -32,7 +32,7 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <embed frameborder="0" height="100%"  width="100%" src="/assets/{{$thesis->file}}"></embed>
+                                        <iframe height="100%"  width="100%" src="/assets/{{$thesis->file}}"></iframe>
                                     </div>
                                     <div class="card_detail">
                                         <span>

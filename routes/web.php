@@ -35,9 +35,10 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/bookdetail/{is}', [BookDetailController::class, 'show']);
 Route::get('/download/{file}',[BookDetailController::class,'download']);
 Route::get('/view/{is}',[BookDetailController::class,'view']);
-// Route::get('/browse', function(){
-//     return view('frontend.browse');
-// })->name('browse');
+
+Route::get('/policy', function(){
+    return view('frontend.policy');
+})->name('policy');
 Auth::routes();
 
 

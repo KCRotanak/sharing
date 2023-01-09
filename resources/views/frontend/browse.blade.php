@@ -57,8 +57,9 @@
                         <div class="browse_descript">
                             <span>
                                 <p>Title: {{ $book->title }} </p>
-                                <p>Author: {{ $book->author }}</p>
+                                {{-- <p>Author: {{ $book->author }}</p> --}}
                                 <p>Department: {{ $book->department->name }}</p>
+                                <p>Lecturer: {{ $book->teacher->name }}</p>
                                 <p>Year: {{ $book->year }} - {{ $book->year+1 }}</p>
                                 <p>Description: {{ $book->description }}</p>
                             </span>
@@ -70,8 +71,8 @@
                     <div class="container" style="padding: 100px">
                         <div class="row justify-content-lg-center">
                           <div class="col-lg-auto">
-                            <p>No result</p>
-                            {{-- <img src="{{ asset('assets/images/noresult.png') }}" alt=""> --}}
+                            <img src="{{ asset('images/noresult.png') }}" alt="" style="margin-top: -130px">
+                      
                           </div>
                         </div>
                     </div>

@@ -55,6 +55,7 @@
     height: 435px;
     border-radius: 25px;
     background-color: #C9D6DF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     margin-top: 8.5em;
     margin-left: auto;
     padding-left: 50px;

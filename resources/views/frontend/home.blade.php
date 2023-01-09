@@ -18,7 +18,7 @@
             
         </div>
         
-        <img src="{{ asset('images/newbook_background.jpg') }}" style="width: 90%" alt="">
+        <img class="bg_img" src="{{ asset('images/new_back.png') }}" alt="">
 
     </div>
     <div class="latest_book">
@@ -89,4 +89,5 @@
             }
         });
     </script>
+
 @endsection

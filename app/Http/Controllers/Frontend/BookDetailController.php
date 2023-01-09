@@ -25,11 +25,8 @@ class BookDetailController extends Controller
     public function show($id)
     {
         $book = Book::find($id);
-        
         return view('frontend.bookdetail', compact('book'));
     }
-
-
     public function download(Request $request,$file)
    {
     return response()->download(public_path('assets/'.$file));

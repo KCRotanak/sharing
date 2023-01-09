@@ -57,9 +57,9 @@
                         <div class="browse_descript">
                             <span>
                                 <p>Title: {{ $book->title }} </p>
-                                {{-- <p>Author: {{ $book->author }}</p> --}}
+                                <p>Author: {{ $book->author }}</p>
                                 <p>Department: {{ $book->department->name }}</p>
-                                <p>Lecturer: {{ $book->teacher->name }}</p>
+                                {{-- <p>Lecturer: {{ $book->teacher->name }}</p> --}}
                                 <p>Year: {{ $book->year }} - {{ $book->year+1 }}</p>
                                 <p>Description: {{ $book->description }}</p>
                             </span>

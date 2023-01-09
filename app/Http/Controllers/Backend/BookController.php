@@ -46,12 +46,6 @@ class BookController extends Controller
               return redirect()->route('backend.books.index') ->with('success','Book created successfully');
 
    }
-//    public function show()
-//    {
-//    	$book=book::all();
-//    	return view('backend.book.show',compact('book'));
-//    }
-
    public function download(Request $request,$file)
    {
     return response()->download(public_path('assets/'.$file));
@@ -63,11 +57,9 @@ class BookController extends Controller
       
    	return view('backend.books.view',compact('book'));
    } 
-
    public function destroy($id)
    {
       $book=Book::findOrFail($id);
-
       $book->delete();
       return redirect()->route('backend.books.index')
                        ->with('success','Books deleted successfully');

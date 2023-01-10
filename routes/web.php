@@ -30,10 +30,9 @@ Route::post('/contact', [ContactUsController::class, 'store'])->name('contactus.
 
 Route::get('/browse', [BrowseController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
-// Route::get('/bookdetail', [BookDetailController::class, 'index']);
 
 Route::get('/bookdetail/{is}', [BookDetailController::class, 'show']);
-Route::get('/download/{file}',[BookDetailController::class,'download'])->name('frontend.bookdetail.download');
+Route::get('/front/download/{file}',[BookDetailController::class,'download'])->name('front_download');
 
 Auth::routes();
   

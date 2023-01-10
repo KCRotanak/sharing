@@ -272,7 +272,7 @@
                                                 </div>
                                                 <div class="flex-shrink-0 text-end">
                                                     <h6 class="mb-1">BTC 0.00584875</h6>
-                                                    <p class="text-success fs-12 mb-0">$19,405.12</p>
+                                                    <p class="text-success fs-12 mb-0">$19405,.12</p>
                                                 </div>
                                             </div>
                                             

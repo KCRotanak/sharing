@@ -42,7 +42,6 @@ class BookController extends Controller
               $book->year=$request->year;
 		        $book->description=$request->description;
 		        $book->save();
-
               return redirect()->route('backend.books.index') ->with('success','Book created successfully');
 
    }

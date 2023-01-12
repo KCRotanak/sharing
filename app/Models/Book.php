@@ -9,6 +9,7 @@ class Book extends Model
 {
     use HasFactory;
     protected $fillable = [
+        // 'cover',
         'title',
         'author', 
         'departmentID',
@@ -16,7 +17,8 @@ class Book extends Model
         'company',
         'year',
         'description',
-        'file'
+        'file',
+        'count'
     ];
     public function teacher()
     {

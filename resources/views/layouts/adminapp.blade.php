@@ -41,7 +41,10 @@
     <link href="{{ asset('css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet" type="text/css" />
-
+     <!-- apexcharts -->
+    <script src="{{ asset('libs/apexcharts/apexcharts.min.js') }}"></script>
+    {{-- echart --}}
+    <script type="text/javascript" src="{{asset('assets/js/echarts.min.js')}}"></script>
 
 </head>
 
@@ -253,9 +256,7 @@
     <script src="{{ asset('js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
     <script src="{{ asset('js/plugins.js') }}"></script>
 
-    <!-- apexcharts -->
-    <script src="{{ asset('libs/apexcharts/apexcharts.min.js') }}"></script>
-
+ 
     <!-- Vector map-->
     <script src="{{ asset('libs/jsvectormap/js/jsvectormap.min.js') }}"></script>
     <script src="{{ asset('libs/jsvectormap/maps/world-merc.js') }}"></script>

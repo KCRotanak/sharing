@@ -39,6 +39,10 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|unique:departments,name', 
+        ]);
+
         Department::updateOrCreate(
             [
                 'id' => $request->department_id

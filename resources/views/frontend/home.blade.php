@@ -18,7 +18,7 @@
             
         </div>
         
-        <img src="{{ asset('images/newbook_background.jpg') }}" style="width: 90%" alt="">
+        <img class="bg_img" src="{{ asset('images/new_back.png') }}" alt="">
 
     </div>
     <div class="latest_book">
@@ -32,7 +32,7 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <iframe  height="100%"  width="100%" src="/assets/{{$book->file}}"></iframe>
+                                        <iframe height="100%" width="100%" src="/assets/{{ $book->file }}"></iframe>
                                     </div>
                                     <div class="card_detail">
                                         <span>

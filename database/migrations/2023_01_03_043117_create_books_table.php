@@ -14,6 +14,7 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
+            // $table->string('cover');
             $table->string('title');
             $table->string('author');
             $table->unsignedBigInteger('departmentID');
@@ -24,6 +25,7 @@ return new class extends Migration
             $table->string('year');
             $table->text('description');
             $table->string('file');
+            $table->string('count')->nullable();
             $table->timestamps();
         });
     }

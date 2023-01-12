@@ -30,6 +30,9 @@ class BookDetailController extends Controller
     
     public function download(Request $request,$file)
    {
+    $books = Book::where("file", "=", $file)->first();
+    $books->count = $books->count + 1;
+    $books->save();
     return response()->download(public_path('assets/'.$file));
    }
 

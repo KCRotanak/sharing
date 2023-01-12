@@ -32,7 +32,7 @@
 
                 <b>Lecturer:</b> <br>
 
-                <div class="dropdown">
+                <div class="dropdown" style="cursor: pointer">
                     <p>{{ $book->teacher->name }}</p>
                     <div class="dropdown-content">
                         <p style="color: white">

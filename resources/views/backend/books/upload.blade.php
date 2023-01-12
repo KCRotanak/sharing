@@ -25,6 +25,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title mb-0">Create New Book</h4>
+                                    
                                 </div>
                                 <div class="card-body">
                                     <div class="row g-3">
@@ -122,13 +123,24 @@
                                                     <input class="form-control" type="file" name="file">
                                                 </div>
                                             </div>
-
+                                            {{-- <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="meassageInput" class="form-label">Cover Upload</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="file" name="cover">
+                                                </div>
+                                            </div> --}}
                                             <div class="text-end">
-                                                <button type="submit" class="btn btn-light"
-                                                    style="margin-right: 10px">Back</button>
+                                               
+                                                
                                                 <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>
+                                            
                                         </form>
+                                        <a href="{{ route('backend.books.index') }}">
+                                            <button class="btn btn-light"
+                                            style="float: right; margin-right: 110px; margin-top: -65px">Back</button></a>  
 
                                     </div>
                                 </div>

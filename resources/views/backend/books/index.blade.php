@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">book</h4>
+                                <h4 class="mb-sm-0">Books</h4>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">Pages</li>
@@ -60,7 +60,8 @@
                                                 <th>Teacher</th>                                               
                                                 <th>Department</th>      
                                                 <th>Company</th>    
-                                                <th>Year</th>                                      
+                                                <th>Year</th>    
+                                                <th>Downloaded</th>                                  
                                                 <th width="280px">Action</th>
                                                
                                             </tr>
@@ -73,8 +74,9 @@
                                                 <td>{{ $book->author }} </td>                                           
                                                 <td>{{ $book->teacher->name }} </td> 
                                                 <td>{{ $book->department->name}} </td>
-                                                <td>{{ $book->company}} </td>                                                   
-                                                <td>{{ $book->year}}-{{ $book->year+1}} </td>                                           
+                                                <td>{{ $book->company}} </td>                                                  
+                                                <td>{{ $book->year}}-{{ $book->year+1}} </td> 
+                                                <td>{{$book->count}}</td>                                           
                                                 <td>
                                                     <form action="{{ route('backend.books.destroy', $book->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-secondary"

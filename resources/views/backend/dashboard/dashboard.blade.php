@@ -241,7 +241,7 @@
                                 <div class="card-header border-bottom-dashed align-items-center d-flex">
                                     <h4 class="card-title mb-0 flex-grow-1">My Portfolio</h4>
                                     <div>
-                                        <div class="dropdown">
+                                        {{-- <div class="dropdown">
                                             <button class="btn btn-soft-primary btn-sm" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <span class="text-uppercase">Btc<i class="mdi mdi-chevron-down align-middle ms-1"></i></span>
                                             </button>
@@ -250,7 +250,7 @@
                                                 <a class="dropdown-item" href="#">USD</a>
                                                 <a class="dropdown-item" href="#">Euro</a>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div><!-- end cardheader -->
                                 <div class="card-body">
@@ -342,7 +342,7 @@
                             <div class="card card-height-100">
                                 <div class="card-header border-0 align-items-center d-flex">
                                     <h4 class="card-title mb-0 flex-grow-1">Audiences Metrics</h4>
-                                    <div>
+                                    {{-- <div>
                                         <button type="button" class="btn btn-soft-secondary btn-sm">
                                             ALL
                                         </button>
@@ -355,21 +355,8 @@
                                         <button type="button" class="btn btn-soft-primary btn-sm">
                                             1Y
                                         </button>
-                                    </div>
+                                    </div> --}}
                                 </div><!-- end card header -->
-                                <div class="card-header p-0">
-                                    <div class="alert alert-warning alert-solid alert-label-icon border-0 rounded-0 m-0 d-flex align-items-center"
-                                        role="alert">
-                                        <i class="ri-error-warning-line label-icon"></i>
-                                        <div class="flex-grow-1 text-truncate">
-                                            Your free trial expired in <b>17</b> days.
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <a href="pages-pricing.html"
-                                                class="text-reset text-decoration-none"><b>Upgrade</b></a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card-header p-0 border-0 bg-soft-light">
                                     <div class="row g-0 text-center">
                                         <div class="col-6 col-sm-4">

@@ -129,7 +129,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/browse">Browse</a></li>
                         <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="/#">Privacy & Policy</a></li>
+                        <li><a href="/policy">Privacy & Policy</a></li>
                         <li><a href="/admin">Admin</a></li>
                     </ul>
                     

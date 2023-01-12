@@ -28,8 +28,8 @@ Route::get('/filter', [BrowseController::class, 'filter'])->name('browse.filter'
 Route::get('/contact', [ContactUsController::class, 'create'])->name('contactus.create');
 Route::post('/contact', [ContactUsController::class, 'store'])->name('contactus.store');
 
-Route::get('/browse', [BrowseController::class, 'index']);
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/browse', [BrowseController::class, 'index'])->name('browse');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/bookdetail', [BookDetailController::class, 'index']);
 
 Route::get('/bookdetail/{is}', [BookDetailController::class, 'show']);

@@ -1,11 +1,11 @@
 @extends('layouts.userapp')
 @section('content')
     <div class="ads_browse">
-        {{-- <div class="loader" style="margin-top: 0px">
+        <div class="loader" style="margin-top: 0px ">
             <div class="loader-content">
                 <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
             </div>
-        </div> --}}
+        </div>
         <div class="ads_text">
 
             <p style="font-size: 50px">FIND GOOD THESIS</p>
@@ -18,7 +18,7 @@
             
         </div>
         
-        <img src="{{ asset('images/newbook_background.jpg') }}" alt="">
+        <img src="{{ asset('images/newbook_background.jpg') }}" style="width: 90%" alt="">
 
     </div>
     <div class="latest_book">
@@ -28,19 +28,19 @@
             
                     <div class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
-                            @foreach($thesis as $thesis)
+                            @foreach($book as $book)
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <iframe height="100%"  width="100%" src="/assets/{{$thesis->file}}"></iframe>
+                                        <iframe  height="100%"  width="100%" src="/assets/{{$book->file}}"></iframe>
                                     </div>
                                     <div class="card_detail">
                                         <span>
-                                            <p>Title: {{$thesis->title}}</p>
-                                            <p>Author: {{$thesis->author}}</p>
-                                            <p>Department: {{$thesis->department->name}}</p>
+                                            <p>Title: {{$book->title}}</p>
+                                            <p>Author: {{$book->author}}</p>
+                                            <p>Department: {{$book->department->name}}</p>
                                         
-                                        <button>View</button>
+                                            <a href="{{ url('/bookdetail', $book->id) }}"><button>View</button></a>
                                     </span>
                                     </div>
                                 </div>                               
@@ -89,4 +89,5 @@
             }
         });
     </script>
+
 @endsection

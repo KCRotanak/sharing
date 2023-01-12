@@ -12,7 +12,7 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">Pages</li>
-                                        <li class="breadcrumb-item active">book</li>
+                                        <li class="breadcrumb-item active">Books</li>
                                     </ol>
                                 </div>
                             </div>
@@ -52,14 +52,17 @@
 
                                     <table class="table table-bordered data-table" id="myTable">
                                         <thead class="table-light">
-                                            <tr>
-                                                <th>ID</th>
+                                            <tr >
+                                               
+                                                <th >ID</th>
                                                 <th>Title</th>
                                                 <th>Author</th>   
                                                 <th>Teacher</th>                                               
-                                                <th>Department</th>        
+                                                <th>Department</th>      
+                                                <th>Company</th>    
                                                 <th>Year</th>                                      
                                                 <th width="280px">Action</th>
+                                               
                                             </tr>
                                         </thead>
 
@@ -69,13 +72,15 @@
                                                 <td>{{ $book->title }} </td>
                                                 <td>{{ $book->author }} </td>                                           
                                                 <td>{{ $book->teacher->name }} </td> 
-                                                <td>{{ $book->department->name}} </td>                                                
-                                                <td>{{ $book->year}} </td>                                           
+                                                <td>{{ $book->department->name}} </td>
+                                                <td>{{ $book->company}} </td>                                                   
+                                                <td>{{ $book->year}}-{{ $book->year+1}} </td>                                           
                                                 <td>
                                                     <form action="{{ route('backend.books.destroy', $book->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-secondary"
                                                         href="{{ url('/view', $book->id) }}">View</a>
-                                                        <a class="btn btn-sm btn-primary"href="{{ route('backend.book.download', $book->file) }}"
+                                                        <a class="btn btn-sm btn-primary"
+                                                        href="{{ route('backend.book.download', $book->file) }}"
                                                            >Download</a>
 
                                                         @csrf

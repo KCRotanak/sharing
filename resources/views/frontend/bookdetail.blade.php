@@ -1,39 +1,49 @@
 @extends('layouts.userapp')
 @section('content')
-<div class="loader" style="margin-top: 0px">
-    <div class="loader-content">
-        <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
+    <div class="loader" style="margin-top: 0px">
+        <div class="loader-content">
+            <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader" style="margin-top:300px">
+        </div>
     </div>
-</div>
-<div class="detail"> 
-    <div class="bookdownload">
-        
-        <img src="{{asset ('images/cover_card.png')}}" alt="">
-        <button>Download&nbsp;<i class='bx bxs-download' ></i></button>
-    </div>
-    <div class="bookdetail">
-        <span style="width: 950px">
-            <h3>The Flactuation</h3>
-            <p style="text-decoration: underline; font-weight: bold">Book Details</p>
-            <b>Author:</b>
-            <p>Donald Remphis</p>
-            <b>Department:</b>
-            <p>Department of Information and Communication Engineering</p>
-            <b>Company:</b>
-            <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate 
-                the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may
-                used as a placeholder before final copy is available.</p>
-        </span>
-        <span class="bookdetail_right">
-            <b>Book ID: </b><b style="font-weight: normal">Hi</b><br><br>
-            <b>Year:</b>
-            <p>2022</p>
-            <b>Lecturer:</b>
-            <p>Mr. SOK Kimheng</p>
-            <b>Supervisor:</b>
-            <p>Mr. Mbappe</p>
-        </span>
+    <div class="detail">
+        <div class="bookdownload">
+            <iframe height="100%" width="100%" src="/assets/{{ $book->file }}"></iframe>
+            <a href="{{ url('download', $book->file) }}">
+                <button >Download&nbsp;
+                    <i class='bx bxs-download'></i>
+                </button></a>
+        </div>
+        <div class="bookdetail">
+            <span style="width: 950px">
+                <h3>{{ $book->title }}</h3>
+                <p style="text-decoration: underline; font-weight: bold">Book Details</p>
+                <b>Author:</b>
+                <p>{{ $book->author }}</p>
+                <b>Department:</b>
+                <p>{{ $book->department->name }}</p>
+                <b>Description:</b>
+                <p class="limit-text">{{ $book->description }}</p>
+            </span>
+            <span class="bookdetail_right">
+                <b>Book ID: </b><b style="font-weight: normal">{{ $book->id }}</b><br><br>
+                <b>Year:</b>
+                <p>{{ $book->year }}</p>
 
+                <b>Lecturer:</b> <br>
+
+                <div class="dropdown">
+                    <p>{{ $book->teacher->name }}</p>
+                    <div class="dropdown-content">
+                        <p style="color: white">
+                            mail:{{ $book->teacher->email }} <br>
+                            phone: {{ $book->teacher->phone }}
+                        </p>
+                    </div>
+                </div>
+
+                <br> <b>Company:</b>
+                <p>{{ $book->company }}</p>
+            </span>
+        </div>
     </div>
-</div>
 @endsection

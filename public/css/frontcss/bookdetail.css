@@ -2,72 +2,115 @@
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
 }
+
 .detail {
     margin: 0 auto;
     width: 1700px;
     height: 64.5vh;
+    margin-top: 110px;
+    margin-bottom: 230px;
     /* background-color: yellow; */
     display: flex;
 }
+
 .detail .bookdownload {
     width: 350px;
     height: 435px;
     border-radius: 25px;
     background-color: #C9D6DF;
     margin-top: 8.5em;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     /* margin-bottom: auto; */
 }
-.detail .bookdownload img{
+
+.detail .bookdownload iframe {
     width: 250px;
     height: 330px;
     margin-left: 45px;
-    margin-top:  2em;
+    margin-top: 2em;
 }
-.detail .bookdownload button{
+
+.detail .bookdownload button {
     width: 250px;
-    height:40px;
+    height: 40px;
     margin-left: 45px;
     margin-top: 10px;
     border-width: 0px;
     border-radius: 10px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    background-color:#1A374D;
+    background-color: #1A374D;
     color: white;
 }
+
 .detail .bookdownload button:hover {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     color: black;
     background-color: #91abbd;
 }
+
 .detail .bookdetail {
     width: 1250px;
     height: 435px;
     border-radius: 25px;
     background-color: #C9D6DF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     margin-top: 8.5em;
     margin-left: auto;
     padding-left: 50px;
     padding-top: 30px;
     display: flex;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-.detail .bookdetail span > h3 {
+
+.detail .bookdetail span>h3 {
     font-size: 36px;
     font-weight: 700;
     line-height: 171.02%;
 }
-.detail .bookdetail span > b {
+
+.detail .bookdetail span>b {
     font-size: 18px;
 }
-.detail .bookdetail span > p {
+
+.detail .bookdetail span>p {
     font-size: 18px;
 }
+
 .detail .bookdetail .bookdetail_right {
     margin-top: 20px;
     margin-left: 750px;
     position: absolute;
 }
+
 .detail .bookdetail .bookdetail_right span {
     font-weight: normal;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #363636;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.limit-text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }

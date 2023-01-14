@@ -25,7 +25,6 @@
             <p class="category_latest">Latest books</p>
         <div class="latest_card swiper">
             {{-- =swiper --}}
-            
                     <div class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
                             @foreach($book as $book)
@@ -39,7 +38,6 @@
                                             <p>Title: {{$book->title}}</p>
                                             <p>Author: {{$book->author}}</p>
                                             <p>Department: {{$book->department->name}}</p>
-                                        
                                             <a href="{{ url('/bookdetail', $book->id) }}"><button>View</button></a>
                                     </span>
                                     </div>

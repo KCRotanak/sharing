@@ -81,13 +81,10 @@
                                                     <form action="{{ route('backend.books.destroy', $book->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-secondary"
                                                         href="{{ url('/view', $book->id) }}">View</a>
-                                                        <a class="downloader"
+                                                        <a class="btn btn-sm btn-primary"
                                                         href="{{ route('backend.book.download', $book->file) }}">Download</a>
-
-                
                                                         @csrf
                                                         @method('DELETE')
-                                                        
                                                         <input name="_method" type="hidden" value="DELETE">
                                                         <button type="submit"
                                                             class="btn btn-sm btn-danger show-alert-delete-box"
@@ -105,5 +102,4 @@
             </div>
         </div>     
     </div>
-
 @endsection

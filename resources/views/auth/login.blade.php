@@ -51,7 +51,10 @@
                                 @enderror
 
                                 <div class="form-group">
-                                    <a href=""> Forget Password</a>
+                                    @if (Route::has('password.request'))
+                                        <span class="forgot-pass"><a href="{{ route('password.request') }}">Forgot
+                                                Password</a></span>
+                                    @endif
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn">Log In</button>

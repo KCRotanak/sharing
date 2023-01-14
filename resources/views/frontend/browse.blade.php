@@ -71,7 +71,7 @@
                     <div class="container" style="padding: 100px">
                         <div class="row justify-content-lg-center">
                           <div class="col-lg-auto">
-                            <img src="{{ asset('images/noresult.png') }}" alt="" style="margin-top: -130px">
+                            <img src="{{ asset('images/noresult.png') }}" alt="" style="margin-top: -100px; margin-left: 180px; width: 50%">
                       
                           </div>
                         </div>

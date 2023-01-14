@@ -137,9 +137,9 @@
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
 
-                                <a class="dropdown-item" href="pages-profile.html"><i
-                                        class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
-                                        class="align-middle">Profile</span></a>
+                                <a class="dropdown-item" href="{{ route('admin.changepassword') }}"><i
+                                        class="mdi mdi-key text-muted fs-16 align-middle me-1"></i> <span
+                                        class="align-middle">Change Password</span></a>
 
                                 <a class="dropdown-item" href="auth-logout-basic.html" data-key="t-analytics"
                                     onclick="event.preventDefault();

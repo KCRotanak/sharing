@@ -2,10 +2,13 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\AdminPasswordController;
+
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\BrowseController;
 use App\Http\Controllers\Frontend\BookDetailController;
@@ -65,6 +68,9 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/download/{file}',[BookController::class,'download'])->name('backend.book.download');
     Route::get('/view/{is}',[BookController::class,'view']);
     Route::delete('delete/book/{id}', [BookController::class, 'destroy'])->name('backend.books.destroy');
+
+    Route::get('admin/change-password', [AdminPasswordController::class, 'changePassword'])->name('admin.changepassword');
+    Route::post('admin/change-password', [AdminPasswordController::class, 'updatePassword'])->name('admin.updatepassword');
 });
   
 

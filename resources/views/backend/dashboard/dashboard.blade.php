@@ -98,7 +98,7 @@
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-warning rounded fs-3">
-                                                <i class="bx bx-spreadsheet text-warning"></i>
+                                                <i class="bx bx-book text-warning"></i>
                                             </span>
                                         </div>
                                     </div>
@@ -125,6 +125,7 @@
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-primary rounded fs-3">
                                                 <i class="bx bx-message-detail text-primary"></i>
+                                                
                                             </span>
                                         </div>
                                     </div>
@@ -132,7 +133,7 @@
                             </div><!-- end card -->
                         </div><!-- end col -->
                     </div> <!-- end row-->
-                    {{-- <div class="row">
+                    <div class="row">
                         <div class="col-xl-3 col-md-6">
                             <!-- card -->
                             <div class="card card-animate">
@@ -146,121 +147,21 @@
                                     <div class="d-flex align-items-end justify-content-between mt-4">
                                         <div>
                                             <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value"
-                                                    data-target="{{ $messages }}">0</span></h4>
+                                                    data-target="{{ $download_sum }}">0</span></h4>
                                             <a href="/admin/thesis" class="text-decoration-none">See details</a>
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-primary rounded fs-3">
-                                                <i class="bx bx-message-detail text-primary"></i>
+                                                <i class="bx bx-download text-info"></i>
                                             </span>
                                         </div>
                                     </div>
                                 </div><!-- end card body -->
                             </div><!-- end card -->
                         </div><!-- end col -->
-                    </div> --}}
+                    </div>
 
-                    {{-- <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-success card-height-100">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-light text-white rounded-2 fs-2">
-                                                <i class="bx bx-shopping-bag"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <p class="text-uppercase fw-medium text-white-50 mb-3">Total Sales</p>
-                                            <h4 class="fs-4 mb-3 text-white"><span class="counter-value"
-                                                    data-target="2045">0</span></h4>
-                                            <p class="text-white-50 mb-0">From 1930 last year</p>
-                                        </div>
-                                        <div class="flex-shrink-0 align-self-center">
-                                            <span class="badge badge-soft-light fs-12"><i
-                                                    class="ri-arrow-up-s-line fs-13 align-middle me-1"></i>6.11
-                                                %<span></span></span>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
-                        </div> <!-- end col-->
-
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card card-height-100">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-warning text-warning rounded-2 fs-2">
-                                                <i class="bx bxs-user-account"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <p class="text-uppercase fw-medium text-muted mb-3">Number of Users</p>
-                                            <h4 class="fs-4 mb-3"><span class="counter-value" data-target="7522">0</span>
-                                            </h4>
-                                            <p class="text-muted mb-0">From 9530 last year</p>
-                                        </div>
-                                        <div class="flex-shrink-0 align-self-center">
-                                            <span class="badge badge-soft-danger fs-12"><i
-                                                    class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35
-                                                %<span></span></span>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
-                        </div> <!-- end col-->
-
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card card-height-100">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-danger text-danger rounded-2 fs-2">
-                                                <i class="bx bxs-badge-dollar"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <p class="text-uppercase fw-medium text-muted mb-3">Total Revenue</p>
-                                            <h4 class="fs-4 mb-3">$<span class="counter-value"
-                                                    data-target="2845.05">0</span></h4>
-                                            <p class="text-muted mb-0">From $1,750.04 last year</p>
-                                        </div>
-                                        <div class="flex-shrink-0 align-self-center">
-                                            <span class="badge badge-soft-success fs-12"><i
-                                                    class="ri-arrow-up-s-line fs-13 align-middle me-1"></i>22.96
-                                                %<span></span></span>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
-                        </div> <!-- end col-->
-
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card card-height-100">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-info text-info rounded-2 fs-2">
-                                                <i class="bx bx-store-alt"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <p class="text-uppercase fw-medium text-muted mb-3">Number of Stores</p>
-                                            <h4 class="fs-4 mb-3"><span class="counter-value" data-target="405">0</span>k
-                                            </h4>
-                                            <p class="text-muted mb-0">From 308 last year</p>
-                                        </div>
-                                        <div class="flex-shrink-0 align-self-center">
-                                            <span class="badge badge-soft-success fs-12"><i
-                                                    class="ri-arrow-up-s-line fs-13 align-middle me-1"></i>16.31
-                                                %<span></span></span>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
-                        </div> <!-- end col-->
-                    </div> <!-- end row--> --}}
+                   
 
                     <div class="row">
                         <div class="col-xxl-6">

@@ -372,11 +372,13 @@ a {
     /* background: rgb(137, 137, 137); */
     border-width: 0px !important;
     margin-top: 30px;
+    border-radius: 10%;
 }
 
 .latest_card .card-image .card-img {
     height: 100%;
     width: 100%;
+    
     /* object-fit: cover; */
 }
 
@@ -387,6 +389,9 @@ a {
     /* margin-top: 80px; */
     padding-top: 10px;
     text-align: center !important;
+}
+img{
+    border-radius: 10px;
 }
 
 .latest_card .image-content .card_detail p {

@@ -53,7 +53,7 @@
                 <h3>Books</h3>
                 @forelse ($books as $book)
                     <div class="browse_card">
-                        <img src="{{ asset('images/cover_card.png') }}" alt="">
+                        <img src="{{ asset('../thumnails/' . $book->cover) }}" alt="">
                         <div class="browse_descript">
                             <span>
                                 <p>Title: {{ $book->title }} </p>

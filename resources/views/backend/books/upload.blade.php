@@ -123,14 +123,14 @@
                                                     <input class="form-control" type="file" name="file">
                                                 </div>
                                             </div>
-                                            {{-- <div class="row mb-3">
+                                            <div class="row mb-3">
                                                 <div class="col-lg-3">
                                                     <label for="meassageInput" class="form-label">Cover Upload</label>
                                                 </div>
                                                 <div class="col-lg-9">
                                                     <input class="form-control" type="file" name="cover">
                                                 </div>
-                                            </div> --}}
+                                            </div>
                                             <div class="text-end">
                                                
                                                 

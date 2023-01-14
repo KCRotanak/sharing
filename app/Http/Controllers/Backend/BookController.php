@@ -34,6 +34,12 @@ class BookController extends Controller
 	           $filename=time().'.'.$file->getClientOriginalExtension();
 		        $request->file->move('assets',$filename);
 		        $book->file=$filename;
+
+              $image=$request->cover;
+	           $filename=time().'.'.$image->getClientOriginalExtension();
+		        $request->cover->move('thumnails',$filename);
+		        $book->cover=$filename;
+
 		        $book->title=$request->title;
               $book->author=$request->author;
               $book->departmentID=$request->departmentID;
@@ -42,18 +48,6 @@ class BookController extends Controller
               $book->year=$request->year;
 		        $book->description=$request->description;
 		        $book->save();
-         //      $request->validate([
-         //       'cover' => 'required',
-         //     ]);
-         //       $input = $request->all();
-         //       if ($image = $request->file('cover')) {
-         //       $destinationPath = 'cover/';
-         //       $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-         //       $image->move($destinationPath, $profileImage);
-         //       $input['cover'] = "$profileImage";
-         //   }
-       
-         //       Book::create($input);
               return redirect()->route('backend.books.index') ->with('success','Book created successfully');
 
    }

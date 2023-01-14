@@ -6,7 +6,7 @@
 .detail {
     margin: 0 auto;
     width: 1700px;
-    height: 64.5vh;
+    height: auto;
     margin-top: 110px;
     margin-bottom: 230px;
     /* background-color: yellow; */
@@ -52,7 +52,6 @@
 
 .detail .bookdetail {
     width: 1250px;
-    height: 435px;
     border-radius: 25px;
     background-color: #C9D6DF;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -61,7 +60,7 @@
     padding-left: 50px;
     padding-top: 30px;
     display: flex;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    
 }
 
 .detail .bookdetail span>h3 {
@@ -108,9 +107,9 @@
     display: block;
 }
 
-.limit-text {
+/* .limit-text {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-}
+} */

@@ -8,13 +8,14 @@
     <div class="detail">
         <div class="bookdownload">
             <iframe height="100%" width="100%" src="/assets/{{ $book->file }}"></iframe>
-            <a href="{{ url('download', $book->file) }}">
+            <a href="{{  route('front_download', $book->file) }}">
                 <button >Download&nbsp;
                     <i class='bx bxs-download'></i>
-                </button></a>
+                </button>
+            </a>
         </div>
         <div class="bookdetail">
-            <span style="width: 950px">
+            <span style="width: 950px; " >
                 <h3>{{ $book->title }}</h3>
                 <p style="text-decoration: underline; font-weight: bold">Book Details</p>
                 <b>Author:</b>
@@ -22,7 +23,7 @@
                 <b>Department:</b>
                 <p>{{ $book->department->name }}</p>
                 <b>Description:</b>
-                <p class="limit-text">{{ $book->description }}</p>
+                <p  style="text-align: justify; text-justify: inter-word">{{ $book->description }}</p>
             </span>
             <span class="bookdetail_right">
                 <b>Book ID: </b><b style="font-weight: normal">{{ $book->id }}</b><br><br>
@@ -31,7 +32,7 @@
 
                 <b>Lecturer:</b> <br>
 
-                <div class="dropdown">
+                <div class="dropdown" style="cursor: pointer">
                     <p>{{ $book->teacher->name }}</p>
                     <div class="dropdown-content">
                         <p style="color: white">

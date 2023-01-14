@@ -23,7 +23,6 @@
 
     <link href="{{ asset('/css/frontcss/auth.css') }}" rel="stylesheet">
 
-
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>

@@ -132,6 +132,33 @@
                             </div><!-- end card -->
                         </div><!-- end col -->
                     </div> <!-- end row-->
+                    {{-- <div class="row">
+                        <div class="col-xl-3 col-md-6">
+                            <!-- card -->
+                            <div class="card card-animate">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <p class="text-uppercase fw-medium text-muted mb-0">Total thesis download</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="d-flex align-items-end justify-content-between mt-4">
+                                        <div>
+                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value"
+                                                    data-target="{{ $messages }}">0</span></h4>
+                                            <a href="/admin/thesis" class="text-decoration-none">See details</a>
+                                        </div>
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span class="avatar-title bg-soft-primary rounded fs-3">
+                                                <i class="bx bx-message-detail text-primary"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div><!-- end card body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+                    </div> --}}
 
                     {{-- <div class="row">
                         <div class="col-xl-3 col-md-6">
@@ -254,7 +281,9 @@
                                     </div>
                                 </div><!-- end cardheader -->
                                 <div class="card-body">
-                                    <div id="portfolio_donut_charts" data-colors='["--vz-primary", "--vz-info", "--vz-warning", "--vz-success"]' class="apex-charts" dir="ltr"></div>
+                                    <div id="portfolio_donut_charts" data-colors='["--vz-primary", "--vz-info", "--vz-warning", "--vz-success"]' class="apex-charts" dir="ltr">
+                                        
+                                    </div>
 
                                     <ul class="list-group list-group-flush border-dashed mb-0">
                                         <li class="list-group-item px-0">
@@ -272,7 +301,7 @@
                                                 </div>
                                                 <div class="flex-shrink-0 text-end">
                                                     <h6 class="mb-1">BTC 0.00584875</h6>
-                                                    <p class="text-success fs-12 mb-0">$19,405.12</p>
+                                                    <p class="text-success fs-12 mb-0">$19405,.12</p>
                                                 </div>
                                             </div>
                                             
@@ -394,8 +423,10 @@
 
                                 <div class="card-body p-0 pb-2">
                                     <div>
-                                        <div id="audiences_metrics_charts" data-colors='["--vz-success", "--vz-gray-300"]'
-                                            class="apex-charts" dir="ltr"></div>
+                                        <div id="audiences_metrics_charts" data-colors='["--vz-success", "--vz-gray-300"]'></div>
+                                    </div>
+                                    <div class="chart-container">
+                                        <div class="chart has-fixed-height" id="bars_basic"></div>
                                     </div>
                                 </div><!-- end card body -->
                             </div><!-- end card -->
@@ -1136,4 +1167,7 @@
             </div>
         </div>
     </div>
+    <script>
+        
+    </script>
 @endsection

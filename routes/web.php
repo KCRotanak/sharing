@@ -32,8 +32,12 @@ Route::get('/browse', [BrowseController::class, 'index'])->name('browse');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/bookdetail', [BookDetailController::class, 'index']);
 
+Route::get('/policy', function () {
+    return view('frontend.policy');
+});
+
 Route::get('/bookdetail/{is}', [BookDetailController::class, 'show']);
-Route::get('/download/{file}',[BookDetailController::class,'download'])->name('frontend.bookdetail.download');
+Route::get('/front/download/{file}',[BookDetailController::class,'download'])->name('front_download');
 
 Auth::routes();
   

@@ -38,7 +38,7 @@
                                                     <th>Department</th>
                                                     <th>Company</th>
                                                     <th>Year</th>
-                                                    <th>description</th>
+                                                    <th>Description</th>
                                                 </tr>
                                             </thead>
                                             <tr>
@@ -48,9 +48,10 @@
                                                 <td>{{ $book->teacher->name }} </td>
                                                 <td>{{ $book->department->name }} </td>
                                                 <td>{{ $book->company }} </td>
-                                                <td>{{ $book->year }} </td>
-                                                <td>{{ $book->description }}</td>
-                                            </tr>
+                                                <td>{{ $book->year}}-{{ $book->year+1}} </td>
+                                                <td>{{ $book->description }} </td>
+                                            </tr> 
+                                        </thead>
                                         </table>
                                         <iframe height="1000px" width="500px" src="/assets/{{ $book->file }}"></iframe>
                                     </div>

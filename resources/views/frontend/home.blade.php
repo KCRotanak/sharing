@@ -32,7 +32,7 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="{{ asset('../thumnails/' . $book->cover) }}" alt="">
+                                        <img height="100%" width="100%" src="{{ asset('../thumnails/' . $book->cover) }}" alt="">
                                     </div>
                                     <div class="card_detail">
                                         <span>

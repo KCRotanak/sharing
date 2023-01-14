@@ -64,6 +64,7 @@ class BookController extends Controller
       return redirect()->route('backend.books.index')
                        ->with('success','Books deleted successfully');
    }
+
 }
 
 

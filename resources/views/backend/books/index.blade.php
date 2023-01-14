@@ -60,7 +60,8 @@
                                                 <th>Teacher</th>                                               
                                                 <th>Department</th>      
                                                 <th>Company</th>    
-                                                <th>Year</th>                                      
+                                                <th>Year</th>
+                                                <th>No of Downloads</th>                                     
                                                 <th width="280px">Action</th>
                                                
                                             </tr>
@@ -74,15 +75,16 @@
                                                 <td>{{ $book->teacher->name }} </td> 
                                                 <td>{{ $book->department->name}} </td>
                                                 <td>{{ $book->company}} </td>                                                   
-                                                <td>{{ $book->year}}-{{ $book->year+1}} </td>                                           
+                                                <td>{{ $book->year}}-{{ $book->year+1}} </td> 
+                                                <td>{{ $book->count }}</td>                                          
                                                 <td>
                                                     <form action="{{ route('backend.books.destroy', $book->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-secondary"
                                                         href="{{ url('/view', $book->id) }}">View</a>
-                                                        <a class="btn btn-sm btn-primary"
-                                                        href="{{ route('backend.book.download', $book->file) }}"
-                                                           >Download</a>
+                                                        <a class="downloader"
+                                                        href="{{ route('backend.book.download', $book->file) }}">Download</a>
 
+                
                                                         @csrf
                                                         @method('DELETE')
                                                         
@@ -101,5 +103,7 @@
                     </div>
                 </div>
             </div>
-        </div>      
+        </div>     
+    </div>
+
 @endsection

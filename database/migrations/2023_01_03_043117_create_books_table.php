@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('year');
             $table->text('description');
             $table->string('file');
+            $table->integer('count')->nullable();
             $table->timestamps();
         });
     }

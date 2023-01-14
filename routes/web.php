@@ -61,6 +61,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/download/{file}',[BookController::class,'download'])->name('backend.book.download');
     Route::get('/view/{is}',[BookController::class,'view']);
     Route::delete('delete/book/{id}', [BookController::class, 'destroy'])->name('backend.books.destroy');
+
 });
   
 

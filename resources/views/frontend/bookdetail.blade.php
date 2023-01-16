@@ -8,7 +8,7 @@
     <div class="detail">
         <div class="bookdownload">
             {{-- <iframe height="100%" width="100%" src="/assets/{{ $book->file }}"></iframe> --}}
-            <img height="100%" width="100%" src="{{ asset('../thumnails/' . $book->cover) }}" alt="">
+            <img src="{{ asset('../thumnails/' . $book->cover) }}" alt="">
             <a href="{{  route('front_download', $book->file) }}">
                 <button >Download&nbsp;
                     <i class='bx bxs-download'></i>

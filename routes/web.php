@@ -55,6 +55,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // Route::get('/admin/dashboard', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('admin.home');
     Route::resource('/admin/dashboard', DashboardController::class);   
     Route::resource('/admin/user', UserController::class);
+
+    Route::get('/admin/contacts/index', [ContactController::class, 'index'])->name('backend.contacts.index');
     Route::resource('/admin/contacts', ContactController::class);
 
     Route::resource('/admin/teachers', App\Http\Controllers\Backend\TeacherController::class);

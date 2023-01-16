@@ -103,7 +103,7 @@
                                 style='color:#ffffff; font-size:30px'></i></a>
                         <a href="#"><i class='bx bxl-instagram' style='color:#fff; font-size:30px'></i></a>
                         <a href="#"><i class='bx bxl-telegram' style='color:#fff; font-size:30px'></i></a>
-                        <a href="#"><i class='bx bx-envelope' style='color:#fff; font-size:30px'></i></a>
+                        {{-- <a href="#"><i class='bx bx-envelope' style='color:#fff; font-size:30px'></i></a> --}}
                     </p>
                 </div>
 

@@ -83,7 +83,7 @@
         <script>
             $('.browse_descript p').text(function(_, txt) {
                 if (txt.length > 80) {
-                    txt = txt.substr(0, 80) + " ...";
+                    txt = txt.substr(0, 80) + "...";
                     $(this).parent().append("");
                 }
                 $(this).html(txt)

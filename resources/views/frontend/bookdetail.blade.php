@@ -16,7 +16,7 @@
             </a>
         </div>
         <div class="bookdetail">
-            <span style="width: 950px; " >
+            <span class="bookdetail_left">
                 <h3>{{ $book->title }}</h3>
                 <p style="text-decoration: underline; font-weight: bold">Book Details</p>
                 <b>Author:</b>
@@ -24,12 +24,12 @@
                 <b>Department:</b>
                 <p>{{ $book->department->name }}</p>
                 <b>Description:</b>
-                <p  style="text-align: justify; text-justify: inter-word">{{ $book->description }}</p>
+                <p style="text-align: justify; text-justify: inter-word">{{ $book->description }}</p>
             </span>
             <span class="bookdetail_right">
+                <b>№ Download: {{$book->count}}</b><br><br>
                 <b>Book ID: </b><b style="font-weight: normal">{{ $book->id }}</b><br><br>
-                <b>Year:</b>
-                <p>{{ $book->year }}</p>
+                <b>Year:</b> <p>{{ $book->year }}</p>
 
                 <b>Lecturer:</b> <br>
 

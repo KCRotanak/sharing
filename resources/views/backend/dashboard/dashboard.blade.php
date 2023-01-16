@@ -147,7 +147,7 @@
                                         <div>
                                             <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value"
                                                     data-target="{{ $download_sum }}">0</span></h4>
-                                            <a href="/admin/thesis" class="text-decoration-none">See details</a>
+                                            <a href="/admin/books" class="text-decoration-none">See details</a>
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-primary rounded fs-3">

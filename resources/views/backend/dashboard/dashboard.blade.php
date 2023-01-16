@@ -54,7 +54,7 @@
                         </div><!-- end col -->
       
 
-                        <div class="col-xl-3 col-md-6">
+                        {{-- <div class="col-xl-3 col-md-6">
                             <!-- card -->
                             <div class="card card-animate">
                                 <div class="card-body">
@@ -78,7 +78,7 @@
                                     </div>
                                 </div><!-- end card body -->
                             </div><!-- end card -->
-                        </div><!-- end col -->
+                        </div><!-- end col --> --}}
 
                         <div class="col-xl-3 col-md-6">
                             <!-- card -->
@@ -132,8 +132,7 @@
                                 </div><!-- end card body -->
                             </div><!-- end card -->
                         </div><!-- end col -->
-                    </div> <!-- end row-->
-                    <div class="row">
+
                         <div class="col-xl-3 col-md-6">
                             <!-- card -->
                             <div class="card card-animate">
@@ -159,9 +158,8 @@
                                 </div><!-- end card body -->
                             </div><!-- end card -->
                         </div><!-- end col -->
-                    </div>
+                    </div> <!-- end row-->
 
-                   
 
                     <div class="row">
                         <div class="col-xxl-6">

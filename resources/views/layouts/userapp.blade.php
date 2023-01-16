@@ -100,17 +100,9 @@
                     <p class="pr-5 text-white-50" style="font-size: 14px">A website where you can research for information, download thesis.</p>
                     <p class="pr-5 text-white-50" style="font-size: 14px">Complete your thesis with us.</p>
                     <p>
-                    <img src="../img/facebook_icon.png" style="cursor: pointer"
-                        onclick="window.location.href='https://www.facebook.com/kong.rotanak.7/'">
-                    <img src="../img/telegram_icon.png" style="cursor: pointer"
-                        onclick="window.location.href='https://web.telegram.org/z/#467814096'">
-                    <img src="../img/gmail_icon.png" style="cursor: pointer"
-                        onclick="window.location.href='https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVlCTvxqTrbzWjQtKtvKwCZVHlfMBhgPbbSmcsXDhrgxZsVgsPpxmCfldhpRQQjQNkkJNz'">
-                        {{-- <a href="#"><i class='bx bxl-facebook-circle'
-                                style='color:#ffffff; font-size:30px'></i></a> --}}
-                        {{-- <a href="#"><i class='bx bxl-instagram' style='color:#fff; font-size:30px'></i></a>
-                        <a href="#"><i class='bx bxl-telegram' style='color:#fff; font-size:30px'></i></a>
-                        <a href="#"><i class='bx bx-envelope' style='color:#fff; font-size:30px'></i></a> --}}
+                        <a href="https://www.facebook.com/kong.rotanak.7/"><i class='bx bxl-facebook-square' style='color:#fff; font-size:30px'></i></a>
+                        <a href="https://web.telegram.org/z/#467814096"><i class='bx bxl-telegram' style='color:#fff; font-size:30px'></i></a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVlCTvxqTrbzWjQtKtvKwCZVHlfMBhgPbbSmcsXDhrgxZsVgsPpxmCfldhpRQQjQNkkJNz"><i class='bx bx-envelope' style='color:#fff; font-size:30px'></i></a>
                     </p>
                 </div>
 

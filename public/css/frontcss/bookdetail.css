@@ -23,7 +23,7 @@
     /* margin-bottom: auto; */
 }
 
-.detail .bookdownload iframe {
+.detail .bookdownload img {
     width: 250px;
     height: 330px;
     margin-left: 45px;
@@ -76,7 +76,9 @@
 .detail .bookdetail span>p {
     font-size: 18px;
 }
-
+.detail .bookdetail .bookdetail_left {
+    width: 500px;
+}
 .detail .bookdetail .bookdetail_right {
     margin-top: 20px;
     margin-left: 750px;

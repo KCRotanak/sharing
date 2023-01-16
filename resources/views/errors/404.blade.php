@@ -1,108 +1,49 @@
-<html>
-<style>
-body, html{
-  margin:0;
-  width:100%;
-  height:100%;
-  background-color:#000;
-  overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-#bm_animation{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404 Not Found</title>
 
-#click_l{
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 50%;
-    height:100%;
-    cursor: pointer;
-    background-color: rgba(255,255,255,0);
-    
-}
+    <style>
+        body {
+            background-color: #F7F9FB;
+        }
 
+        .center {
+            margin: auto;
+            width: 60%;
+            /* border: 3px solid #73AD21; */
+            padding: 10px;
+            display: block;
+            text-align: center;
+        }
 
-#click_r{
-    position: absolute;
-    top: 0;
-    right:0;
-    width: 50%;
-    height:100%;
-    cursor: pointer;
-    background-color: rgba(255,255,255,0);
-    
-}
-</style>
+        .back_btn {
+            width: 150px;
+            height: 40px;
+            background: #1A374D;
+            border-radius: 15px;
+            border-width: 0;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 
 <body>
-    <div id="bm_animation">
-        <div id="click_r"></div>
-        <div id="click_l"></div>
+    <div class="center"><img src="{{ asset('images/404notfound.gif') }}" alt="" style="width: 80%">
     </div>
 
-    <script>
-    var container = document.getElementById('bm_animation');
-    var animData = {
-        container: container,
-        renderer: 'svg',
-        loop: true,
-        prerender: false,
-        autoplay: true,
-        autoloadSegments: false,
-        path: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/51676/fight.json'   
-    };
+    <div class="center">
+        <a href="/">
+            <button class="back_btn">
+                Go back</button></a>
+    </div>
 
-    var anim;
-    var isHitting = false;
-
-
-    anim = bodymovin.loadAnimation(animData);
-    anim.addEventListener('DOMLoaded',startAnimation);
-    click_r.onclick = hitRight;
-    click_l.onclick = hitLeft;
-
-    function hitComplete(){
-        isHitting = false;
-        anim.removeEventListener('loopComplete',hitComplete);
-    }
-
-    function hitRight(){
-        if(isHitting){
-            return;
-        }
-        isHitting = true;
-        anim.playSegments([[75,95],[65,75]],true);
-        anim.addEventListener('loopComplete',hitComplete);
-    }
-
-
-    function hitLeft(){
-        if(isHitting){
-            return;
-        }
-        isHitting = true;
-        anim.playSegments([[95,115],[65,75]],true);
-        anim.addEventListener('loopComplete',hitComplete);
-    }
-
-
-
-    function startAnimation(){
-        anim.playSegments([[0,65],[65,75]],true);
-    }
-    
-
-
-
-
-
-
-
-    </script>
 </body>
 
 </html>

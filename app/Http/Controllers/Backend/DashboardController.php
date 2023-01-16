@@ -7,7 +7,7 @@ use App\Models\Contact;
 use App\Models\Department;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
-
+use DB;
 class DashboardController extends Controller
 {
     public function __construct()
@@ -25,7 +25,16 @@ class DashboardController extends Controller
         $teachers = Teacher::get()->count();
         $messages = Contact::get()->count();
         $books = Book::get()->count();
-        return view('backend.dashboard.dashboard', compact('departments', 'teachers', 'messages', 'books'));
+        // $all_book = Book::get();
+        // $download_sum = 0;
+        // foreach($all_book as $book) {
+        //     $download_sum = $download_sum + $book->count;
+        // }
+        // dd($download_sum);
+        $download_sum = DB::table('books')->sum('count');
+ 
+        // dd($download_sum );
+        return view('backend.dashboard.dashboard', compact('departments', 'teachers', 'messages', 'books','download_sum'));
     }
 
     /**

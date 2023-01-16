@@ -14,17 +14,20 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
+            $table->string('cover');
             $table->string('title');
             $table->string('author');
             $table->unsignedBigInteger('departmentID');
             $table->unsignedBigInteger('teacherID');
-            $table->foreign('departmentID')->references('id')->on('departments');
-            $table->foreign('teacherID')->references('id')->on('teachers');
             $table->string('company');
             $table->string('year');
             $table->text('description');
             $table->string('file');
+            $table->string('count')->nullable();
             $table->timestamps();
+
+            $table->foreign('departmentID')->references('id')->on('departments')->onDelete('cascade');
+            $table->foreign('teacherID')->references('id')->on('teachers')->onDelete('cascade');
         });
     }
 

@@ -34,6 +34,12 @@ class BookController extends Controller
 	           $filename=time().'.'.$file->getClientOriginalExtension();
 		        $request->file->move('assets',$filename);
 		        $book->file=$filename;
+
+              $image=$request->cover;
+	           $filename=time().'.'.$image->getClientOriginalExtension();
+		        $request->cover->move('thumnails',$filename);
+		        $book->cover=$filename;
+
 		        $book->title=$request->title;
               $book->author=$request->author;
               $book->departmentID=$request->departmentID;
@@ -42,12 +48,14 @@ class BookController extends Controller
               $book->year=$request->year;
 		        $book->description=$request->description;
 		        $book->save();
-
               return redirect()->route('backend.books.index') ->with('success','Book created successfully');
 
    }
    public function download(Request $request,$file)
    {
+        $books = Book::where("file", "=", $file)->first();
+        $books->count = $books->count + 1;
+        $books->save();
     return response()->download(public_path('assets/'.$file));
    }
 
@@ -64,6 +72,7 @@ class BookController extends Controller
       return redirect()->route('backend.books.index')
                        ->with('success','Books deleted successfully');
    }
+
 }
 
 

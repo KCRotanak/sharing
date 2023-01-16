@@ -47,9 +47,9 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:teachers,name',
-            'email' => 'required|unique:teachers,email',
-            'phone'=> 'required|unique:teachers,phone',        
+            // 'name' => 'required|unique:teachers,name',
+            // 'email' => 'required|unique:teachers,email',
+            // 'phone'=> 'required|unique:teachers,phone',        
         ]);
         
         Teacher::updateOrCreate(

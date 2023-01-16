@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Thesis</title>
+    <title>THESIS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -41,7 +41,10 @@
     <link href="{{ asset('css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet" type="text/css" />
-
+     <!-- apexcharts -->
+    <script src="{{ asset('libs/apexcharts/apexcharts.min.js') }}"></script>
+    {{-- echart --}}
+    <script type="text/javascript" src="{{asset('assets/js/echarts.min.js')}}"></script>
 
 </head>
 
@@ -134,9 +137,9 @@
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
 
-                                <a class="dropdown-item" href="pages-profile.html"><i
-                                        class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
-                                        class="align-middle">Profile</span></a>
+                                <a class="dropdown-item" href="{{ route('admin.changepassword') }}"><i
+                                        class="mdi mdi-key text-muted fs-16 align-middle me-1"></i> <span
+                                        class="align-middle">Change Password</span></a>
 
                                 <a class="dropdown-item" href="auth-logout-basic.html" data-key="t-analytics"
                                     onclick="event.preventDefault();
@@ -253,9 +256,7 @@
     <script src="{{ asset('js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
     <script src="{{ asset('js/plugins.js') }}"></script>
 
-    <!-- apexcharts -->
-    <script src="{{ asset('libs/apexcharts/apexcharts.min.js') }}"></script>
-
+ 
     <!-- Vector map-->
     <script src="{{ asset('libs/jsvectormap/js/jsvectormap.min.js') }}"></script>
     <script src="{{ asset('libs/jsvectormap/maps/world-merc.js') }}"></script>

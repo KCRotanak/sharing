@@ -53,13 +53,12 @@
                 <h3>Books</h3>
                 @forelse ($books as $book)
                     <div class="browse_card">
-                        <img src="{{ asset('images/cover_card.png') }}" alt="">
+                        <img height="100%" width="100%" src="{{ asset('../thumnails/' . $book->cover) }}" alt="">
                         <div class="browse_descript">
                             <span>
                                 <p>Title: {{ $book->title }} </p>
                                 <p>Author: {{ $book->author }}</p>
                                 <p>Department: {{ $book->department->name }}</p>
-                                {{-- <p>Lecturer: {{ $book->teacher->name }}</p> --}}
                                 <p>Year: {{ $book->year }} - {{ $book->year+1 }}</p>
                                 <p>Description: {{ $book->description }}</p>
                             </span>
@@ -71,7 +70,7 @@
                     <div class="container" style="padding: 100px">
                         <div class="row justify-content-lg-center">
                           <div class="col-lg-auto">
-                            <img src="{{ asset('images/noresult.png') }}" alt="" style="margin-top: -130px">
+                            <img src="{{ asset('images/noresult.png') }}" alt="" style="margin-top: -100px; margin-left: 180px; width: 50%">
                       
                           </div>
                         </div>

@@ -25,21 +25,19 @@
             <p class="category_latest">Latest books</p>
         <div class="latest_card swiper">
             {{-- =swiper --}}
-            
                     <div class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
                             @foreach($book as $book)
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <iframe  height="100%"  width="100%" src="/assets/{{$book->file}}"></iframe>
+                                        <img height="100%" width="100%" src="{{ asset('../thumnails/' . $book->cover) }}" alt="">
                                     </div>
                                     <div class="card_detail">
                                         <span>
                                             <p>Title: {{$book->title}}</p>
                                             <p>Author: {{$book->author}}</p>
                                             <p>Department: {{$book->department->name}}</p>
-                                        
                                             <a href="{{ url('/bookdetail', $book->id) }}"><button>View</button></a>
                                     </span>
                                     </div>

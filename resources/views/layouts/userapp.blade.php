@@ -32,7 +32,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
 
     <link href="{{ asset('/css/frontcss/home.css') }}" rel="stylesheet">
 
@@ -44,7 +44,7 @@
 
     {{-- swiper css --}}
     <link rel="stylesheet" href="{{ asset('/css/frontcss/swiper-bundle.min.css') }} ">
-    
+
 
 </head>
 
@@ -54,15 +54,15 @@
             <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader"  style="margin-top:300px">
         </div>
     </div> --}}
-     <!-- Navbar start -->
-     <nav id="navbar" class="">
+    <!-- Navbar start -->
+    <nav id="navbar" class="">
         <div class="nav-wrapper">
             <!-- Navbar Logo -->
             <div class="logo">
                 <!-- Logo Placeholder for Inlustration -->
                 <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
             </div>
-            
+
             <ul id="" class="menu">
                 @php
                     $currentRouteName = request()
@@ -70,14 +70,21 @@
                         ->getName();
                 @endphp
 
-                <li><a href="{{ asset('/') }}" class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a></li>
-                <li><a href="{{ asset('/browse') }}" class="{{ $currentRouteName === 'browse' ? 'active' : '' }} one">Browse</a></li>
-                <li><a href="{{ asset('/contact') }}"  class="{{ $currentRouteName === 'contactus.create' ? 'active' : '' }} one">Contact Us</a></li>
+                <li><a href="{{ asset('/') }}"
+                        class="{{ $currentRouteName === 'home' ? 'active' : '' }} six">Home</a></li>
+                <li><a href="{{ asset('/browse') }}"
+                        class="{{ $currentRouteName === 'browse' ? 'active' : '' }} one">Browse</a></li>
+                <li><a href="{{ asset('/contact') }}"
+                        class="{{ $currentRouteName === 'contactus.create' ? 'active' : '' }} one">Contact Us</a></li>
                 <li>
-                    <div class="search-box">
-                        <button class="btn-search"><i class='bx bx-search'></i></button>
-                        <input type="text" class="input-search" placeholder="Type to Search...">
-                      </div>
+
+                    <form action="{{ route('browse.search') }}" method="GET">
+                        @csrf
+                        <div class="search-box">
+                            <input type="text" class="input-search" placeholder="Type to Search..." name="inputTitle">
+                            <button class="btn-search" type="submit"><i class='bx bx-search'></i></button>
+                        </div>
+                    </form>
                 </li>
             </ul>
 
@@ -88,7 +95,7 @@
     <!-- Navbar end -->
 
     <div class="page-wrapper">
-            @yield('content')
+        @yield('content')
     </div>
 
     <!-- footer start -->
@@ -97,18 +104,24 @@
             <div class="row">
                 <div class="col-lg-5 col-xs-12 about-company">
                     <h2 style="font-size: 20px">THESIS</h2>
-                    <p class="pr-5 text-white-50" style="font-size: 14px">A website where you can research for information, download thesis.</p>
+                    <p class="pr-5 text-white-50" style="font-size: 14px">A website where you can research for
+                        information, download thesis.</p>
                     <p class="pr-5 text-white-50" style="font-size: 14px">Complete your thesis with us.</p>
                     <p>
-                        <a href="https://www.facebook.com/kong.rotanak.7/"><i class='bx bxl-facebook-square' style='color:#fff; font-size:30px'></i></a>
-                        <a href="https://web.telegram.org/z/#467814096"><i class='bx bxl-telegram' style='color:#fff; font-size:30px'></i></a>
-                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVlCTvxqTrbzWjQtKtvKwCZVHlfMBhgPbbSmcsXDhrgxZsVgsPpxmCfldhpRQQjQNkkJNz"><i class='bx bx-envelope' style='color:#fff; font-size:30px'></i></a>
+                        <a href="https://www.facebook.com/kong.rotanak.7/"><i class='bx bxl-facebook-square'
+                                style='color:#fff; font-size:30px'></i></a>
+                        <a href="https://web.telegram.org/z/#467814096"><i class='bx bxl-telegram'
+                                style='color:#fff; font-size:30px'></i></a>
+                        <a
+                            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVlCTvxqTrbzWjQtKtvKwCZVHlfMBhgPbbSmcsXDhrgxZsVgsPpxmCfldhpRQQjQNkkJNz"><i
+                                class='bx bx-envelope' style='color:#fff; font-size:30px'></i></a>
                     </p>
                 </div>
 
                 <div class="col-lg-4 col-xs-12 location">
                     <h4 class="mt-lg-0 mt-sm-4" style="font-size: 20px">Location</h4>
-                    <p class="mb-0" style="font-size: 14px"><i class='bx bx-map'></i>#123, St 123, Toul Tompong, Phnom Penh</p>
+                    <p class="mb-0" style="font-size: 14px"><i class='bx bx-map'></i>#123, St 123, Toul Tompong, Phnom
+                        Penh</p>
                     <br />
                     <p class="mb-0" style="font-size: 14px"><i class='bx bxs-phone-call'></i>(+855) 12-123-456</p>
                     <br />
@@ -124,7 +137,7 @@
                         <li><a href="/policy">Privacy & Policy</a></li>
                         <li><a href="/admin">Admin</a></li>
                     </ul>
-                    
+
                 </div>
 
             </div>
@@ -169,7 +182,7 @@
                 mybutton.style.display = "none";
             }
         }
-        
+
         // When the user clicks on the button, scroll to the top of the document
         mybutton.addEventListener("click", backToTop);
 
@@ -179,7 +192,7 @@
         }
     </script>
 
-    {{-- nav bar active--}}
+    {{-- nav bar active --}}
     <script>
         $(document).ready(function() {
 
@@ -189,15 +202,15 @@
         });
     </script>
 
-<script>
-    window.onload = function() {
-        setTimeout(function() {
-            var loader = document.getElementsByClassName("loader")[0];
-            loader.className = "loader fadeout";
+    <script>
+        window.onload = function() {
             setTimeout(function() {
-                loader.style.display = "none"
-            }, 1000)
-        }, 500)
-    }
-</script>
+                var loader = document.getElementsByClassName("loader")[0];
+                loader.className = "loader fadeout";
+                setTimeout(function() {
+                    loader.style.display = "none"
+                }, 1000)
+            }, 500)
+        }
+    </script>
 </body>

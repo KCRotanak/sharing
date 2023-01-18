@@ -25,7 +25,7 @@
 
 .detail .bookdownload img {
     width: 250px;
-    height: 330px;
+    height: 310px;
     margin-left: 45px;
     margin-top: 2em;
 }
@@ -34,7 +34,7 @@
     width: 250px;
     height: 40px;
     margin-left: 45px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-width: 0px;
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -54,13 +54,12 @@
     width: 1250px;
     border-radius: 25px;
     background-color: #C9D6DF;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     margin-top: 8.5em;
     margin-left: auto;
     padding-left: 50px;
     padding-top: 30px;
     display: flex;
-    
 }
 
 .detail .bookdetail span>h3 {
@@ -76,9 +75,11 @@
 .detail .bookdetail span>p {
     font-size: 18px;
 }
+
 .detail .bookdetail .bookdetail_left {
     width: 500px;
 }
+
 .detail .bookdetail .bookdetail_right {
     margin-top: 20px;
     margin-left: 750px;
@@ -108,6 +109,7 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 /* .limit-text {
     display: -webkit-box;

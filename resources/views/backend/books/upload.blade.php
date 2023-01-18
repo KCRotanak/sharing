@@ -140,7 +140,7 @@
                                         </form>
                                         <a href="{{ route('backend.books.index') }}">
                                             <button class="btn btn-light"
-                                            style="float: right; margin-right: 110px; margin-top: -65px">Back</button></a>  
+                                            style="float: right; margin-right: 90px; margin-top: -53px">Back</button></a>  
 
                                     </div>
                                 </div>

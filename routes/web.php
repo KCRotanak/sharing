@@ -26,14 +26,16 @@ use App\Http\Controllers\Frontend\ContactUsController;
 */
 
 
-Route::get('/filter', [BrowseController::class, 'filter'])->name('browse.filter');
 
 Route::get('/contact', [ContactUsController::class, 'create'])->name('contactus.create');
 Route::post('/contact', [ContactUsController::class, 'store'])->name('contactus.store');
 
-Route::get('/browse', [BrowseController::class, 'index'])->name('browse');
 Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/bookdetail', [BookDetailController::class, 'index']);
+
+Route::get('/browse', [BrowseController::class, 'index'])->name('browse');
+Route::get('/search', [BrowseController::class, 'search'])->name('browse.search');
+Route::get('/filter', [BrowseController::class, 'filter'])->name('browse.filter');
+
 
 Route::get('/policy', function () {
     return view('frontend.policy');

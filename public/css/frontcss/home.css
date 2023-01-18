@@ -118,7 +118,7 @@ a {
     border-radius: 25px;
     transition: all .5s ease-in-out;
     background-color: #1A374D;
-    padding-right: 40px;
+    padding-right: 75px;
     color: #fff;
 }
 
@@ -148,7 +148,7 @@ a {
 .btn-search:focus~.input-search {
     width: 300px;
     border-radius: 0px;
-    background-color: transparent;
+    background-color: #1A374D;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
@@ -156,7 +156,7 @@ a {
 .input-search:focus {
     width: 300px;
     border-radius: 0px;
-    background-color: transparent;
+    background-color: #1A374D;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
@@ -378,7 +378,6 @@ a {
 .latest_card .card-image .card-img {
     height: 100%;
     width: 100%;
-    
     /* object-fit: cover; */
 }
 
@@ -390,7 +389,8 @@ a {
     padding-top: 10px;
     text-align: center !important;
 }
-img{
+
+img {
     border-radius: 10px;
 }
 

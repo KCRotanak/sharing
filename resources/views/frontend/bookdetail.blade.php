@@ -5,6 +5,7 @@
             <img src="{{ asset('images/load.gif') }}" alt="Loader" class="loader-loader" style="margin-top:300px">
         </div>
     </div>
+
     <div class="detail">
         <div class="bookdownload">
             {{-- <iframe height="100%" width="100%" src="/assets/{{ $book->file }}"></iframe> --}}
@@ -27,7 +28,7 @@
                 <p style="text-align: justify; text-justify: inter-word">{{ $book->description }}</p>
             </span>
             <span class="bookdetail_right">
-                <b>№ Download: {{$book->count}}</b><br><br>
+                <b>№ of download: {{$book->count}}</b><br><br>
                 <b>Book ID: </b><b style="font-weight: normal">{{ $book->id }}</b><br><br>
                 <b>Year:</b> <p>{{ $book->year }}</p>
 

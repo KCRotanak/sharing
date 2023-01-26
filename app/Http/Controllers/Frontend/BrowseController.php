@@ -95,15 +95,15 @@ class BrowseController extends Controller
 
         // dd($request->all());
 
-        $inputTitle = $request->input('inputTitle');
+        $inputDep = $request->input('inputDep');
         $inputTec = $request->input('inputTec');
         $inputYear = $request->input('inputYear');
 
         $books = Book::select()
         
-        ->where(function($query) use ($inputTitle){
-           if ($inputTitle){
-            $query->where('departmentID', $inputTitle);
+        ->where(function($query) use ($inputDep){
+           if ($inputDep){
+            $query->where('departmentID', $inputDep);
            }
         }) 
 
@@ -134,12 +134,24 @@ class BrowseController extends Controller
         // dd($request->all());
 
         $inputTitle = $request->input('inputTitle');
+        $inputAuthor = $request->input('inputAuthor');
+        $inputYear = $request->input('inputYear');
 
         $books = Book::select()
         
         ->where(function($query) use ($inputTitle){
            if ($inputTitle){
             $query->where('title', 'like', $inputTitle);
+           }
+        }) 
+        ->where(function($query) use ($inputAuthor){
+           if ($inputAuthor){
+            $query->where('author', 'like', $inputAuthor);
+           }
+        }) 
+        ->where(function($query) use ($inputYear){
+           if ($inputYear){
+            $query->where('year', 'like', $inputYear);
            }
         }) 
 

@@ -82,6 +82,7 @@
                         @csrf
                         <div class="search-box">
                             <input type="text" class="input-search" placeholder="Type to Search..." name="inputTitle">
+                            <input type="hidden" name="inputAuthor">
                             <button class="btn-search" type="submit"><i class='bx bx-search'></i></button>
                         </div>
                     </form>

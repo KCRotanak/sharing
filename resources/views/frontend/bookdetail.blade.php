@@ -30,7 +30,7 @@
             <span class="bookdetail_right">
                 <b>№ of download: {{$book->count}}</b><br><br>
                 <b>Book ID: </b><b style="font-weight: normal">{{ $book->id }}</b><br><br>
-                <b>Year:</b> <p>{{ $book->year }}</p>
+                <b>Year:</b> <p>{{ $book->year}}-{{ $book->year+1}}</p>
 
                 <b>Lecturer:</b> <br>
 

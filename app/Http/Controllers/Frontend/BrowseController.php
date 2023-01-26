@@ -133,25 +133,23 @@ class BrowseController extends Controller
 
         // dd($request->all());
 
-        $inputTitle = $request->input('inputTitle');
-        $inputAuthor = $request->input('inputAuthor');
-        $inputYear = $request->input('inputYear');
+        $inputSearch = $request->input('inputSearch');
 
         $books = Book::select()
         
-        ->where(function($query) use ($inputTitle){
-           if ($inputTitle){
-            $query->where('title', 'like', $inputTitle);
+        ->where(function($query) use ($inputSearch){
+           if ($inputSearch){
+            $query->where('title', 'like', $inputSearch);
            }
         }) 
-        ->where(function($query) use ($inputAuthor){
-           if ($inputAuthor){
-            $query->where('author', 'like', $inputAuthor);
+        ->orWhere(function($query) use ($inputSearch){
+           if ($inputSearch){
+            $query->where('author', 'like', $inputSearch);
            }
         }) 
-        ->where(function($query) use ($inputYear){
-           if ($inputYear){
-            $query->where('year', 'like', $inputYear);
+        ->orWhere(function($query) use ($inputSearch){
+           if ($inputSearch){
+            $query->where('year', 'like', $inputSearch);
            }
         }) 
 

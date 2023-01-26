@@ -81,8 +81,7 @@
                     <form action="{{ route('browse.search') }}" method="GET">
                         @csrf
                         <div class="search-box">
-                            <input type="text" class="input-search" placeholder="Type to Search..." name="inputTitle">
-                            <input type="hidden" name="inputAuthor">
+                            <input type="text" class="input-search" placeholder="Type to Search..." name="inputSearch">
                             <button class="btn-search" type="submit"><i class='bx bx-search'></i></button>
                         </div>
                     </form>
